@@ -37,10 +37,18 @@ ATK: ?
 DEF: ?
 ???
 
-The Phantom Knights of ??? Hood
+The Phantom Knights of Shadowy Hood
 Code: 700666007
 Type: Warrior/DARK/Effect
 Level: 3
+ATK: ?
+DEF: ?
+???
+
+The Phantom Knights of Shredded Hauberk
+Code: 700666009
+Type: Warrior/DARK/Effect
+Level: 4
 ATK: ?
 DEF: ?
 ???
@@ -52,7 +60,7 @@ Rank: 5
 ATK: 2800
 DEF: 2500
 3 DARK Level 5 monsters
- If this Xyz Summoned card is destroyed: You can target up to 3 of your banished cards; Shuffle them into the Deck. Once per turn: You can detach 1 Xyz Material from this card, then target 1 face-up monsters your opponent controls; reduce its ATK to 0, and if you do, this card gains ATK equal to that lost ATK. If this card has "Dark Rebellion Xyz Dragon" as an Xyz Material, you can activate this effect instead:
+If this Xyz Summoned card is destroyed: You can target up to 3 of your banished cards; Shuffle them into the Deck. Once per turn: You can detach 1 Xyz Material from this card, then target 1 face-up monsters your opponent controls; reduce its ATK to 0, and if you do, this card gains ATK equal to that lost ATK. If this card has "Dark Rebellion Xyz Dragon" as an Xyz Material, you can activate this effect instead:
  ● Detach 2 Xyz Materials from this card; halve the ATK and DEF of all face-up Special Summoned monsters your opponent controls, and if you do, this card gains ATK equal to half the lost amount until the end of the turn.
  
 The Phantom Knights of Bent Buckler
@@ -80,7 +88,12 @@ Target 1 DARK Xyz Monster you control; Special Summon from your Extra Deck, 1 DA
 Hallowed Grounds of the Phantom Knights
 Code: 700666056
 Type: Spell/Field
-???
+All DARK monsters you control gain 300 ATK and DEF. You can activate 1 of these effects, depending on the number of "Phantom-" cards with different names in you Graveyard and Banished Zone:
+ ● 3+: Send 1 "Phantom-" card from your Deck to your Graveyard.
+ ● 5+: Attach 1 of your banished "Phantom-" cards to a DARK Xyz Monster you control as an Xyz Material.
+ ● 7+: Target 1 of your banished "Phantom-" cards: add it to your hand.
+ ● 9+: Target 1 of your banished "Phantom-" cards: return it to the Graveyard.
+You can only use 1 effect of "Hallowed Grounds of the Phantom Knights" per turn, and only once per turn.
 
 Phantom-Chariot
 Code: 700666057
@@ -91,6 +104,11 @@ Phantom-Flag
 Code: 700666058
 Type: Spell/Continuous
 ???
+
+Xyz Rider
+Code: 700666059
+Type: Spell/Normal
+Target 1 Dragon-type or Winged Beast-type Xyz monster you control and 1 Warrior-type Xyz Monster you control: the second target cannot attack this turn, and the first target gains ATK equal to the second target's ATK until the end of the turn, but all damage it inflicts to your opponent is halved. You can only activate 1 "Xyz Rider" per turn.
 
 Phantom-Shield
 Code: 700666075
