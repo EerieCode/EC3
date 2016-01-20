@@ -1,0 +1,86 @@
+Base code: 214444XXX
+
+Frightfur Sanctuary (Based on the anime version)
+Code: 214444000
+Activate this card by sending 1 card from your hand and 2 "Frightfur" monsters from your Extra Deck to the Graveyard. All Fusion, Synchro and Xyz monsters you control are also treated as "Frightfur" monsters. If this card is sent to the Graveyard: You can target up to 2 "Frightfur" monsters in your Graveyard; shuffle them into your Deck. You can only use this effect of "Frightfur Sanctuary" once per turn.
+
+Fluffal Fox
+Code: 214444001
+Fairy/EARTH/Effect
+***
+600/1300
+This card can attack your opponent directly. If this card inflicts battle damage to your opponent, you can draw 1 card.
+
+Fluffal Hippo
+Code: 214444002
+Fairy/EARTH/Effect
+***
+800/800
+During the turn this card was Normal Summoned, you can Normal Summon 1 "Fluffal" monster in addition to your Normal Summon/Set. (You can only gain this effect once per turn.)
+
+Fluffal Hamster
+Code: 214444003
+Fairy/EARTH/Effect
+**
+200/400
+During the turn this card was Normal Summoned, you can tribute this card: Special Summon 1 "Fluffal" monster from your Graveyard, except "Fluffal Hamster", and 1 "Edge Imp" monster from your Deck, but their effects are negated and they cannot attack, also they are destroyed during the End Phase.
+
+Fluffal Wolf
+Code: 214444004
+Fairy/EARTH/Effect
+****
+1500/1800
+When this card declares an attack: All "Fluffal" monsters you control gain 300 ATK until the end of the Battle Phase.
+
+Fluffal Elephant
+Code: 214444005
+Fairy/EARTH/Effect
+****
+1700/1600
+When this card declares an attack: You can destroy 1 Spell/Trap card on your opponent's side of the field.
+
+Edge Imp Missile
+Code: 214444025
+Fiend/DARK/Effect
+***
+1800/200
+While attacking, this card cannot be destroyed by battle. When this card is targeted for an attack: destroy it, then inflict damage to both players equal to half this card's ATK on the field.
+
+Frightfur Owl
+Code: 214444035
+Fiend/DARK/Fusion/Effect
+*****
+2000/1600
+"Edge Imp Missile" + 1 "Fluffal" monster
+This card can attack your opponent directly, but when it does so using this effect, any battle damage it inflicts on your opponent is halved. If this card inflicts damage to your opponent, you can target 1 monster your opponent controls: destroy it, then inflict 500 damage to your opponent. You can only use this effect of "Frightfur Owl" once per turn.
+
+Frightfur Elephant
+Code: 214444036
+Fiend/DARK/Fusion/Effect
+*******
+2600/1800
+"Edge Imp Chain" + 2 "Fluffal" monster
+Must be Fusion Summoned, and cannot be Special Summoned by other ways. When this card attacks, you can activate this effect: Destroy all face-down Spell/Trap cards your opponent controls, and if you do, this card gains 100 ATK for each card destroyed.
+
+Frightfur Dragon
+Code: 214444037
+Fiend/DARK/Fusion/Effect
+********
+2500/2000
+3 "Frightfur" monsters
+Must be Fusion Summoned, and cannot be Special Summoned by other ways. You can only control 1 "Frightfur Dragon". This card cannot attack directly, and is unaffected by other monster effects. When this card declares an attack: all "Frightfur" monsters you currently control gain 500 ATK until the end of the Battle Phase. Each time this card destroys a monster by battle, it gains 200 ATK.
+
+Toyland
+Code: 214444055
+Spell/Field
+All "Fluffal" monster you control gain 300 ATK and DEF. While this card is face-up on the field, you can activate this effect instead of conducting a normal draw during your Draw Phase. Choose 3 "Fluffal" monsters from your Deck and have your opponent pick one of them at random to add it to your hand, then shuffle the rest back in your Deck. During your Main Phase, you can pay 500 LP: shuffle this card into the Deck, and if you do, activate 1 "Frightland" from your Deck or hand. You can only use this effect of "Toyland" once per turn.
+
+Frightland
+Code: 214444056
+Spell/Field
+All "Frightfur" monster you control gain 400 ATK and DEF. While this card is face-up on the field, you can activate this effect instead of conducting a normal draw during your Draw Phase. Choose 3 "Fluffal" or "Edge Imp" banished monsters and have your opponent pick one of them at random to add it to your hand, then send the rest to your Graveyard. During your Main Phase, you can pay 500 LP: shuffle this card into the Deck, and if you do, activate 1 "Toyland" from your Deck or hand. You can only use this effect of "Frightland" once per turn.
+
+Emergency Seam
+Code: 214444075
+Trap/Normal
+Send, from your hand or side of the field to the Graveyard, Fusion Material Monsters listed on a "Frightfur" Fusion Monster Card, and Special Summon that monster from your Extra Deck (This Special Summon is treated as a Fusion Summon).
