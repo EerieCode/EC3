@@ -70,13 +70,18 @@ Fiend/DARK/Fusion/Effect
 3 "Frightfur" monsters
 Must be Fusion Summoned, and cannot be Special Summoned by other ways. You can only control 1 "Frightfur Dragon". This card cannot attack directly, and is unaffected by other monster effects. When this card declares an attack: all "Frightfur" monsters you currently control gain 500 ATK until the end of the Battle Phase. Each time this card destroys a monster by battle, it gains 200 ATK.
 
-Toyland
+Edge Nightmare
 Code: 214444055
+Spell/Continuous
+(to be done)
+
+Toyland
+Code: 214444056
 Spell/Field
 All "Fluffal" monster you control gain 300 ATK and DEF. While this card is face-up on the field, you can activate this effect instead of conducting a normal draw during your Draw Phase. Choose 3 "Fluffal" monsters from your Deck and have your opponent pick one of them at random to add it to your hand, then shuffle the rest back in your Deck. During your Main Phase, you can pay 500 LP: shuffle this card into the Deck, and if you do, activate 1 "Frightland" from your Deck or hand. You can only use this effect of "Toyland" once per turn.
 
 Frightland
-Code: 214444056
+Code: 214444057
 Spell/Field
 All "Frightfur" monster you control gain 400 ATK and DEF. While this card is face-up on the field, you can activate this effect instead of conducting a normal draw during your Draw Phase. Choose 3 "Fluffal" or "Edge Imp" banished monsters and have your opponent pick one of them at random to add it to your hand, then send the rest to your Graveyard. During your Main Phase, you can pay 500 LP: shuffle this card into the Deck, and if you do, activate 1 "Toyland" from your Deck or hand. You can only use this effect of "Frightland" once per turn.
 
