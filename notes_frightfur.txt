@@ -50,8 +50,8 @@ Edge Imp Flail
 Code: 214444026
 Fiend/DARK/Effect
 ****
-?/?
-(to be done)
+1600/1200
+You can discard 1 "Edge Imp" monster, then target 1 card your opponent controls; destroy it. You can onyl use this effect of "Edge Imp Flail" once per turn.
 
 Frightfur Owl
 Code: 214444035
@@ -71,10 +71,18 @@ Must be Fusion Summoned, and cannot be Special Summoned by other ways. When this
 
 Frightfur Rabbit
 Code: 214444037
-Fiend/Dark/Fusion/Effect
+Fiend/DARK/Fusion/Effect
 ******
 ?/?
 "Edge Imp Saw" + 1 or more "Fluffal" monsters
+(to be done)
+
+Frightfur Marionette
+Code: 214444038
+Fiend/DARK/Fusion/Effect
+*******
+?/?
+"Edge Imp Chain" + "Fluffal Wing"
 (to be done)
 
 Frightfur Dragon
