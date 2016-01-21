@@ -46,6 +46,13 @@ Fiend/DARK/Effect
 1800/200
 While attacking, this card cannot be destroyed by battle. When this card is targeted for an attack: destroy it, then inflict damage to both players equal to half this card's ATK on the field.
 
+Edge Imp Flail
+Code: 214444026
+Fiend/DARK/Effect
+****
+?/?
+(to be done)
+
 Frightfur Owl
 Code: 214444035
 Fiend/DARK/Fusion/Effect
@@ -59,11 +66,19 @@ Code: 214444036
 Fiend/DARK/Fusion/Effect
 *******
 2600/1800
-"Edge Imp Chain" + 2 "Fluffal" monster
+"Edge Imp Flail" + 2 "Fluffal" monster
 Must be Fusion Summoned, and cannot be Special Summoned by other ways. When this card attacks, you can activate this effect: Destroy all face-down Spell/Trap cards your opponent controls, and if you do, this card gains 100 ATK for each card destroyed.
 
-Frightfur Dragon
+Frightfur Rabbit
 Code: 214444037
+Fiend/Dark/Fusion/Effect
+******
+?/?
+"Edge Imp Saw" + 1 or more "Fluffal" monsters
+(to be done)
+
+Frightfur Dragon
+Code: 214444040
 Fiend/DARK/Fusion/Effect
 ********
 2500/2000
