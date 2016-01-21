@@ -93,12 +93,12 @@ You can target 1 "Edge Imp" monster in your Graveyard; Special Summon it, but it
 Toyland
 Code: 214444057
 Spell/Field
-All "Fluffal" monster you control gain 300 ATK and DEF. While this card is face-up on the field, you can activate this effect instead of conducting a normal draw during your Draw Phase. Choose 3 "Fluffal" monsters from your Deck and have your opponent pick one of them at random to add it to your hand, then shuffle the rest back in your Deck. During your Main Phase, you can pay 500 LP: shuffle this card into the Deck, and if you do, activate 1 "Frightland" from your Deck or hand. You can only use this effect of "Toyland" once per turn.
+All "Fluffal" monster you control gain 300 ATK and DEF. While this card is face-up on the field, you can activate this effect instead of conducting a normal draw during your Draw Phase. Choose 3 "Fluffal" or "Edge Imp" monsters from your Deck and have your opponent pick one of them at random to add it to your hand, then shuffle the rest back in your Deck. During your opponent's Standby Phase, you can pay 500 LP: shuffle this card into the Deck, and if you do, activate 1 "Frightland" from your Deck or Graveyard, but its effects are negated during this Standby Phase only. You can only use this effect of "Toyland" once per turn.
 
 Frightland
 Code: 214444058
 Spell/Field
-All "Frightfur" monster you control gain 400 ATK and DEF. While this card is face-up on the field, you can activate this effect instead of conducting a normal draw during your Draw Phase. Choose 3 "Fluffal" or "Edge Imp" banished monsters and have your opponent pick one of them at random to add it to your hand, then send the rest to your Graveyard. During your Main Phase, you can pay 500 LP: shuffle this card into the Deck, and if you do, activate 1 "Toyland" from your Deck or hand. You can only use this effect of "Frightland" once per turn.
+All "Frightfur" monster you control gain 400 ATK and DEF. While this card is face-up on the field, you can activate this effect instead of conducting a normal draw during your Draw Phase. Choose 3 "Fluffal" or "Edge Imp" banished monsters and have your opponent pick one of them at random to add it to your hand, then send the rest to your Graveyard. During your opponent's Standby Phase, you can pay 500 LP: shuffle this card into the Deck, and if you do, activate 1 "Toyland" from your Deck or Graveyard, but its effects are negated during this Standby Phase only. You can only use this effect of "Frightland" once per turn.
 
 Emergency Seam
 Code: 214444075
