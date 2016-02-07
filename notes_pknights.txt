@@ -44,16 +44,16 @@ Code: 216666007
 Type: Warrior/DARK/Effect
 Level: 3
 ATK: 1000
-DEF: 0
-???
+DEF: 500
+If this card is in Attack Position: You can target 1 face-up monster on your opponent's side of the field; change this card to Defense Position, and if you do, that monsters loses 500 ATK and DEF until the end of your opponent's turn, and if it does, inflict 500 damage to your opponent. You can banish this card from your Graveyard and 1 "Phantom Knights" card from your hand, then target 1 card on the field; destroy it. You can only use each effect of "The Phantom Knights of Hidden Hood" once per turn.
 
 The Phantom Knights of Shredded Hauberk
 Code: 216666009
 Type: Warrior/DARK/Effect
 Level: 4
-ATK: ?
-DEF: ?
-???
+ATK: 100
+DEF: 1100
+If you control no Xyz monsters, and the only monsters you control are "The Phantom Knights" monsters, you can activate this effect: Immediately after this effect resolves, Xyz Summon 1 DARK Xyz Monster from your Extra Deck, using only this card treated as 2 Xyz Materials and other "The Phantom Knights" you control as Xyz Materials. You can banish this card from your Graveyard, then target 1 face-up monster on the field; Gain LP equal to half its ATK or DEF (whichever is higher). You can only use each effect of "The Phantom Knights of Shredded Hauberk" once per turn.
 
 Vicious Rebellion CXyz Dragon
 Code: 216666035
@@ -78,9 +78,10 @@ The Phantom Knights of Rusty Glaive
 Code: 216666038
 Type: Warrior/DARK/Xyz/Effect
 Rank: 3
-ATK: ?
-DEF: ?
-???
+ATK: 1800
+DEF: 1600
+2 Level 3 monsters
+Once per turn: You can detach 1 Xyz Material from this card, then target 1 card in your opponent's Graveyard; banish it face-down, then banish the top card of your Deck. If this Xyz Summoned card is destroyed: You can target 2 "The Phantom Knights" monsters with the same Level in your Graveyard; Special Summon them and increase their Levels by 1, also you cannot Special Summon monsters for the rest of this turn, except DARK monsters.
 
 The Phantom Knights of Stained Cleaver
 Code: 216666039
@@ -89,7 +90,10 @@ Rank: 4
 ATK: 2600
 DEF: 2000
 3 DARK Level 4 monsters
-You can also Xyz Summon this card by detaching 1 Xyz Material from a "The Phantom Knights of Break Sword" you control, then using it as the Xyz Material. (Xyz Materials attached to that monster also become Xyz Materials on this card.) (Remaining effects unknown)
+You can also Xyz Summon this card by detaching 1 Xyz Material from a "The Phantom Knights of Break Sword" you control, then using it as the Xyz Material. (Xyz Materials attached to that monster also become Xyz Materials on this card.) This card can make up to 2 attacks on monsters during each Battle Phase. Once per turn, during either player's turn: You can detach 1 Xyz Material from this card, then activate 1 of these effects:
+● Target 1 card on each side of the field; destroy them.
+● Target 1 "The Phantom Knights" monster you control, except "The Phantom Knights of Stained Cleaver"; if that target battles an opponent's monster this turn, you can banish both monsters after damage calculation. You cannot activate this effect during the turn this card was Special Summoned by its own procedure.
+If this Xyz Summoned card is destroyed: You can target 3 "The Phantom Knights" monsters with the same Level in your Graveyard; Special Summon them and increase their Levels by 2, also you cannot Special Summon monsters for the rest of this turn, except DARK monsters.
 
 The Phantom Knights of Weary Aegis
 Code: 216666040
@@ -101,14 +105,14 @@ DEF: 2900
 You can also Xyz Summon this card by detaching 1 Xyz Material from a "The Phantom Knights of Bent Buckler" you control, then using it as the Xyz Material. (Xyz Materials attached to that monster also become Xyz Materials on this card.) This card can attack while in face-up Defense Position. If it does, apply its DEF for damage calculation. Once per turn, during either player's turn: You can detach 1 Xyz Material from this card, then activate 1 of these effects:
  ● Send 1 "Phantom Knights" card from your Deck to the Graveyard.
  ● Target 1 "The Phantom Knights" monster you control: once this turn, it cannot be destroyed by battle or card effect. You cannot activate this effect during the turn this card was Special Summoned by its own procedure.
- If this Xyz Summoned card is destroyed: You can target 3 "The Phantom Knights" monsters with the same Level in your Graveyard; Special Summon them and increase their Levels by 2, also you cannot Special Summon monsters for the rest of this turn, except DARK monsters.
+If this Xyz Summoned card is destroyed: You can target 3 "The Phantom Knights" monsters with the same Level in your Graveyard; Special Summon them and increase their Levels by 2, also you cannot Special Summon monsters for the rest of this turn, except DARK monsters.
 
 The Phantom Knights of Blunt Lance
 Code: 216666041
 Type: Warrior/DARK/Xyz/Effect
 Rank: 4
-ATK: ???
-DEF: ???
+ATK: 2200
+DEF: 2000
 3 DARK Level 4 monsters
 You can also Xyz Summon this card by detaching 1 Xyz Material from a "The Phantom Knights of Rusty Glaive" you control, then using it as the Xyz Material. (Xyz Materials attached to that monster also become Xyz Materials on this card.) (Remaining effects unknown)
 
