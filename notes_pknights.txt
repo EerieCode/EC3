@@ -1,9 +1,9 @@
 Base code: 216666XXX
 
-The Phantom Knights of Torn Banner
+Phantom Knights' Torn Banner
 Code: 216666000
 Type: Trap/Normal
-Target 1 of your banished "Phantom-" cards, except "The Phantom Knights of Torn Banner": shuffle it into the Deck. You can banish this card from your Graveyard: immediately after this effect resolves, Xyz Summon a DARK Xyz Monster from your Graveyard, using only "Phantom Knights" monsters you control as Xyz Materials. If the monster Xyz Summoned by this card would leave the field, return it to the Extra Deck instead. You can only use each effect of "The Phantom Knights of Torn Banner" once per turn.
+Target 1 of your banished "Phantom Knights" cards, except "Phantom Knights' Torn Banner": shuffle it into the Deck. You can banish this card from your Graveyard: immediately after this effect resolves, Xyz Summon a DARK Xyz Monster from your Graveyard, using only "The Phantom Knights" monsters you control as Xyz Materials. If the monster Xyz Summoned by this card would leave the field, return it to the Extra Deck instead. You can only use each effect of "Phantom Knights' Torn Banner" once per turn.
 
 The Phantom Knights of Fragmented Ring
 Code: 216666002
@@ -12,10 +12,11 @@ Level: 3
 Scale: 5
 ATK: 300
 DEF: 500
-Pendulum Effect:
-All "Phantom Knights" monsters you control gain 300 ATK. Once per turn, if you control a "Phantom Knights" card in your other Pendulum Zone and you control no monsters, you can target that other "Phantom Knights" card and this card: This turn, you can Pendulum Summon "Phantom Knights" monsters using those targets' Scales, but only from the Graveyard.
-Monster Effect:
-Once per turn, you can either: Target 1 "Phantom Knights" you control; equip this card to that target, OR: Unequip this card and Special Summon it in Attack Position. While equipped by this effect, the equipped monster gains 600 ATK, and can attack twice each Battle Phase. (A monster can only be equipped with 1 Union monster at a time. If the equipped monster would be destroyed [by battle], destroy this card instead.) You can banish this card from your Graveyard, then target 1 DARK monster you control: it gains 600 ATK until the end of the turn (this is a Quick effect). You can only use this effect of "The Phantom Knights of Fragmented Ring" once per turn.
+[ Pendulum Effect ]
+All "The Phantom Knights" monsters you control gain 300 ATK. Once per turn, if you control a "The Phantom Knights" card in your other Pendulum Zone and you control no monsters, you can target that other "The Phantom Knights" card and this card: This turn, you can Pendulum Summon "The Phantom Knights" monsters using those targets' Scales, but only from the Graveyard.
+----------------------------------------
+[ Monster Effect ]
+Once per turn, you can either: Target 1 "The Phantom Knights" you control; equip this card to that target, OR: Unequip this card and Special Summon it in Attack Position. While equipped by this effect, the equipped monster gains 600 ATK, and can attack twice each Battle Phase. (A monster can only be equipped with 1 Union monster at a time. If the equipped monster would be destroyed, destroy this card instead.) You can banish this card from your Graveyard, then target 1 DARK monster you control: it gains 600 ATK until the end of the turn (this is a Quick effect). You can only use this effect of "The Phantom Knights of Fragmented Ring" once per turn.
 
 The Phantom Knights of Battered Bracelet
 Code: 216666003
@@ -24,10 +25,11 @@ Level: 4
 Scale: 2
 ATK: 0
 DEF: 1500
-Pendulum Effect:
-All "Phantom Knights" monsters you control gain 300 DEF. You can pay 500 LP, then target 1 of your banished "Phantom-" cards: return it to the Graveyard, but you can't Special Summon or activate the effect of that card, or cards with the same name, for the rest of the turn. You can only use this effect of "The Phantom Knights of Battered Bracelet" once per turn.
-Monster Effect:
-Once per turn, you can either: Target 1 "Phantom Knights" you control; equip this card to that target, OR: Unequip this card and Special Summon it in Attack Position. While equipped by this effect, the equipped monster gains 600 DEF, and if it destroys an opponent's monster by battle, you gain LP equal to half that monster's original ATK. (A monster can only be equipped with 1 Union monster at a time. If the equipped monster would be destroyed [by battle], destroy this card instead.) You can banish this card from your Graveyard, then target 1 DARK monster you control: it gains 600 DEF until the end of the turn (this is a Quick effect). You can only use this effect of "The Phantom Knights of Battered Bracelet" once per turn.
+[ Pendulum Effect ]
+All "The Phantom Knights" monsters you control gain 300 DEF. If you control a "The Phantom Knights" card in your other Pendulum Zone: You can pay 500 LP, then target 1 of your banished "The Phantom Knights" monsters, except "The Phantom Knights of Battered Bracelet"; return it to the Graveyard, but you can't Special Summon or activate the effect of that card, or cards with the same name, for the rest of the turn. You can only use this effect of "The Phantom Knights of Battered Bracelet" once per turn.
+----------------------------------------
+[ Monster Effect ]
+Once per turn, you can either: Target 1 "The Phantom Knights" you control; equip this card to that target, OR: Unequip this card and Special Summon it in Attack Position. While equipped by this effect, the equipped monster gains 600 DEF, and if it destroys an opponent's monster by battle, you gain LP equal to half that monster's original ATK. (A monster can only be equipped with 1 Union monster at a time. If the equipped monster would be destroyed, destroy this card instead.) You can banish this card from your Graveyard, then target 1 DARK monster you control: it gains 600 DEF until the end of the turn (this is a Quick effect). You can only use this effect of "The Phantom Knights of Battered Bracelet" once per turn.
 
 The Phantom Knights of Ruptured Pouch
 Code: 216666005
@@ -35,7 +37,7 @@ Type: Warrior/DARK/Effect
 Level: 3
 ATK: 200
 DEF: 500
-If this card is Normal Summoned or Special Summoned from your Graveyard: You can Special Summon 1 "Phantom Knights" monster from your hand in Defense Position. You can banish this card from your Graveyard, then target 1 DARK Xyz Monster you control and 2 "Phantom-" cards with different names in your Graveyard; Attach the latter 2 targets to the first target as Xyz Materials. You can only use each effect of "The Phantom Knights of Ruptured Pouch" once per turn.
+If this card is Normal Summoned or Special Summoned from your Graveyard: You can Special Summon 1 "The Phantom Knights" monster from your hand in face-up Defense Position, except "The Phantom Knights of Ruptured Pouch". You can banish this card from your Graveyard, then target 1 DARK Xyz Monster you control with no Xyz Materials and 2 of your banished "Phantom Knights" cards with different names, except "The Phantom Knights of Ruptured Pouch"; Attach the latter 2 targets to the first target as Xyz Materials. You can only use each effect of "The Phantom Knights of Ruptured Pouch" once per turn.
 
 The Phantom Knights of Hidden Hood
 Code: 216666007
@@ -53,7 +55,7 @@ ATK: ?
 DEF: ?
 ???
 
-Dark Uprising CXyz Dragon
+Vicious Rebellion CXyz Dragon
 Code: 216666035
 Type: Dragon/DARK/Xyz/Effect
 Rank: 5
@@ -61,7 +63,7 @@ ATK: 2800
 DEF: 2500
 3 DARK Level 5 monsters
 If this Xyz Summoned card is destroyed: You can target up to 3 of your banished cards; Shuffle them into the Deck. Once per turn: You can detach 1 Xyz Material from this card, then target 1 face-up monster your opponent controls; reduce its ATK to 0, and if you do, this card gains ATK equal to that lost ATK. If this card has "Dark Rebellion Xyz Dragon" as an Xyz Material, you can activate this effect instead:
- ● Detach 2 Xyz Materials from this card; halve the ATK and DEF of all face-up Special Summoned monsters your opponent controls, and if you do, this card gains ATK equal to half the lost amount until the end of the turn.
+ ● Detach 2 Xyz Materials from this card; halve the ATK and DEF of all other face-up Special Summoned monsters on the field, and if you do, this card gains ATK equal to half the lost amount until the end of the turn.
  
 The Phantom Knights of Bent Buckler
 Code: 216666037
@@ -70,7 +72,7 @@ Rank: 3
 ATK: 1000
 DEF: 2400
 2 Level 3 monsters
-Once per turn: You can detach 1 Xyz Material from this card; Send 1 "Phantom-" card from your Deck to your Graveyard. If this Xyz Summoned card is destroyed: You can target 2 "Phantom Knights" monsters with the same Level in your Graveyard; Special Summon them and increase their Levels by 1, also you cannot Special Summon monsters for the rest of this turn, except DARK monsters.
+Once per turn: You can detach 1 Xyz Material from this card; Send 1 "Phantom Knights" card from your Deck to your Graveyard. If this Xyz Summoned card is destroyed: You can target 2 "The Phantom Knights" monsters with the same Level in your Graveyard; Special Summon them and increase their Levels by 1, also you cannot Special Summon monsters for the rest of this turn, except DARK monsters.
 
 The Phantom Knights of Rusty Glaive
 Code: 216666038
@@ -97,9 +99,9 @@ ATK: 1200
 DEF: 2900
 3 DARK Level 4 monsters
 You can also Xyz Summon this card by detaching 1 Xyz Material from a "The Phantom Knights of Bent Buckler" you control, then using it as the Xyz Material. (Xyz Materials attached to that monster also become Xyz Materials on this card.) This card can attack while in face-up Defense Position. If it does, apply its DEF for damage calculation. Once per turn, during either player's turn: You can detach 1 Xyz Material from this card, then activate 1 of these effects:
- ● Send 1 "Phantom-" card from your Deck to the Graveyard.
- ● Target 1 "Phantom Knights" monster you control: once this turn, it cannot be destroyed by battle or card effect. You cannot activate this effect during the turn this card was Special Summoned by its own procedure.
- If this Xyz Summoned card is destroyed: You can target 3 "Phantom Knights" monsters with the same Level in your Graveyard; Special Summon them and increase their Levels by 2, also you cannot Special Summon monsters for the rest of this turn, except DARK monsters.
+ ● Send 1 "Phantom Knights" card from your Deck to the Graveyard.
+ ● Target 1 "The Phantom Knights" monster you control: once this turn, it cannot be destroyed by battle or card effect. You cannot activate this effect during the turn this card was Special Summoned by its own procedure.
+ If this Xyz Summoned card is destroyed: You can target 3 "The Phantom Knights" monsters with the same Level in your Graveyard; Special Summon them and increase their Levels by 2, also you cannot Special Summon monsters for the rest of this turn, except DARK monsters.
 
 The Phantom Knights of Blunt Lance
 Code: 216666041
@@ -110,38 +112,39 @@ DEF: ???
 3 DARK Level 4 monsters
 You can also Xyz Summon this card by detaching 1 Xyz Material from a "The Phantom Knights of Rusty Glaive" you control, then using it as the Xyz Material. (Xyz Materials attached to that monster also become Xyz Materials on this card.) (Remaining effects unknown)
 
-Supreme King of the Phantom Knights
+Fallen King of the Phantom Knights
 Code: 216666042
 Type: Warrior/DARK/Xyz/Effect
 Rank: 6
 ATK: ?
 DEF: 0
-2 or more "Phantom Knights" Xyz monsters with the same Rank
-When this card is Xyz Summoned: Its original ATK becomes equal to the total Rank of all "Phantom Knights" monsters used as Xyz Materials for its summon x300 (this effect cannot be negated). Once per turn: You can activate 1 of the following effects: 
+2 or more "The Phantom Knights" Xyz monsters with the same Rank
+When this card is Xyz Summoned: Its original ATK becomes equal to the total Rank of all "The Phantom Knights" monsters used as Xyz Materials for its summon x300 (this effect cannot be negated). Once per turn: You can activate 1 of the following effects: 
 Pay 600 LP, then select 1 Xyz Material attached to this card whose original attribute was DARK; until the end of this turn, this card gains that monster's effect. At the end of the turn, if the selected material is still attached to this card, detach it.
 Detach all Xyz Materials from this card, then target 1 DARK Xyz Monster in either player's Graveyard; Attach it to this card as an Xyz Material.
 
 Rank-Up-Magic Phantom Force
 Code: 216666055
 Type: Spell/Normal
+(This card is always treated as a "Phantom Knights" card.)
 Target 1 DARK Xyz Monster you control; Special Summon from your Extra Deck, 1 DARK Xyz Monster that is 1 Rank higher than that monster you control, by using it as the Xyz Material. (This Special Summon is treated as an Xyz Summon. Xyz Materials attached to that target also become Xyz Materials on the Summoned monster.) During either player's turn, if you control no monsters: you can banish this card from your Graveyard, then target 1 DARK Xyz Monster in your Graveyard; Special Summon it, then Special Summon from your Extra Deck, 1 DARK Xyz monster that is 1 Rank higher than that monster, by using it as the Xyz Material. (This Special Summon is treated as an Xyz Summon.) You can only use one effect of "Rank-Up-Magic Phantom Force" per turn, and only once per turn.
 
-Hallowed Grounds of the Phantom Knights
+Phantom Knights' Hallowed Grounds
 Code: 216666056
 Type: Spell/Field
-All DARK monsters you control gain 300 ATK and DEF. You can activate 1 of these effects, depending on the number of "Phantom-" cards with different names in you Graveyard and Banished Zone:
- ● 3+: Send 1 "Phantom-" card from your Deck to your Graveyard.
- ● 5+: Add 1 "Phantom Knights" card from your Graveyard or face-up in your Extra Deck to your hand.
- ● 7+: Attach 1 of your banished "Phantom-" cards to a DARK Xyz Monster you control as an Xyz Material.
- ● 9+: Target 1 of your banished "Phantom-" cards: return it to the Graveyard.
-You can only use 1 effect of "Hallowed Grounds of the Phantom Knights" per turn, and only once per turn.
+All DARK monsters you control gain 300 ATK and DEF. You can activate 1 of these effects, depending on the number of "Phantom Knights" cards with different names in you Graveyard and Banished Zone: 
+● 3+: Send 1 "Phantom Knights" card from your Deck to your Graveyard. 
+● 5+: Add 1 "The Phantom Knights" card from your Graveyard or face-up in your Extra Deck to your hand. 
+● 7+: Target 1 DARK Xyz Monster you control: Attach 1 of your banished "Phantom Knights" cards to that target as an Xyz Material. 
+● 9+: Target 1 of your banished "Phantom Knights" cards: return it to the Graveyard.
+You can only use 1 effect of "Phantom Knights' Hallowed Grounds" per turn, and only once per turn.
 
-Phantom-Chariot
+Phantom Knights' Chariot
 Code: 216666057
 Type: Spell/Continuous
 ???
 
-Phantom-Flag
+Phantom Knights' Flag
 Code: 216666058
 Type: Spell/Continuous
 Each "Phantom Knights" monster you control cannot be destroyed by card effects once per turn. During your opponent's turn: You can banish this card from your Graveyard: For the rest of this turn, all damage you take becomes 0.
@@ -151,7 +154,7 @@ Code: 216666059
 Type: Spell/Normal
 Target 1 Dragon-type or Winged Beast-type Xyz monster you control and 1 Warrior-type Xyz Monster you control: the second target cannot attack this turn, and the first target gains ATK equal to the second target's ATK until the end of the turn, but all damage it inflicts to your opponent is halved. You can only activate 1 "Xyz Rider" per turn.
 
-Phantom-Shield
+Phantom Knights' Shield
 Code: 216666075
 Type: Trap/Continuous
-Activate this card by targeting 1 face-up DARK monster on the field. It gains 800 DEF, also it cannot be targeted by your opponent's monsters effects. When that monster leaves the field, destroy this card. You can banish this card from your Graveyard, then target 1 "Phantom Knights" monster in your Graveyard; Special Summon it, but banish it when it leaves the field. You can only use this effect of "Phantom-Shield" once per turn.
+Activate this card by targeting 1 face-up DARK monster on the field. It gains 800 DEF, also it cannot be targeted by your opponent's monsters effects. When that monster leaves the field, destroy this card. You can banish this card from your Graveyard, then target 1 "The Phantom Knights" monster in your Graveyard; Special Summon it, but banish it when it leaves the field. You can only use this effect of "Phantom Knights' Shield" once per turn.
