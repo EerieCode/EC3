@@ -43,5 +43,5 @@ Type: Dragon/WIND/Synchro/Effect
 Level: 11
 ATK: 3600
 DEF: 3200
-1 Synchro Tuner + 2 or more WIND Synchro monsters
+1 Synchro Tuner + 1 or more WIND Synchro monsters
 Must first be Synchro Summoned. While face-up on the field, this card is also LIGHT-Attribute. (to be added) 
