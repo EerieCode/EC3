@@ -29,4 +29,18 @@ Level: 8
 ATK: 2500
 DEF: 2000
 1 Tuner + 1 or more non-Tuner monsters
-(to be added)
+This card's name becomes "Stardust Dragon" while it is on the field or in the Graveyard. During either player's turn, when a card or effect is activated that would destroy a card(s) on the field, or that would remove exactly 1 card from the field: You can Tribute this card; negate the activation, and if you do, banish it. During the End Phase, if this effect was activated this turn (and was not negated): You can Special Summon this card from your Graveyard.
+
+Radiant Lightspeed Dragon
+Code:
+Type: Dragon/WIND/Synchro/Pendulum/Effect
+Level: 11
+Scale: 4
+ATK: 3600
+DEF: 3200
+[ Pendulum Effect ]
+The Synchro Summon of your WIND Synchro Monsters cannot be negated. Once per turn, WIND Synchro monsters you control cannot be destroyed by card effects. Once per turn, if you have no cards in your other Pendulum Zone: You can place 1 Pendulum Monster from your Deck in your Pendulum Zone.
+----------------------------------------
+[ Monster Effect ]
+1 Synchro Tuner + 1 or more WIND Synchro monsters
+Must first be Synchro Summoned. If you can Pendulum Summon Level 7, you can Pendulum Summon this face-up card from your Extra Deck, but it loses 400 ATK and DEF. While face-up on the field, this card is also LIGHT-Attribute. (to be added) If this card in the Monster Zone is destroyed by battle or card effect: You can destroy as many cards in your Pendulum Zones as possible (min. 1), and if you do, place this card in your Pendulum Zone.
