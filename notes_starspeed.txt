@@ -1,14 +1,20 @@
 Speedroid Kite (temp)
 
-Speedroid Box (temp)
+Speedroid Dispenser (JP: Ganbacchapon)
 Code: 
 Type: Machine/WIND/Effect
 Level: 4
 ATK: 1200
 DEF: 0
-If this card on the field is destroyed by battle or by an opponent's card effect, or if this card is used as a Synchro Material: You can Special Summon 1 "Speedroid" monster from your Deck. You can only use this effect of "" once per turn.
+If this card on the field is destroyed by battle or by an opponent's card effect, or if this card is used as a Synchro Material: You can Special Summon 1 "Speedroid" monster from your Deck. You can only use this effect of "Speedroid Dispenser" once per turn.
 
 Speedroid Snake-Eyed Dice
+Code:
+Type: Machine/WIND/Tuner/Effect
+Level: 2
+ATK: 400
+DEF: 900
+(to be added)
 
 Hyper-Speedroid Trick Dice
 Code: 
