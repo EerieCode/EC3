@@ -1,9 +1,32 @@
 Speedroid Kite (temp)
 
 Speedroid Box (temp)
+Code: 
+Type: Machine/WIND/Effect
+Level: 4
+ATK: 1200
+DEF: 0
+If this card on the field is destroyed by battle or by an opponent's card effect, or if this card is used as a Synchro Material: You can Special Summon 1 "Speedroid" monster from your Deck. You can only use this effect of "" once per turn.
 
 Speedroid Snake-Eyed Dice
 
 Hyper-Speedroid Trick Dice
+Code: 
+Type: Machine/WIND/Synchro/Tuner/Effect
+Level: 3
+ATK: 300
+DEF: 600
+1 Tuner + 1 or more non-Tuner monsters
+If this card is Special Summoned: You can target 1 "Speedroid" monster in your Graveyard, then activate 1 of these effects;
+● Increase this card's Level by the Level of the targeted monster.
+● Reduce this card's Level by the Level of the targeted monster. If the resulting Level would be lower than 1, it becomes 1 instead.
+If this card was not Synchro Summoned, banish the targeted monster after this effect resolves. During your opponent's Main Phase, you can: Immediately after this effect resolves, Synchro Summon using this card you control (this is a Quick Effect). You can only Special Summon "Hyper-Speedroid Trick Dice"(s) once per turn.
 
 Stardust Luminous Dragon
+Code: 
+Type: Dragon/WIND/Synchro/Effect
+Level: 8
+ATK: 2500
+DEF: 2000
+1 Tuner + 1 or more non-Tuner monsters
+(to be added)
