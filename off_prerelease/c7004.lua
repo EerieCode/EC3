@@ -22,6 +22,13 @@ function c7004.initial_effect(c)
   e1:SetOperation(c7004.thop)
   c:RegisterEffect(e1)
   --Indes
+	local e4=Effect.CreateEffect(c)
+	e4:SetType(EFFECT_TYPE_SINGLE)
+	e4:SetCode(EFFECT_INDESTRUCTABLE_EFFECT)
+	e4:SetProperty(EFFECT_FLAG_SINGLE_RANGE)
+	e4:SetRange(LOCATION_MZONE)
+	e4:SetValue(c7004.efilter)
+	c:RegisterEffect(e4)
   --ATK
 end
 
@@ -49,4 +56,8 @@ function c7004.thop(e,tp,eg,ep,ev,re,r,rp)
       Duel.SendTohand(g,tp,REASON_EFFECT)
     end
   end
+end
+
+function c7004.efilter(e,re,rp)
+	return e:GetHandler():IsPosition(POS_FACEUP_ATTACK) and re:IsActiveType(TYPE_SPELL+TYPE_TRAP)
 end
