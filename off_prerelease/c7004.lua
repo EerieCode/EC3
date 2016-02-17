@@ -30,6 +30,14 @@ function c7004.initial_effect(c)
 	e4:SetValue(c7004.efilter)
 	c:RegisterEffect(e4)
   --ATK
+  local e2=Effect.CreateEffect(c)
+	e2:SetType(EFFECT_TYPE_SINGLE)
+	e2:SetProperty(EFFECT_FLAG_SINGLE_RANGE)
+	e2:SetRange(LOCATION_MZONE)
+	e2:SetCode(EFFECT_UPDATE_ATTACK)
+	e2:SetCondition(c7004.atkcon)
+	e2:SetValue(c7004.atkval)
+	c:RegisterEffect(e2)
 end
 
 function c7004.reg(e,tp,eg,ep,ev,re,r,rp,chk)
@@ -60,4 +68,16 @@ end
 
 function c7004.efilter(e,re,rp)
 	return e:GetHandler():IsPosition(POS_FACEUP_ATTACK) and re:IsActiveType(TYPE_SPELL+TYPE_TRAP)
+end
+
+function c7004.atkcon(e)
+	local ph=Duel.GetCurrentPhase()
+	local tp=Duel.GetTurnPlayer()
+	return tp==e:GetHandler():GetControler() and ph>=PHASE_BATTLE_START and ph<=PHASE_BATTLE
+end
+function c7004.atkfil(c)
+	return c:IsFaceup() and c:IsSetCard(0x9f)
+end
+function c7004.atkval(e,c)
+	return Duel.GetMatchingGroupCount(c7004.atkfil,e:GetHandler():GetControler(),LOCATION_ONFIELD,0,nil)*100
 end
