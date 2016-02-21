@@ -1,3 +1,5 @@
+Base: 214445XXX
+
 Odd-Eyes Whelp
 Code:
 Type: Dragon/Effect
@@ -7,5 +9,12 @@ DEF: ?
 (to be added)
 
 Odd-Eyes Catastrophe
+Code: 214445000
 Spell/Normal
-Target 2 Pendulum Monsters you control, at least 1 of them being a Tuner and at least 1 of them being an "Odd-Eyes" monster: Special Summon 1 Fusion monster and 1 Synchro monster from your Extra Deck, using only those 2 monsters as Materials (these summons are treated respectively as a Fusion Summon and a Synchro Summon). Then, Special Summon 1 Xyz monster summonable with the targeted monsters treated as having a Level equal to the sum of their Levels from your Extra Deck, and if you do, attach this card to that monster as an Xyz Material. You cannot Special Summon monsters until the end of your 3rd turn after activating this card. You can only activate 1 "Odd-Eyes Catastrophe" per turn.
+Target 2 Pendulum Monsters you control, at least 1 of them being a Tuner and at least 1 of them being an "Odd-Eyes" monster: Special Summon 1 Fusion monster and 1 Synchro monster from your Extra Deck, using only those 2 monsters as Materials (these summons are treated respectively as a Fusion Summon and a Synchro Summon). Then, Special Summon 1 Xyz monster summonable with the targeted monsters treated as having a Level equal to the sum of their Levels from your Extra Deck, and if you do, attach this card to that monster as an Xyz Material (this Special Summon is treated as a Xyz Summon). You cannot Special Summon monsters until the end of your 3rd turn after activating this card. You can only activate 1 "Odd-Eyes Catastrophe" per turn.
+
+Harmony Magician
+Discord Magician
+Odd-Eyes Wing Dragon
+
+
