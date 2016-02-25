@@ -75,13 +75,38 @@ function c7112.spcost(e,tp,eg,ep,ev,re,r,rp,chk)
 	local mg=Duel.GetMatchingGroup(c7112.cfilter,tp,LOCATION_MZONE,0,c)
 	if chk==0 then return c:IsAbleToRemoveAsCost() and Duel.IsExistingMatchingCard(c7112.sptgfil,tp,LOCATION_GRAVE,0,1,nil,e,tp,c:GetLevel(),mg) end
 	Duel.Hint(HINT_SELECTMSG,tp,HINTMSG_SPSUMMON)
-	local g=Duel.SelectMatchingCard(tp,c7112.sptgfil,tp,LOCATION_GRAVE,0,1,1,nil,e,tp,c:GetLevel(),mg)
+	local g=Duel.SelectMatchingCard(tp,c7112.spfil1,tp,LOCATION_GRAVE,0,1,1,nil,e,tp,c)
 	local sc=g:GetFirst()
 	e:SetLabelObject(sc)
-	
+	local lv=c:GetLevel()
+	local g1=Group.FromCards(c)
+	local tglv=sc:GetLevel()
+	while lv<tglv do
+			Duel.Hint(HINT_SELECTMSG,tp,HINTMSG_REMOVE)
+			local g2=mg:FilterSelect(tp,c7112.spfil2,1,1,nil,tglv-lv,mg,sc)
+			local gc=g2:GetFirst()
+			lv=lv+gc:GetLevel()
+			mg:RemoveCard(gc)
+			g1:AddCard(gc)
+	end
+	Duel.Remove(g1,POS_FACEUP,REASON_COST)
 end
 function c7112.sptgfil(c,e,tp,lv,mg)
 	return c:IsSetCard(0x33) and c:IsType(TYPE_SYNCHRO) and c:IsCanBeSpecialSummoned(e,0,tp,false,false) and mg:CheckWithSumEqual(Card.GetOriginalLevel,c:GetLevel()-lv,1,63,c) and c:IsCanBeEffectTarget(e)
+end
+function c7112.spfil1(c,e,tp,tc)
+	if c:IsSetCard(0x33) and c:IsType(TYPE_SYNCHRO) and c:IsCanBeSpecialSummoned(e,0,tp,false,false) and c:IsCanBeEffectTarget(e) then
+		local mg=Duel.GetMatchingGroup(c7112.cfilter,tp,LOCATION_MZONE,0,tc)
+		return mg:IsExists(c7112.spfil2,1,nil,c:GetLevel()-tc:GetLevel(),mg,c)
+	else
+		return false
+	end
+end
+function c7112.spfil2(c,limlv,mg,sc)
+	local fg=mg:Clone()
+	fg:RemoveCard(c)
+	local newlim=limlv-c:GetLevel()
+	if newlim==0 then return true else return fg:CheckWithSumEqual(Card.GetOriginalLevel,newlim,1,63,sc) end
 end
 function c7112.sptg(e,tp,eg,ep,ev,re,r,rp,chk,chkc)
 	if chkc then return false end
