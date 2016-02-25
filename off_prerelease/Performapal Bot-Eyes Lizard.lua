@@ -2,15 +2,28 @@
 --Performapal Bot-Eyes Lizard
 function c7105.initial_effect(c)
   local e1=Effect.CreateEffect(c)
-	e1:SetDescription(aux.Stringid(7105,0))
+  e1:SetDescription(aux.Stringid(7105,0))
   e1:SetType(EFFECT_TYPE_IGNITION)
   e1:SetRange(LOCATION_MZONE)
   e1:SetCountLimit(1)
+  e1:SetCon(c7105.con)
   e1:SetCost(c7105.cost)
   e1:SetOperation(c7105.op)
   c:RegisterEffect(e1)
+  local e3=Effect.CreateEffect(c)
+  e3:SetType(EFFECT_TYPE_SINGLE+EFFECT_TYPE_CONTINUOUS)
+  e3:SetCode(EVENT_SUMMON_SUCCESS)
+  e3:SetProperty(EFFECT_FLAG_CANNOT_DISABLE)
+  e3:SetOperation(c7105.regop)
+  c:RegisterEffect(e3)
+  local e2=e3:Clone()
+  e2:SetCode(EVENT_SPSUMMON_SUCCESS)
+  c:RegisterEffect(e2)
 end
 
+function c7105.con(e,tp,eg,ep,ev,re,r,rp)
+	return e:GetHandler():GetFlagEffect(7105)~=0
+end
 function c7105.cfilter(c)
   return c:IsSetCard(0x99) and c:IsAbleToGraveAsCost()
 end
@@ -49,4 +62,8 @@ function c7105.rstop(e,tp,eg,ep,ev,re,r,rp)
 	e1:Reset()
 	Duel.HintSelection(Group.FromCards(c))
 	Duel.Hint(HINT_OPSELECTED,1-tp,e:GetDescription())
+end
+
+function c7105.regop(e,tp,eg,ep,ev,re,r,rp)
+	e:GetHandler():RegisterFlagEffect(7105,RESET_EVENT+0x1fc0000+RESET_PHASE+PHASE_END,0,1)
 end
