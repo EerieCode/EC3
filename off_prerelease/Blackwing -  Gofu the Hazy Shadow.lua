@@ -67,28 +67,28 @@ function c7112.operation(e,tp,eg,ep,ev,re,r,rp)
 	Duel.SpecialSummonComplete()
 end
 
-function c7112.cfilter(c,e,tp,lv)
-  return c:IsFaceup() and not c:IsType(TYPE_TUNER) and c:IsLevelAbove(1) and c:IsAbleToRemoveAsCost() and Duel.IsExistingTarget(c7112.spfil,tp,LOCATION_GRAVE,0,1,nil,e,tp,lv+c:GetLevel())
+function c7112.cfilter(c)
+	return c:IsAbleToRemoveAsCost() and c:IsLevelAbove(1) and not c:IsType(TYPE_TUNER)
 end
 function c7112.spcost(e,tp,eg,ep,ev,re,r,rp,chk)
-  local c=e:GetHandler()
-  if chk==0 then return c:IsAbleToRemoveAsCost() and Duel.IsExistingMatchingCard(c7112.cfilter,tp,LOCATION_MZONE,0,1,c,e,tp,c:GetLevel()) end
-  Duel.Hint(HINT_SELECTMSG,tp,HINTMSG_REMOVE)
-  local g=Duel.SelectMatchingCard(tp,c7112.cfilter,tp,LOCATION_MZONE,0,1,1,c,e,tp,c:GetLevel())
-  e:SetLabel(c:GetLevel()+g:GetFirst():GetLevel())
-  g:AddCard(c)
-  Duel.Remove(g,POS_FACEUP,REASON_COST)
+	local c=e:GetHandler()
+	local mg=Duel.GetMatchingGroup(c7112.cfilter,tp,LOCATION_MZONE,0,c)
+	if chk==0 then return c:IsAbleToRemoveAsCost() and Duel.IsExistingMatchingCard(c7112.sptgfil,tp,LOCATION_GRAVE,0,1,nil,e,tp,c:GetLevel(),mg) end
+	Duel.Hint(HINT_SELECTMSG,tp,HINTMSG_SPSUMMON)
+	local g=Duel.SelectMatchingCard(tp,c7112.sptgfil,tp,LOCATION_GRAVE,0,1,1,nil,e,tp,c:GetLevel(),mg)
+	local sc=g:GetFirst()
+	e:SetLabelObject(sc)
+	
 end
-function c7112.spfil(c,e,tp,lv)
-  return c:IsSetCard(0x33) and c:IsType(TYPE_SYNCHRO) and c:GetLevel()==lv and c:IsCanBeSpecialSummoned(e,0,tp,false,false)
+function c7112.sptgfil(c,e,tp,lv,mg)
+	return c:IsSetCard(0x33) and c:IsType(TYPE_SYNCHRO) and c:IsCanBeSpecialSummoned(e,0,tp,false,false) and mg:CheckWithSumEqual(Card.GetOriginalLevel,c:GetLevel()-lv,1,63,c) and c:IsCanBeEffectTarget(e)
 end
 function c7112.sptg(e,tp,eg,ep,ev,re,r,rp,chk,chkc)
-  local lv=e:GetLabel()
-  if chkc then return chkc:IsLocation(LOCATION_GRAVE) and chkc:IsControler(tp) and c7112.spfil(chkc,e,tp,lv) end
-  if chk==0 then return Duel.GetLocationCount(tp,LOCATION_MZONE)>0 and Duel.IsExistingTarget(c7112.spfil,tp,LOCATION_GRAVE,0,1,nil,e,tp,lv) end
-  Duel.Hint(HINT_SELECTMSG,tp,HINTMSG_SPSUMMON)
-  local g=Duel.SelectTarget(tp,c7112.spfil,tp,LOCATION_GRAVE,0,1,1,nil,e,tp,lv)
-  Duel.SetOperationInfo(0,CATEGORY_SPECIAL_SUMMON,g,1,0,0)
+	if chkc then return false end
+	if chk==0 then return Duel.GetLocationCount(tp,LOCATION_MZONE)>0 end
+	local sc=e:GetLabelObject()
+	Duel.SetTargetCard(sc)
+	Duel.SetOperationInfo(0,CATEGORY_SPECIAL_SUMMON,sc,1,0,0)
 end
 function c7112.spop(e,tp,eg,ep,ev,re,r,rp)
   local tc=Duel.GetFirstTarget()
