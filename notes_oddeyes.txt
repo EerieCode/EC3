@@ -1,7 +1,7 @@
 Base: 214445XXX
 
 Odd-Eyes Whelp
-Code:
+Code: 214445001
 Type: Dragon/Pendulum/Effect
 Level: 4
 Scale: 2
@@ -11,7 +11,7 @@ Pendulum Effect: ???
 Monster Effect: If you control no monsters, you can Special Summon this card (from your hand). You can Special Summon "Odd-Eyes Whelp" only once per turn this way. If this card is Normal Summoned or Special Summoned from your hand: You can add 1 "Odd-Eyes" monster from your Deck to your hand. You can only use this effect of "Odd-Eyes Whelp" once per turn.
 
 Dragon Knight with Different Eyes
-Code:
+Code: 214445003
 Type: Dragon/Pendulum/Tuner/Effect
 Level: 4
 Scale: 5
@@ -26,7 +26,7 @@ Spell/Normal
 Target 2 Pendulum Monsters you control, 1 of them being a Tuner and at least 1 of them being an "Odd-Eyes" monster: Special Summon 1 Fusion monster and 1 Synchro monster from your Extra Deck, using only those 2 monsters as Materials (these summons are treated respectively as a Fusion Summon and a Synchro Summon). Then, Special Summon 1 Xyz monster summonable with the targeted monsters treated as having a Level equal to the sum of their Levels from your Extra Deck, and if you do, attach this card to that monster as an Xyz Material (this Special Summon is treated as a Xyz Summon). You cannot Special Summon monsters until the end of your 3rd turn after activating this card. You can only activate 1 "Odd-Eyes Catastrophe" per turn.
 
 Harmony Magician
-Code:
+Code: 214445020
 Type: Spellcaster/Pendulum/Tuner/Effect
 Level: 3
 Scale: 2
@@ -36,7 +36,7 @@ Pendulum Effect: Once per turn, you can target 1 Synchro monster you control; It
 Monster Effect: Cannot be used as a Synchro Material Monster, except for the Synchro Summon of a Spellcaster-type monster. You can roll a six-sided die and have this card's Level become the result until the end of the turn. You can only use this effect of "Harmony Magician" once per turn.
 
 Discord Magician
-Code:
+Code: 214445021
 Type: Spellcaster/Pendulum/Effect
 Level: 6
 Scale: 8
@@ -49,7 +49,7 @@ Monster Effect: During either player's turn: You can roll a six-sided die and ap
 You can only use this effect of "Discord Magician" once per turn.
 
 Odd-Eyes Wing Dragon
-Code:
+Code: 214445045
 Type: Dragon/Synchro/Pendulum/Effect
 Level: 7
 Scale: 4
