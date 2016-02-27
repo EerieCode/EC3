@@ -14,7 +14,32 @@ Spell/Normal
 Target 2 Pendulum Monsters you control, 1 of them being a Tuner and at least 1 of them being an "Odd-Eyes" monster: Special Summon 1 Fusion monster and 1 Synchro monster from your Extra Deck, using only those 2 monsters as Materials (these summons are treated respectively as a Fusion Summon and a Synchro Summon). Then, Special Summon 1 Xyz monster summonable with the targeted monsters treated as having a Level equal to the sum of their Levels from your Extra Deck, and if you do, attach this card to that monster as an Xyz Material (this Special Summon is treated as a Xyz Summon). You cannot Special Summon monsters until the end of your 3rd turn after activating this card. You can only activate 1 "Odd-Eyes Catastrophe" per turn.
 
 Harmony Magician
+Code:
+Type: Spellcaster/Pendulum/Effect
+Level: ?
+Scale: 2
+ATK: ?
+DEF: ?
+Pendulum Effect: Once per turn, you can target 1 Synchro monster you control; Its Level becomes 1, also it is treated as a Tuner monster until the end of the turn.
+Monster Effect: ???
+
 Discord Magician
+Code:
+Type: Spellcaster/Pendulum/Effect
+Level: ?
+Scale: 8
+ATK: ?
+DEF: ?
+Pendulum Effect: You Cannot Pendulum Summon Level 5 or above monsters, except Dragon-type monsters. This effect cannot be negated. Once per turn, you can target 1 Synchro monster and 1 non-Synchro monster you control; reduce the Level of the latter monster by 1, and if you do, those targets' Levels are switched until the end of the turn.
+Monster Effect: ???
+
 Odd-Eyes Wing Dragon
-
-
+Code:
+Type: Dragon/Synchro/Pendulum/Effect
+Level: 7
+Scale: 4
+ATK: 3000
+DEF: 2500
+Pendulum Effect: Once per turn, if you have no cards in your other Pendulum Zone: You can place 1 Pendulum Monster from your Deck in your Pendulum Zone.
+Monster Effect: 1 Dragon-Type Synchro Tuner Monster + 1 or more non-Tuner Dragon-type monsters
+If you can Pendulum Summon Level 7, you can Pendulum Summon this face-up card in your Extra Deck. After this card is Synchro Summoned, negate the effect of all other Level 5 or above monsters on the field, and if you do, for each card affected by this effect, this card gains 200 ATK times the Level on the field of the Tuner monster used as a Synchro Material for this card. These changes last until the end of the turn. If this card in the Monster Zone is destroyed by battle or card effect: You can destroy as many cards in your Pendulum Zones as possible (min. 1), and if you do, place this card in your Pendulum Zone.
