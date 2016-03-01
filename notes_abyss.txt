@@ -1,0 +1,66 @@
+Abyss Actor - Superstar
+LV7 / S3
+2500/1800
+P: Once per turn: You can send 1 "Abyss Actor" Pendulum Monster you control to your Extra Deck face-up, then target 1 "Abyss Script" Spell Card in your Graveyard; add it to your hand.
+M: You can add 1 "Abyss Script" Spell Card from your Deck to your hand, but it is sent to the Graveyard during the End Phase of this turn. You can only use this effect of "Abyss Actor - Superstar" once per turn.
+
+Abyss Actor - Best Boy
+LV3 / S5
+1600/1100
+
+Abyss Actor - Body Double
+LV2 / S7
+?/?
+P: Once per turn: You can send 1 "Abyss Actor" Pendulum Monster you control to your Extra Deck face-up, then target 1 monster you control; its ATK and DEF become equal to the sent monster's ATK and DEF, and your opponent takes no battle damage from attacks involving that card. These changes last until the end of the turn.
+M: You can only control 1 "Abyss Actor - Body Double". When this card is Normal or Special Summoned: You can target 1 "Abyss Actor" monster you control or in your Graveyard; this card's ATK and DEF become equal to that monster's ATK and DEF.
+
+Abyss Actor - Brave Stuntie
+LV3 / S5
+600/1900
+P: If an "Abyss Actor" monster(s) you control would be destroyed by battle or card effect, you can destroy this card instead.
+
+Abyss Actor - Evil Heel
+LV8 / S1
+3000/2000
+
+Abyss Actor - Funky Comedian
+LV1 / S8
+300/200
+
+Abyss Actor - Sassy Rookie
+LV4 / S2
+1700/1000
+
+Abyss Actor - Talent Scout
+LV4 / S4
+1800/800
+
+Abyss Actor - Valiant Babyface
+LV5 / S6
+2100/1400
+
+Abyss Script - Cosmic Opera (pierce)
+Abyss Script - Crouching Jaguar (ATK)
+Abyss Script - Fantasy Magic (bounce)
+Abyss Script - Fright Night (banish)
+Abyss Script - Lovely Evening (control)
+Abyss Script - Spy Mission (discard)
+Abyss Script - Stunts of Smirks (recover)
+Abyss Script - The Devilfather (act limit)
+Abyss Script - Wild West Shooting (multiattack)
+
+Abyss Stage - Dojo of the Greatest Masters (ATK,5)
+Abyss Stage - Haunted Castle in the Sea of Trees (Damage,3)
+Abyss Stage - Treasure Ship of the Seven Lucky Gods (Draw,2)
+
+Last Minute Rewrite
+Normal Trap
+If you control an "Abyss Actor" monster: You can send 1 "Abyss Script" Spell card from your Deck to your Graveyard; this card's effect becomes the sent card's effect. You can only activate 1 "Last Minute Rewrite" per turn.
+
+Overacting
+Quick-play Spell
+Target 1 "Abyss Actor" monster you control: It gains ATK equal to its DEF until the end of this turn. During the End Phase, send that monster to the Graveyard.
+
+Scene Change
+Quick-play Spell
+Activate only if you control 1 "Abyss Stage" Continuous Spell Card: Send it to the Graveyard, then you can activate 1 "Abyss Stage" Continuous Spell Card with a different name from your hand or Deck, and if you do, each player can attach monsters in their Graveyard to it, but no more than the number of cards owned by them attached to the sent card - 1. You can only activate 1 "Scene Change" per turn.
