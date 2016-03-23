@@ -11,8 +11,11 @@ function c7179.initial_effect(c)
   c:RegisterEffect(e1)
 end
 
+function c7179.filter(c)
+	return bit.band(c:GetSummonType(),SUMMON_TYPE_PENDULUM)==SUMMON_TYPE_PENDULUM
+end
 function c7179.condition(e,tp,eg,ep,ev,re,r,rp)
-  return Duel.GetCurrentChain()==0
+  return Duel.GetCurrentChain()==0 and eg:IsExists(c7179.filter,1,nil)
 end
 function c7179.target(e,tp,eg,ep,ev,re,r,rp,chk)
   if chk==0 then return true end
