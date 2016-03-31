@@ -7,6 +7,7 @@ function c7160.initial_effect(c)
   e1:SetCode(EVENT_FREE_CHAIN)
   e1:SetTarget(c7160.tg)
   e1:SetOperation(c7160.op)
+  c:RegisterEffect(e1)
 end
 c7160.dark_magician_list=true
 
