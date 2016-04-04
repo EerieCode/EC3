@@ -1,0 +1,2 @@
+--Scripted by Eerie Code
+--Forbidden Dark Contract with the Swamp King
