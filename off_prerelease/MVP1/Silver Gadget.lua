@@ -2,7 +2,7 @@
 --Silver Gadget
 --Scripted by Eerie Code
 function c7217.initial_effect(c)
-  --Special Summon Machine
+  --Special Summon LV 4 Machine
   local e1=Effect.CreateEffect(c)
   e1:SetDescription(aux.Stringid(7217,0))
   e1:SetCategory(CATEGORY_SPECIAL_SUMMON)
