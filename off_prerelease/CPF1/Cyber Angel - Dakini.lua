@@ -56,7 +56,7 @@ function c7264.thcon(e,tp,eg,ep,ev,re,r,rp)
 	return Duel.GetTurnPlayer()==tp
 end
 function c7264.thfil(c)
-  return c:IsAbleToHand() and (c:IsCode(7265) or bit.band(c:GetType(),0x81)==81)
+  return c:IsAbleToHand() and (c:IsCode(7265) or bit.band(c:GetType(),0x81)==0x81)
 end
 function c7264.thtg(e,tp,eg,ep,ev,re,r,rp,chk,chkc)
   if chkc then return chkc:IsLocation(LOCATION_GRAVE) and chkc:IsControler(tp) and c7264.thfil(chkc) end
