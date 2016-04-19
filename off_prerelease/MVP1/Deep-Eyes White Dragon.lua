@@ -25,6 +25,15 @@ function c7205.initial_effect(c)
 	local e3=e2:Clone()
 	e3:SetCode(EVENT_SPSUMMON_SUCCESS)
 	c:RegisterEffect(e3)
+	--destroyed
+	local e4=Effect.CreateEffect(c)
+	e4:SetCategory(CATEGORY_DESTROY)
+	e4:SetType(EFFECT_TYPE_SINGLE+EFFECT_TYPE_TRIGGER_F)
+	e4:SetCode(EVENT_LEAVE_FIELD)
+	e4:SetCondition(c7205.descon)
+	e4:SetTarget(c7205.destg)
+	e4:SetOperation(c7205.desop)
+	c:RegisterEffect(e4)
 end
 
 function c7205.cfilter(c,tp)
@@ -69,5 +78,20 @@ function c7205.atkop(e,tp,eg,ep,ev,re,r,rp)
 		e1:SetValue(tc:GetAttack())
 		e1:SetReset(RESET_EVENT+0x1fe0000)
 		c:RegisterEffect(e1)
+	end
+end
+
+function c7205.descon(e,tp,eg,ep,ev,re,r,rp)
+	return bit.band(e:GetHandler():GetReason(),0x41)==0x41
+end
+function c7205.destg(e,tp,eg,ep,ev,re,r,rp,chk)
+	local mc=Duel.GetMatchingGroup(Card.IsDestructable,tp,0,LOCATION_MZONE,nil)
+	if chk==0 then return mc:GetCount()>0 end
+	Duel.SetOperationInfo(0,CATEGORY_DESTROY,mc,mc:GetCount(),0,0)
+end
+function c7205.desop(e,tp,eg,ep,ev,re,r,rp)
+	local mg=Duel.GetMatchingGroup(Card.IsDestructable,tp,0,LOCATION_MZONE,nil)
+	if mg:GetCount()>0 then
+		Duel.Destroy(mg,REASON_EFFECT)
 	end
 end
