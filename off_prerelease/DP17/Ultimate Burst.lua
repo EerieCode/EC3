@@ -24,4 +24,31 @@ function c7077.tg(e,tp,eg,ep,ev,re,r,rp,chk,chkc)
   Duel.Hint(HINT_SELECTMSG,tp,HINTMSG_FACEUP)
   Duel.SelectTarget(tp,c7077.fil,tp,LOCATION_MZONE,0,1,1,nil)
 end
+function c7077.op(e,tp,eg,ep,ev,re,r,rp)
+	local c=e:GetHandler()
+	local tc=Duel.GetFirstTarget()
+	if tc:IsRelateToEffect(e) then
+		local e1=Effect.CreateEffect(c)
+		e1:SetType(EFFECT_TYPE_SINGLE)
+		e1:SetCode(EFFECT_EXTRA_ATTACK)
+		e1:SetValue(2)
+		e1:SetReset(RESET_EVENT+0x1fe0000+RESET_PHASE+PHASE_END)
+		tc:RegisterEffect(e1)
+		local e2=Effect.CreateEffect(c)
+		e2:SetType(EFFECT_TYPE_FIELD)
+		e2:SetCode(EFFECT_CANNOT_ACTIVATE)
+		e2:SetRange(LOCATION_MZONE)
+		e2:SetTargetRange(0,1)
+		e2:SetCondition(c7077.actcon)
+		e2:SetValue(c7077.aclimit)
+		e2:SetReset(RESET_EVENT+0x1fe0000+RESET_PHASE+PHASE_END)
+		tc:RegisterEffect(e2)
+	end
+end
 
+function c7077.actcon(e)
+	return Duel.GetAttacker()==e:GetHandler()
+end
+function c7077.aclimit(e,re,tp)
+	return not re:GetHandler():IsImmuneToEffect(e)
+end
