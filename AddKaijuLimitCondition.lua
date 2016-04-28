@@ -19,13 +19,24 @@ function Auxiliary.AddKaijuLimitCondition(c)
 	local e4=e2:Clone()
 	e4:SetCode(EFFECT_CANNOT_SPECIAL_SUMMON)
 	c:RegisterEffect(e4)
+	local e5=Effect.CreateEffect(c)
+	e5:SetType(EFFECT_TYPE_SINGLE)
+	e5:SetCode(EFFECT_CANNOT_FLIP_SUMMON)
+	e5:SetCondition(Auxiliary.KaijuSummonLimit2())
+	c:RegisterEffect(e5)
+	local e6=e5:Clone()
+	e6:SetCode(EFFECT_CANNOT_SPECIAL_SUMMON)
+	c:RegisterEffect(e6)
+	local e7=e5:Clone()
+	e7:SetCode(EFFECT_CANNOT_SUMMON)
+	c:RegisterEffect(e7)
 	local g=Group.CreateGroup()
 	g:KeepAlive()
 	e1:SetLabelObject(g)
 end
 function Auxiliary.KaijuAdjustFilter(c,g,pg)
 	if pg:IsContains(c) then return false end
-	return g:IsExists(Card.IsSetCode,1,c,0xd3) or pg:IsExists(Card.IsSetCode,1,c,0xd3)
+	return g:IsExists(Card.IsSetCard,1,c,0xd3) or pg:IsExists(Card.IsSetCard,1,c,0xd3)
 end
 function Auxiliary.KaijuAdjustOperation()
 	return function(e,tp,eg,ep,ev,re,r,rp)
@@ -59,5 +70,10 @@ end
 function Auxiliary.KaijuSummonLimit()
 	return function(e,c,sump,sumtype,sumpos,targetp)
 		return c:IsSetCard(0xd3) and (targetp==c:GetControler() or Duel.IsExistingMatchingCard(Auxiliary.KaijuSummonFilter,targetp,LOCATION_MZONE,0,1,nil))
+	end
+end
+function Auxiliary.KaijuSummonLimit2()
+	return function(e)
+		return Duel.IsExistingMatchingCard(Auxiliary.KaijuSummonFilter,e:GetHandlerPlayer(),LOCATION_MZONE,0,1,nil)
 	end
 end
