@@ -53,9 +53,36 @@ function c7354.spop(e,tp,eg,ep,ev,re,r,rp)
 		if mg:GetCount()~=0 then
 			Duel.Overlay(sc,mg)
 		end
-		sc:SetMaterial(Group.FromCards(tc,c))
-		Duel.Overlay(sc,Group.FromCards(tc,c))
+		sc:SetMaterial(Group.FromCards(tc))
+		Duel.Overlay(sc,Group.FromCards(tc))
 		Duel.SpecialSummon(sc,SUMMON_TYPE_XYZ,tp,tp,false,false,POS_FACEUP)
+		Duel.Overlay(sc,Group.FromCards(c))
 		sc:CompleteProcedure()
+	end
+end
+
+function c7354.xyzcost(e,tp,eg,ep,ev,re,r,rp,chk)
+	if chk==0 then return e:GetHandler():IsAbelToRemoveAsCost() end
+	Duel.Remove(e:GetHandler(),POS_FACEUP,REASON_COST)
+end
+function c7354.xyzfil(c)
+	return c:IsFaceup() and c:IsType(TYPE_XYZ) and c:IsAttribute(ATTRIBUTE_DARK)
+end
+function c7354.matfil(c,e)
+	return c:IsType(TYPE_MONSTER) and c:IsSetCard(0x10db) and not c:IsImmuneToEffect(e)
+end
+function c7354.xyztg(e,tp,eg,ep,ev,re,r,rp,chk,chkc)
+	if chkc then return chkc:IsLocation(LOCATION_MZONE) and chkc:IsControler(tp) and c7354.xyzfil(chkc) end
+	if chk==0 then return Duel.IsExistingTarget(c7354.xyzfil,tp,LOCATION_MZONE,0,1,nil) and Duel.IsExistingMatchingCard(c7354.matfil,tp,LOCATION_HAND,0,1,nil,e) end
+	Duel.Hint(HINT_SELECTMSG,tp,HINTMSG_FACEUP)
+	Duel.SelectTarget(tp,c7354.xyzfil,tp,LOCATION_MZONE,0,1,1,nil)
+end
+function c7354.xyzop(e,tp,eg,ep,ev,re,r,rp)
+	local tc=Duel.GetFirstTarget()
+	if tc:IsFacedown() or not tc:IsRelateToEffect(e) or tc:IsImmuneToEffect(e) then return end
+	Duel.Hint(HINT_SELECTMSG,tp,HINTMSG_XMATERIAL)
+	local g=Duel.SelectMatchingCard(tp,c7354.matfil,tp,LOCATION_HAND,0,1,1,nil,e)
+	if g:GetCount()>0 then
+		Duel.Overlay(tc,g)
 	end
 end
