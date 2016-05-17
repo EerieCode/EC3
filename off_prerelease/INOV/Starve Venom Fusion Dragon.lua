@@ -26,6 +26,17 @@ function c7338.initial_effect(c)
   e2:SetTarget(c7338.nmtg)
   e2:SetOperation(c7338.nmop)
   c:RegisterEffect(e2)
+  --
+  local e3=Effect.CreateEffect(c)
+  e3:SetDescription(aux.Stringid(7338,2))
+  e3:SetCategory(CATEGORY_DESTROY)
+  e3:SetType(EFFECT_TYPE_SINGLE+EFFECT_TYPE_TRIGGER_O)
+  e3:SetCode(EVENT_DESTROYED)
+  e3:SetProperty(EFFECT_FLAG_DELAY+EFFECT_FLAG_DAMAGE_STEP)
+  e3:SetCondition(c7338.descon)
+  e3:SetTarget(c7338.destg)
+  e3:SetOperation(c7338.desop)
+  c:RegisterEffect(e3)
 end
 
 function c7338.mat_filter(c)
@@ -79,5 +90,24 @@ function c7338.nmop(e,tp,eg,ep,ev,re,r,rp)
     e1:SetValue(code)
     c:RegisterEffect(e1)
     c:CopyEffect(code,RESET_EVENT+0x1fe0000+RESET_PHASE+PHASE_END,1)
+  end
+end
+
+function c7338.descon(e,tp,eg,ep,ev,re,r,rp)
+  local c=e:GetHandler()
+  return c:IsPreviousLocation(LOCATION_MZONE) and aux.sumfus(c)
+end
+function c7338.desfil(c)
+  return c:IsDestructable() and aux.sumsp(c)
+end
+function c7338.destg(e,tp,eg,ep,ev,re,r,rp,chk)
+  local g=Duel.GetMatchingGroup(c7338.desfil,tp,0,LOCATION_MZONE,nil)
+  if chk==0 then return g:GetCount()>0 end
+  Duel.SetOperationInfo(0,CATEGORY_DESTROY,g,g:GetCount(),0,0)
+end
+function c7338.desop(e,tp,eg,ep,ev,re,r,rp)
+  local g=Duel.GetMatchingGroup(c7338.desfil,tp,0,LOCATION_MZONE,nil)
+  if g:GetCount()>0 then
+    Duel.Destroy(g,REASON_EFFECT)
   end
 end
