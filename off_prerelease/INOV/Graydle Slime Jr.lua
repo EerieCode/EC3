@@ -61,7 +61,7 @@ function c7330.spop1(e,tp,eg,ep,ev,re,r,rp)
 	Duel.RegisterEffect(e1,tp)
 end
 function c7330.splimit(e,c,sump,sumtype,sumpos,targetp,se)
-    return not c:IsRace(RACE_AQUA)
+    return not c:IsAttribute(ATTRIBUTE_WATER)
 end
 
 function c7330.spcon(e,tp,eg,ep,ev,re,r,rp)
