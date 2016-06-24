@@ -15,7 +15,14 @@ function c7317.initial_effect(c)
 	c:RegisterEffect(e1)
 	--
 	local e2=Effect.CreateEffect(c)
-	
+	e2:SetDescription(aux.Stringid(7317,1))
+	e2:SetCategory(CATEGORY_SPECIAL_SUMMON)
+	e2:SetType(EFFECT_TYPE_IGNITION)
+	e2:SetRange(LOCATION_GRAVE)
+	e2:SetCountLimit(1,7317)
+	e2:SetCost(c7317.spcost2)
+	e2:SetTarget(c7317.sptg2)
+	e2:SetOperation(c7317.spop2)
 	c:RegisterEffect(e2)
 end
 
@@ -62,4 +69,24 @@ function c7317.spop(e,tp,eg,ep,ev,re,r,rp)
 end
 function c7317.splimit(e,c,tp,sumtp,sumpos)
 	return c:IsLocation(LOCATION_EXTRA) and not c:IsType(TYPE_SYNCHRO) and not c:IsRace(RACE_MACHINE)
+end
+
+function c7317.spcost2(e,tp,eg,ep,ev,re,r,rp,chk)
+	if chk==0 then return e:GetHandler():IsAbleToRemoveAsCost() end
+	Duel.Remove(e:GetHandler(),POS_FACEUP,REASON_COST)
+end
+function c7317.spfil2(c,e,tp)
+	return c:IsSetCard(0xeb) and c:IsCanBeSpecialSummoned(e,0,tp,false,false)
+end
+function c7317.sptg2(e,tp,eg,ep,ev,re,r,rp,chk)
+	if chk==0 then return Duel.GetLocationCount(tp,LOCATION_MZONE)>0 and Duel.IsExistingMatchingCard(c7317.spfil2,tp,LOCATION_HAND,0,1,nil,e,tp) end
+	Duel.SetOperationInfo(0,CATEGORY_SPECIAL_SUMMON,nil,1,0,0)
+end
+function c7317.spop2(e,tp,eg,ep,ev,re,r,rp)
+	if Duel.GetLocationCount(tp,LOCATION_MZONE)<1 then return end
+	Duel.Hint(HINT_SELECTMSG,tp,HINTMSG_SPSUMMON)
+	local g=Duel.SelectMatchingCard(tp,c7317.spfil2,tp,LOCATION_HAND,0,1,1,nil,e,tp)
+	if g:GetCount()>0 then
+		Duel.SpecialSummon(g,0,tp,tp,false,false,POS_FACEUP)
+	end
 end
