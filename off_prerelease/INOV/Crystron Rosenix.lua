@@ -75,3 +75,24 @@ function c7320.tkcost(e,tp,eg,ep,ev,re,r,rp,chk)
 	if chk==0 then return e:GetHandler():IsAbleToRemoveAsCost() end
 	Duel.Remove(e:GetHandler(),POS_FACEUP,REASON_COST)
 end
+function c7320.tktg(e,tp,eg,ep,ev,re,r,rp,chk)
+	if chk==0 then return Duel.GetLocationCount(tp,LOCATION_MZONE)>0
+		and Duel.IsPlayerCanSpecialSummonMonster(tp,7320+1,0xeb,0x4011,0,0,1,RACE_MACHINE,ATTRIBUTE_WATER) end
+	Duel.SetOperationInfo(0,CATEGORY_TOKEN,nil,1,0,0)
+	Duel.SetOperationInfo(0,CATEGORY_SPECIAL_SUMMON,nil,1,0,0)
+end
+function c7320.tkop(e,tp,eg,ep,ev,re,r,rp)
+	if Duel.GetLocationCount(tp,LOCATION_MZONE)<=0
+		or not Duel.IsPlayerCanSpecialSummonMonster(tp,7320+1,0xeb,0x4011,0,0,1,RACE_MACHINE,ATTRIBUTE_WATER) then return end
+	local token=Duel.CreateToken(tp,7320+1)
+	Duel.SpecialSummon(token,0,tp,tp,false,false,POS_FACEUP)
+	local e1=Effect.CreateEffect(e:GetHandler())
+	e1:SetType(EFFECT_TYPE_SINGLE)
+	e1:SetCode(EFFECT_UNRELEASABLE_SUM)
+	e1:SetReset(RESET_EVENT+0x1fe0000)
+	e1:SetValue(1)
+	token:RegisterEffect(e1,true)
+	local e5=e1:Clone()
+	e5:SetCode(EFFECT_UNRELEASABLE_NONSUM)
+	token:RegisterEffect(e5,true)
+end
