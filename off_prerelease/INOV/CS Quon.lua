@@ -3,18 +3,18 @@
 --Scripted by Eerie Code
 function c7315.initial_effect(c)
         --
-	local e3=Effect.CreateEffect(c)
-	e3:SetDescription(aux.Stringid(7315,0))
-	e3:SetCategory(CATEGORY_SPECIAL_SUMMON)
-	e3:SetType(EFFECT_TYPE_QUICK_O)
-	e3:SetCode(EVENT_FREE_CHAIN)
-	e3:SetHintTiming(0,0x1c0+TIMING_MAIN_END)
-	e3:SetRange(LOCATION_MZONE)
-	e3:SetCountLimit(1,7315)
-	e3:SetCondition(c7315.spcon)
-	e3:SetTarget(c7315.sptg)
-	e3:SetOperation(c7315.spop)
-	c:RegisterEffect(e3)
+	local e1=Effect.CreateEffect(c)
+	e1:SetDescription(aux.Stringid(7315,0))
+	e1:SetCategory(CATEGORY_SPECIAL_SUMMON)
+	e1:SetType(EFFECT_TYPE_QUICK_O)
+	e1:SetCode(EVENT_FREE_CHAIN)
+	e1:SetHintTiming(0,0x1c0+TIMING_MAIN_END)
+	e1:SetRange(LOCATION_MZONE)
+	e1:SetCountLimit(1,7315)
+	e1:SetCondition(c7315.spcon)
+	e1:SetTarget(c7315.sptg)
+	e1:SetOperation(c7315.spop)
+	c:RegisterEffect(e1)
 end
 
 function c7315.spcon(e,tp,eg,ep,ev,re,r,rp)
@@ -32,7 +32,7 @@ function c7315.spfil(c,e,tp,mc)
                 and Duel.IsExistingMatchingCard(c7315.synfil,tp,LOCATION_EXTRA,0,1,nil,e,tp,mg)
 end
 function c7315.synfil(c,mg)
-        return c:IsRAce(RACE_MACHINE) and c:IsSynchroSummonable(nil,mg)
+        return c:IsRace(RACE_MACHINE) and c:IsSynchroSummonable(nil,mg)
 end
 function c7315.sptg(e,tp,eg,ep,ev,re,r,rp,chk)
         if chk==0 then return Duel.IsPlayerCanSpecialSummonCount(tp,2) and Duel.GetLocationCount(tp,LOCATION_MZONE)>0 and Duel.IsExistingMatchingCard(c7315.spfil,tp,LOCATION_HAND,0,1,nil,e,tp,e:GetHandler()) end
