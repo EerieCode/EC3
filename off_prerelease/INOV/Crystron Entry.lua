@@ -1,7 +1,7 @@
 --クリストロン・エントリー
 --Crystron Entry
 --Scripted by Eerie Code
-function c7371.initial_effect(e)
+function c7371.initial_effect(c)
 	--
 	local e1=Effect.CreateEffect(c)
 	e1:SetType(EFFECT_TYPE_ACTIVATE)
