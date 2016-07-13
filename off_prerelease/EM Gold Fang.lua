@@ -31,10 +31,8 @@ function c6140.initial_effect(c)
 end
 
 function c6140.dmcon(e,tp,eg,ep,ev,re,r,rp)
-	local a=Duel.GetAttacker()
-	local d=a:GetBattleTarget()
-	if a:IsControler(1-tp) then a,d=d,a end
-	return a:IsSetCard(0x9f) and a:IsRelateToBattle() and a:IsStatus(STATUS_OPPO_BATTLE)
+	local rc=eg:GetFirst()
+	return rc:IsRelateToBattle() and rc:IsSetCard(0x9f) and rc:IsFaceup() and rc:IsControler(tp)
 end
 function c6140.dmtg(e,tp,eg,ep,ev,re,r,rp,chk)
 	if chk==0 then return true end
@@ -59,7 +57,9 @@ function c6140.atkop(e,tp,eg,ep,ev,re,r,rp)
 		e1:SetType(EFFECT_TYPE_SINGLE)
 		e1:SetCode(EFFECT_UPDATE_ATTACK)
 		e1:SetValue(200)
+		e1:SetProperty(EFFECT_FLAG_CANNOT_DISABLE)
 		e1:SetReset(RESET_EVENT+0x1fe0000+RESET_PHASE+PHASE_END)
 		tc:RegisterEffect(e1)
+		tc=g:GetNext()
 	end
 end
