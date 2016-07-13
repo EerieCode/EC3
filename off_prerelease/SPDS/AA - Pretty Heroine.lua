@@ -25,6 +25,15 @@ function c7421.initial_effect(c)
 	e2:SetTarget(c7421.atktg)
 	e2:SetOperation(c7421.atkop)
 	c:RegisterEffect(e2)
+	--
+	local e5=Effect.CreateEffect(c)
+	e5:SetDescription(aux.Stringid(7421,2))
+	e5:SetType(EFFECT_TYPE_SINGLE+EFFECT_TYPE_TRIGGER_O)
+	e5:SetCode(EVENT_DESTROYED)
+	e5:SetCondition(c7421.setcon)
+	e5:SetTarget(c7421.settg)
+	e5:SetOperation(c7421.setop)
+	c:RegisterEffect(e5)
 end
 
 function c7421.aafil(c)
@@ -102,5 +111,26 @@ function c7421.atkop(e,tp,eg,ep,ev,re,r,rp)
 		e1:SetValue(-ev)
 		e1:SetReset(RESET_EVENT+0x1fe0000)
 		tc:RegisterEffect(e1)
+	end
+end
+
+function c7421.setcon(e,tp,eg,ep,ev,re,r,rp)
+	local c=e:GetHandler()
+	return (rp~=tp and c:IsReason(REASON_EFFECT) and c:GetPreviousControler()==tp and c:IsPreviousLocation(LOCATION_MZONE)) or c:IsReason(REASON_BATTLE)
+end
+function c7421.setfil(c)
+	return c7421.asfil(c) and c:IsType(TYPE_SPELL) and c:IsSSetable(false)
+end
+function c7421.settg(e,tp,eg,ep,ev,re,r,rp,chk)
+	if chk==0 then return Duel.GetLocationCount(tp,LOCATION_SZONE)>0 and Duel.IsExistingMatchingCard(c7421.setfil,tp,LOCATION_DECK,0,1,nil) end
+end
+function c7421.setop(e,tp,eg,ep,ev,re,r,rp)
+	if Duel.GetLocationCount(tp,LOCATION_SZONE)<1 then return end
+	Duel.Hint(HINT_SELECTMSG,tp,HINTMSG_SET)
+	local g=Duel.SelectMatchingCard(tp,c7421.setfil,tp,LOCATION_DECK,0,1,1,nil)
+	local tc=g:GetFirst()
+	if tc then
+		Duel.SSet(tp,tc)
+		Duel.ConfirmCards(1-tp,tc)
 	end
 end
