@@ -1,0 +1,24 @@
+Code: 21XXXX000
+
+0	6666	Phantom Knights
+1	6444	Abyss Theater
+2	3456	Dimension Dragons
+3	4444	Frightfur
+4	5555	Speedroid
+5	3334	World's End
+6	3333	Predator Plant
+7	3335	Lunalight
+8	5558	Wind Witch
+9	6000	Red
+10	3336	Superheavy Samurai
+11	4445	Earthbound
+12	2000	Cipher
+13	3339	Destiny HERO
+14	3900	Number
+15	2222	NEXT
+16	4555	Lyrical Luscinia
+17	5444	Raidraptor
+18	6555	Ancient Gear
+19	2444	Cyber Angel
+20	6134	C/C
+21	2535	Super Quant
