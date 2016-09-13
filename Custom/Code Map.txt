@@ -21,4 +21,5 @@ Code: 21XXXX000
 18	6555	Ancient Gear
 19	2444	Cyber Angel
 20	6134	C/C
-21	2535	Super Quant
+21  6431    D/D
+22	2535	Super Quant
