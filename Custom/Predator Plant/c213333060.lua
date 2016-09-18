@@ -36,15 +36,15 @@ function c213333060.initial_effect(c)
 end
 
 function c213333060.atktg(e,c)
-	return not c:IsAttribute(ATTRIBUTE_DARK) or c:GetCounter(0x3b)>0
+	return not c:IsAttribute(ATTRIBUTE_DARK) or c:GetCounter(0x1041)>0
 end
 function c213333060.atkval(e,c)
-	return Duel.GetCounter(0,1,1,0x3b)*(-200)
+	return Duel.GetCounter(0,1,1,0x1041)*(-200)
 end
 
 function c213333060.thcost(e,tp,eg,ep,ev,re,r,rp,chk)
-	if chk==0 then return Duel.IsCanRemoveCounter(tp,1,1,0x3b,2,REASON_COST) end
-	Duel.RemoveCounter(tp,1,1,0x3b,2,REASON_COST)
+	if chk==0 then return Duel.IsCanRemoveCounter(tp,1,1,0x1041,2,REASON_COST) end
+	Duel.RemoveCounter(tp,1,1,0x1041,2,REASON_COST)
 end
 function c213333060.thfil(c)
 	return c:IsAttribute(ATTRIBUTE_DARK) and c:IsRace(RACE_PLANT) and c:IsAbleToHand()

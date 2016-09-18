@@ -1,6 +1,6 @@
 --ＬＬ－インディペンデント・ナイチンゲール
 --Lyrical Luscinia - Independent Nightingale
---Adapted and scripted by Eerie Code
+--Altered by Isaiahj95, scripted by Eerie Code
 function c214555045.initial_effect(c)
 	c:EnableReviveLimit()
 	aux.AddFusionProcFun2(c,c214555045.matfil1,c214555045.matfil2,true)
@@ -24,6 +24,7 @@ function c214555045.initial_effect(c)
 	e4:SetType(EFFECT_TYPE_IGNITION)
 	e4:SetRange(LOCATION_MZONE)
 	e4:SetProperty(EFFECT_FLAG_PLAYER_TARGET)
+	e4:SetCountLimit(1,214555045)
 	e4:SetTarget(c214555045.damtg)
 	e4:SetOperation(c214555045.damop)
 	c:RegisterEffect(e4)
@@ -38,14 +39,14 @@ function c214555045.initial_effect(c)
 end
 
 function c214555045.matfil1(c)
-	return c:IsFusionSetCard(0xeda) and c:IsType(TYPE_XYZ)
+	return c:IsAttribute(ATTRIBUTE_WIND) and c:IsType(TYPE_XYZ)
 end
 function c214555045.matfil2(c)
-	return c:IsFusionSetCard(0xeda) and not c:IsType(TYPE_XYZ)
+	return c:GetLevel()==1
 end
 
 function c214555045.checkfil(c,tp)
-	return c:IsSetCard(0xeda) and c:IsType(TYPE_XYZ) and c:GetOverlayCount()>0
+	return c:IsType(TYPE_XYZ) and c:GetOverlayCount()>0
 end
 function c214555045.checkop(e,tp,eg,ep,ev,re,r,rp)
 	if not eg then return  end

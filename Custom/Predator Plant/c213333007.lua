@@ -28,13 +28,14 @@ function c213333007.initial_effect(c)
 	e4:SetType(EFFECT_TYPE_SINGLE+EFFECT_TYPE_TRIGGER_O)
 	e4:SetCode(EVENT_BATTLE_DESTROYING)
 	e4:SetRange(LOCATION_MZONE)
+	e4:SetCountLimit(1,213333007)
 	e4:SetTarget(c213333007.thtg)
 	e4:SetOperation(c213333007.thop)
 	c:RegisterEffect(e4)
 end
 
 function c213333007.atktg(e,c)
-	return c:GetCounter(0x3b)>0
+	return c:GetCounter(0x1041)>0
 end
 
 function c213333007.thfil(c)

@@ -39,7 +39,7 @@ function c213333005.tkop(e,tp,eg,ep,ev,re,r,rp)
 	for i=1,2 do
 		local token=Duel.CreateToken(tp,213333005+1)
 		Duel.SpecialSummonStep(token,0,tp,1-tp,false,false,POS_FACEUP_ATTACK)
-		token:AddCounter(0x3b,1)
+		token:AddCounter(0x1041,1)
 	end
 	Duel.SpecialSummonComplete()
 	if not c213333005.global_flag then
@@ -54,7 +54,7 @@ function c213333005.tkop(e,tp,eg,ep,ev,re,r,rp)
 	end
 end
 function c213333005.lvtg(e,c)
-	return c:GetCounter(0x3b)>0 and c:IsLevelAbove(1)
+	return c:GetCounter(0x1041)>0 and c:IsLevelAbove(1)
 end
 
 function c213333005.atkcost(e,tp,eg,ep,ev,re,r,rp,chk)

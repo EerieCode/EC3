@@ -88,7 +88,7 @@ function c213333045.spop(e,tp,eg,ep,ev,re,r,rp,c)
 end
 
 function c213333045.atkcon(e,tp,eg,ep,ev,re,r,rp)
-	return e:GetHandler()bit.band(:GetSummonType(),SUMMON_TYPE_FUSION)==SUMMON_TYPE_FUSION
+	return e:GetHandler():IsSummonType(SUMMON_TYPE_FUSION)
 end
 function c213333045.atkfil(c)
 	return c:IsFaceup() and bit.band(c:GetSummonType(),SUMMON_TYPE_SPECIAL)==SUMMON_TYPE_SPECIAL

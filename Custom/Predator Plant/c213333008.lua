@@ -74,6 +74,6 @@ function c213333008.atkcon(e)
 	if not (ph==PHASE_DAMAGE or ph==PHASE_DAMAGE_CAL) then return false end
 	local a=Duel.GetAttacker()
 	local d=Duel.GetAttackTarget()
-	return (a==e:GetHandler() and d and d:IsFaceup() and d:GetCounter(0x3b)>0)
-		or (d==e:GetHandler() and a:GetCounter(0x3b)>0)
+	return (a==e:GetHandler() and d and d:IsFaceup() and d:GetCounter(0x1041)>0)
+		or (d==e:GetHandler() and a:GetCounter(0x1041)>0)
 end

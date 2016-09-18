@@ -32,7 +32,7 @@ function c213333037.initial_effect(c)
 end
 
 function c213333037.dirfil(c)
-	return c:IsFacedown() or c:GetCounter(0x3b)==0
+	return c:IsFacedown() or c:GetCounter(0x1041)==0
 end
 function c213333037.dircon(e)
 	return not Duel.IsExistingMatchingCard(c213333037.dirfil,e:GetHandlerPlayer(),0,LOCATION_MZONE,1,nil)

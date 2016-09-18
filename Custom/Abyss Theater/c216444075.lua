@@ -19,7 +19,7 @@ function c216444075.fil(c)
 end
 function c216444075.con(e,tp,eg,ep,ev,re,r,rp)
 	local rc=re:GetHandler()
-	return ep~=tp and rc:IsActiveType(TYPE_SPELL+TYPE_TRAP) and Duel.IsExistingMatchingCard(c216444075.cfil,tp,LOCATION_MZONE,0,1,nil) and Duel.IsExistingMatchingCard(c216444075.fil,tp,LOCATION_SZONE,0,1,nil)
+	return ep~=tp and re:IsActiveType(TYPE_SPELL+TYPE_TRAP) and Duel.IsExistingMatchingCard(c216444075.cfil,tp,LOCATION_MZONE,0,1,nil) and Duel.IsExistingMatchingCard(c216444075.fil,tp,LOCATION_SZONE,0,1,nil)
 end
 function c216444075.op(e,tp,eg,ep,ev,re,r,rp)
 	local g=Group.CreateGroup()

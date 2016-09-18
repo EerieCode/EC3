@@ -52,22 +52,22 @@ function c213333070.addop2(e,tp,eg,ep,ev,re,r,rp)
 	local c=eg:GetFirst()
 	while c~=nil do
 		if not c:IsCode(213333070) and c:IsPreviousLocation(LOCATION_ONFIELD) and c:IsReason(REASON_DESTROY) then
-			count=count+c:GetCounter(0x3b)
+			count=count+c:GetCounter(0x1041)
 		end
 		c=eg:GetNext()
 	end
 	if count>0 then
-		e:GetHandler():AddCounter(0x3b,count)
+		e:GetHandler():AddCounter(0x1041,count)
 	end
 end
 
 function c213333070.desreptg(e,tp,eg,ep,ev,re,r,rp,chk)
 	if chk==0 then return not e:GetHandler():IsReason(REASON_RULE)
-		and e:GetHandler():GetCounter(0x3b)>0 end
+		and e:GetHandler():GetCounter(0x1041)>0 end
 	return Duel.SelectYesNo(tp,aux.Stringid(39910367,1))
 end
 function c213333070.desrepop(e,tp,eg,ep,ev,re,r,rp)
-	e:GetHandler():RemoveCounter(ep,0x3b,1,REASON_EFFECT)
+	e:GetHandler():RemoveCounter(ep,0x1041,1,REASON_EFFECT)
 end
 
 function c213333070.ctfil(c)
@@ -75,7 +75,7 @@ function c213333070.ctfil(c)
 end
 function c213333070.cttg(e,tp,eg,ep,ev,re,r,rp,chk,chkc)
 	if chkc then return chkc:IsLocation(LOCATION_MZONE) and c213333070.ctfil(chkc) end
-	if chk==0 then return e:GetHandler():IsCanRemoveCounter(tp,0x3b,1,REASON_EFFECT) and Duel.IsExistingTarget(c213333070.ctfil,tp,LOCATION_MZONE,LOCATION_MZONE,1,e:GetHandler()) end
+	if chk==0 then return e:GetHandler():IsCanRemoveCounter(tp,0x1041,1,REASON_EFFECT) and Duel.IsExistingTarget(c213333070.ctfil,tp,LOCATION_MZONE,LOCATION_MZONE,1,e:GetHandler()) end
 	Duel.Hint(HINT_SELECTMSG,tp,aux.Stringid(34029630,2))
 	Duel.SelectTarget(tp,c213333070.ctfil,tp,LOCATION_MZONE,LOCATION_MZONE,1,1,e:GetHandler())
 end
@@ -83,9 +83,9 @@ function c213333070.ctop(e,tp,eg,ep,ev,re,r,rp)
 	local c=e:GetHandler()
 	if not c:IsRelateToEffect(e) then return end
 	local tc=Duel.GetFirstTarget()
-	if tc and tc:IsRelateToEffect(e) and c:IsCanRemoveCounter(tp,0x3b,1,REASON_EFFECT) and tc:IsCanAddCounter(0x3b,1) then
-		c:RemoveCounter(tp,0x3b,1,REASON_EFFECT)
-		tc:AddCounter(0x3b,1)
+	if tc and tc:IsRelateToEffect(e) and c:IsCanRemoveCounter(tp,0x1041,1,REASON_EFFECT) and tc:IsCanAddCounter(0x1041,1) then
+		c:RemoveCounter(tp,0x1041,1,REASON_EFFECT)
+		tc:AddCounter(0x1041,1)
 	end
 end
 

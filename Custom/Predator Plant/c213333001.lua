@@ -40,12 +40,12 @@ function c213333001.condition(e,tp,eg,ep,ev,re,r,rp)
 end
 function c213333001.target(e,tp,eg,ep,ev,re,r,rp,chk)
 	if chk==0 then return true end
-	Duel.SetOperationInfo(0,CATEGORY_COUNTER,nil,1,0x3b,1)
+	Duel.SetOperationInfo(0,CATEGORY_COUNTER,nil,1,0x1041,1)
 end
 function c213333001.operation(e,tp,eg,ep,ev,re,r,rp)
 	local a=Duel.GetAttacker()
 	if not a:IsRelateToBattle() then return end
-	a:AddCounter(0x3b,1)
+	a:AddCounter(0x1041,1)
 	if not c213333001.global_check then
 		c213333001.global_check=true
 		local e3=Effect.CreateEffect(e:GetHandler())
@@ -58,5 +58,5 @@ function c213333001.operation(e,tp,eg,ep,ev,re,r,rp)
 	end
 end
 function c213333001.lvtg(e,c)
-	return c:GetCounter(0x3b)>0 and c:IsLevelAbove(1)
+	return c:GetCounter(0x1041)>0 and c:IsLevelAbove(1)
 end

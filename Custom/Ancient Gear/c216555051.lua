@@ -1,5 +1,5 @@
 --古代の機械参頭猟犬
---Triple Ancient Gear Hunting Hound (custom)
+--Triple Ancient Gear Hunting Hound
 --Altered by Raku, scripted by Eerie Code
 function c216555051.initial_effect(c)
 	c:EnableReviveLimit()
@@ -101,6 +101,7 @@ function c216555051.fusop(e,tp,eg,ep,ev,re,r,rp,gc,chkf)
 		if not (gc:IsHasEffect(EFFECT_FUSION_SUBSTITUTE) or tc1:IsHasEffect(EFFECT_FUSION_SUBSTITUTE)) or Duel.SelectYesNo(tp,str) then
 			Duel.Hint(HINT_SELECTMSG,tp,HINTMSG_FMATERIAL)
 			local g2=g:FilterSelect(tp,c216555051.ffilter,1,1,nil,true)
+			g1:Merge(g2)
 		end
 		Duel.SetFusionMaterial(g1)
 		return

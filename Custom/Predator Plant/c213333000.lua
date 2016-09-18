@@ -28,14 +28,14 @@ end
 function c213333000.cttg(e,tp,eg,ep,ev,re,r,rp,chk)
 	local g=Duel.GetMatchingGroup(Card.IsFaceup,tp,0,LOCATION_MZONE,nil)
 	if chk==0 then return g:GetCount()>0 end
-	Duel.SetOperationInfo(0,CATEGORY_COUNTER,g,g:GetCount(),0x3b,1)
+	Duel.SetOperationInfo(0,CATEGORY_COUNTER,g,g:GetCount(),0x1041,1)
 end
 function c213333000.ctop(e,tp,eg,ep,ev,re,r,rp)
 	local c=e:GetHandler()
 	local g=Duel.GetMatchingGroup(Card.IsFaceup,tp,0,LOCATION_MZONE,nil)
 	local tc=g:GetFirst()
 	while tc do
-		tc:AddCounter(0x3b,1)
+		tc:AddCounter(0x1041,1)
 		tc=g:GetNext()
 	end
 	local e3=Effect.CreateEffect(c)
@@ -47,12 +47,12 @@ function c213333000.ctop(e,tp,eg,ep,ev,re,r,rp)
 	Duel.RegisterEffect(e3,0)
 end
 function c213333000.lvtg(e,c)
-	return c:GetCounter(0x3b)>0 and c:IsLevelAbove(1)
+	return c:GetCounter(0x1041)>0 and c:IsLevelAbove(1)
 end
 
 function c213333000.condition(e,tp,eg,ep,ev,re,r,rp)
 	local bt=e:GetHandler():GetBattleTarget()
-	return bt --and bt:GetCounter(0x3b)>0
+	return bt --and bt:GetCounter(0x1041)>0
 end
 function c213333000.cost(e,tp,eg,ep,ev,re,r,rp,chk)
 	local c=e:GetHandler()

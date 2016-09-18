@@ -24,7 +24,7 @@ function c213333050.initial_effect(c)
 end
 
 function c213333050.filter1(c,e,tp)
-	return c:IsCanBeFusionMaterial() and c:IsAbleToGrave() and not c:IsImmuneToEffect(e) and (c:IsControler(tp) or c:GetCounter(0x3b)>0)
+	return c:IsCanBeFusionMaterial() and c:IsAbleToGrave() and not c:IsImmuneToEffect(e) and (c:IsControler(tp) or c:GetCounter(0x1041)>0)
 end
 function c213333050.filter2(c,e,tp,m,f,chkf)
 	return c:IsType(TYPE_FUSION) and c:IsAttribute(ATTRIBUTE_DARK) and (not f or f(c)) and c:IsCanBeSpecialSummoned(e,SUMMON_TYPE_FUSION,tp,false,false) and c:CheckFusionMaterial(m,nil,chkf)

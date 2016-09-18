@@ -1,6 +1,6 @@
 --ＬＬ－アセンブリー・ナイチンゲール
 --Lyrical Luscinia - Assembly Nightingale
---Scripted by Eerie Code
+--Altered by Isaiahj95, scripted by Eerie Code
 function c214555055.initial_effect(c)
 	c:EnableReviveLimit()
 	aux.AddXyzProcedure(c,nil,1,2,nil,nil,5)
@@ -12,26 +12,19 @@ function c214555055.initial_effect(c)
 	e1:SetRange(LOCATION_MZONE)
 	e1:SetValue(c214555055.atkval)
 	c:RegisterEffect(e1)
-	--direct atk
+	--
 	local e2=Effect.CreateEffect(c)
-	e2:SetType(EFFECT_TYPE_SINGLE)
-	e2:SetCode(EFFECT_DIRECT_ATTACK)
-	e2:SetCondition(c214555055.dacon)
+	e2:SetType(EFFECT_TYPE_IGNITION)
+	e2:SetRange(LOCATION_MZONE)
+	e2:SetCountLimit(1)
+	e2:SetCondition(c214555055.con)
+	e2:SetOperation(c214555055.op)
 	c:RegisterEffect(e2)
-	--multi attack
-	local e3=Effect.CreateEffect(c)
-	e3:SetType(EFFECT_TYPE_SINGLE)
-	e3:SetCode(EFFECT_EXTRA_ATTACK)
-	e3:SetValue(c214555055.raval)
-	c:RegisterEffect(e3)
 	--no damage
 	local e4=Effect.CreateEffect(c)
-	e4:SetType(EFFECT_TYPE_QUICK_O)
-	e4:SetCode(EVENT_PRE_DAMAGE_CALCULATE)
-	e4:SetRange(LOCATION_MZONE)
-	e4:SetCondition(c214555055.bcon)
-	e4:SetCost(c214555055.bcost)
-	e4:SetOperation(c214555055.bop)
+	e4:SetType(EFFECT_TYPE_SINGLE)
+	e4:SetCode(EFFECT_AVOID_BATTLE_DAMAGE)
+	e4:SetValue(1)
 	c:RegisterEffect(e4)
 	--destroy replace
 	local e7=Effect.CreateEffect(c)
@@ -44,7 +37,7 @@ function c214555055.initial_effect(c)
 end
 
 function c214555055.atkval(e,c)
-	return c:GetOverlayCount()*100
+	return c:GetOverlayCount()*300
 end
 
 function c214555055.dacon(e)
@@ -90,4 +83,25 @@ function c214555055.reptg(e,tp,eg,ep,ev,re,r,rp,chk)
 		c:RemoveOverlayCard(tp,1,1,REASON_EFFECT)
 		return true
 	else return false end
+end
+
+function c214555055.con(e,tp,eg,ep,ev,re,r,rp)
+	return Duel.IsAbleToEnterBP() and e:GetHandler():GetOverlayCount()>0 and not e:GetHandler():IsHasEffect(EFFECT_DIRECT_ATTACK)
+end
+function c214555055.op(e,tp,eg,ep,ev,re,r,rp)
+	local c=e:GetHandler()
+	--direct atk
+	local e2=Effect.CreateEffect(c)
+	e2:SetType(EFFECT_TYPE_SINGLE)
+	e2:SetCode(EFFECT_DIRECT_ATTACK)
+	e2:SetCondition(c214555055.dacon)
+	e2:SetReset(RESET_EVENT+0x1fe0000+RESET_PHASE+PHASE_END)
+	c:RegisterEffect(e2)
+	--multi attack
+	local e3=Effect.CreateEffect(c)
+	e3:SetType(EFFECT_TYPE_SINGLE)
+	e3:SetCode(EFFECT_EXTRA_ATTACK)
+	e3:SetValue(c214555055.raval)
+	e3:SetReset(RESET_EVENT+0x1fe0000+RESET_PHASE+PHASE_END)
+	c:RegisterEffect(e3)
 end
