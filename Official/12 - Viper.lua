@@ -1,0 +1,3 @@
+--十二獣ヴァイパー
+--Viper of the Twelve Beasts
+--Scripted by Eerie Code
