@@ -21,7 +21,7 @@ function c7514.initial_effect(c)
 		Duel.RegisterEffect(ge1,0)
 		local ge2=Effect.CreateEffect(c)
 		ge2:SetType(EFFECT_TYPE_FIELD+EFFECT_TYPE_CONTINUOUS)
-		ge2:SetCode(EVENT_CUSTOM+7514)
+		ge2:SetCode(0x40000)
 		ge2:SetOperation(c7514.xmatop)
 		Duel.RegisterEffect(ge2,0)
 	end
