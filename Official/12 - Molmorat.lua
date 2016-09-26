@@ -1,0 +1,3 @@
+--十二獣モルモラット
+--Molmorat of the Twelve Beasts
+--Scripted by Eerie Code
