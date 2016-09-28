@@ -42,7 +42,7 @@ function c7609.rmtg(e,tp,eg,ep,ev,re,r,rp,chk,chkc)
 	if chkc then return chkc:IsLocation(LOCATION_MZONE) and c7609.rmfil(chkc,lv) end
 	if chk==0 then return Duel.IsExistingTarget(c7609.rmfil,tp,LOCATION_MZONE,LOCATION_MZONE,1,nil,lv) end
 	Duel.Hint(HINT_SELECTMSG,tp,HINTMSG_REMOVE)
-	local g=Duel.SelectTarget(tp,c7609.rmfil,tp,LOCATION_MZONE,LOCATION_MZONE,1,1,nil)
+	local g=Duel.SelectTarget(tp,c7609.rmfil,tp,LOCATION_MZONE,LOCATION_MZONE,1,1,nil,lv)
 	Duel.SetOperationInfo(0,CATEGORY_REMOVE,g,1,0,0)
 end
 function c7609.rmop(e,tp,eg,ep,ev,re,r,rp)
