@@ -1,0 +1,3 @@
+--十二獣の方合
+--Season of the Zodiac Beasts
+--Scripted by Eerie Code
