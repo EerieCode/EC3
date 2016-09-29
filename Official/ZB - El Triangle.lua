@@ -66,3 +66,16 @@ end
 function c7559.xyzfil(c)
 	return c:IsFaceup() and c:IsType(TYPE_XYZ) and c:IsSetCard(0xf2)
 end
+function c7559.xyztg(e,tp,eg,ep,ev,re,r,rp,chk,chkc)
+	if chkc then return chkc:IsLocation(LOCATION_MZONE) and chkc:IsControler(tp) and c7559.xyzfil(chkc) end
+	if chk==0 then return Duel.IsExistingTarget(c7559.xyzfil,tp,LOCATION_MZONE,0,1,nil) end
+	Duel.Hint(HINT_SELECTMSG,tp,HINTMSG_TARGET)
+	Duel.SelectTarget(tp,c7559.xyzfil,tp,LOCATION_MZONE,0,1,1,nil)
+end
+function c7559.xyzop(e,tp,eg,ep,ev,re,r,rp)
+	local c=e:GetHandler()
+	local tc=Duel.GetFirstTarget()
+	if c:IsRelateToEffect(e) and tc:IsRelateToEffect(e) and tc:IsFaceup() and not tc:IsImmuneToEffect(e) then
+		Duel.Overlay(tc,Group.FromCards(c))
+	end
+end
