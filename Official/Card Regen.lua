@@ -11,6 +11,15 @@ function c7557.initial_effect(c)
 	e1:SetTarget(c7557.tg)
 	e1:SetOperation(c7557.op)
 	c:RegisterEffect(e1)
+	--
+	local e2=Effect.CreateEffect(c)
+	e2:SetType(EFFECT_TYPE_SINGLE+EFFECT_TYPE_TRIGGER_O)
+	e2:SetCode(EVENT_TO_GRAVE)
+	e2:SetProperty(EFFECT_FLAG_DELAY)
+	e2:SetCondition(c7557.excon)
+	e2:SetTarget(c7557.extg)
+	e2:SetOperation(c7557.exop)
+	c:RegisterEffect(e2)
 end
 
 function c7557.fil(c)
@@ -39,3 +48,28 @@ function c7557.op(e,tp,eg,ep,ev,re,r,rp)
 	end
 end
 	
+function c7557.excon(e,tp,eg,ep,ev,re,r,rp)
+	local c=e:GetHandler()
+	local rc=re:GetHandler()
+	return c:IsReason(REASON_EFFECT) and rc and rc:IsSetCard(SET_CARDIAN) and rc:IsType(TYPE_MONSTER)
+end
+function c7557.exfil(c)
+	return c:IsType(TYPE_SPELL+TYPE_TRAP) and c:IsAbleToHand()
+end
+function c7557.extg(e,tp,eg,ep,ev,re,r,rp,chk)
+	if chk==0 then return Duel.GetFieldGroupCount(tp,LOCATION_DECK,0)>=5 end
+end
+function c7557.exop(e,tp,eg,ep,ev,re,r,rp)
+	Duel.ShuffleDeck(tp)
+	Duel.BreakEffect()
+	Duel.ConfirmDecktop(tp,5)
+	local g=Duel.GetDecktopGroup(tp,5)
+	if g:IsExists(c7557.exfil,1,nil) and Duel.SelectYesNo(tp,aux.Stringid(7557,1)) then
+		Duel.Hint(HINT_SELECTMSG,tp,HINTMSG_ATOHAND)
+		local sg=g:FilterSelect(c7557.exfil,tp,1,1,nil)
+		Duel.SendtoHand(sg,nil,REASON_EFFECT)
+		Duel.ConfirmCards(1-tp,sg)
+		g:RemoveCard(sg:GetFirst())
+	end
+	Duel.SortDecktop(tp,tp,g:GetCount())
+end
