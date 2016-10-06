@@ -4,9 +4,9 @@
 function c7628.initial_effect(c)
 	c:EnableReviveLimit()
 	if Card.IsFusionAttribute then
-		aux.AddFusProcCodeFun(c,7626,aux.FilterBoolFunction(Card.IsFusionAttribute,ATTRIBUTE_WIND),1,true,true)
+		aux.AddFusionProcCodeFun(c,7626,aux.FilterBoolFunction(Card.IsFusionAttribute,ATTRIBUTE_WIND),1,true,true)
 	else
-		aux.AddFusProcCodeFun(c,7626,aux.FilterBoolFunction(Card.IsAttribute,ATTRIBUTE_WIND),1,true,true)
+		aux.AddFusionProcCodeFun(c,7626,aux.FilterBoolFunction(Card.IsAttribute,ATTRIBUTE_WIND),1,true,true)
 	end
 	--
 	local e1=Effect.CreateEffect(c)
