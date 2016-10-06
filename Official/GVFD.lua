@@ -6,6 +6,12 @@ function c7610.initial_effect(c)
 	c:EnableReviveLimit()
 	aux.AddFusionProcFun2(c,aux.FilterBoolFunction(Card.IsFusionSetCard,0xf3),c7610.mat_fil,true)
 	--Must first be Fusion Summoned
+	local e1=Effect.CreateEffect(c)
+	e1:SetType(EFFECT_TYPE_SINGLE)
+	e1:SetProperty(EFFECT_FLAG_CANNOT_DISABLE+EFFECT_FLAG_UNCOPYABLE)
+	e1:SetCode(EFFECT_SPSUMMON_CONDITION)
+	e1:SetValue(c7610.splimit)
+	c:RegisterEffect(e1)
 	--Reduce ATK
 	local e2=Effect.CreateEffect(c)
 	e2:SetDescription(aux.Stringid(7610,0))
@@ -36,6 +42,10 @@ function c7610.mat_fil(c)
 		attr=c:IsFusionAttribute(ATTRIBUTE_DARK)
 	end
 	return attr and c:GetOriginalLevel()>=8
+end
+
+function c7610.splimit(e,se,sp,st)
+	return not e:GetHandler():IsLocation(LOCATION_EXTRA) or aux.fuslimit(e,se,sp,st)
 end
 
 function c7610.atktg(e,tp,eg,ep,ev,re,r,rp,chk,chkc)
