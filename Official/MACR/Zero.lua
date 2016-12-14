@@ -26,36 +26,36 @@ function c100912017.initial_effect(c)
 	c:RegisterEffect(e2)
 	--special summon
 	local e3=Effect.CreateEffect(c)
-	e3:SetDescription(aux.Stringid(100912018,1))
+	e3:SetDescription(aux.Stringid(100912017,1))
 	e3:SetCategory(CATEGORY_DESTROY+CATEGORY_SPECIAL_SUMMON)
 	e3:SetType(EFFECT_TYPE_IGNITION)
 	e3:SetRange(LOCATION_MZONE)
 	e3:SetProperty(EFFECT_FLAG_CARD_TARGET)
 	e3:SetCountLimit(1)
-	e3:SetTarget(c100912018.sptg)
-	e3:SetOperation(c100912018.spop)
+	e3:SetTarget(c100912017.sptg)
+	e3:SetOperation(c100912017.spop)
 	c:RegisterEffect(e3)
 	--pendulum
 	local e6=Effect.CreateEffect(c)
-	e6:SetDescription(aux.Stringid(100912018,2))
+	e6:SetDescription(aux.Stringid(100912017,2))
 	e6:SetType(EFFECT_TYPE_SINGLE+EFFECT_TYPE_TRIGGER_O)
 	e6:SetCode(EVENT_DESTROYED)
 	e6:SetProperty(EFFECT_FLAG_DELAY)
-	e6:SetCondition(c100912018.pencon)
-	e6:SetTarget(c100912018.pentg)
-	e6:SetOperation(c100912018.penop)
+	e6:SetCondition(c100912017.pencon)
+	e6:SetTarget(c100912017.pentg)
+	e6:SetOperation(c100912017.penop)
 	c:RegisterEffect(e6)
 end
 function c100912017.ndcfilter(c)
 	return c:IsFaceup() and c:IsCode(100912039)
 end
 function c100912017.ndcon(e,tp,eg,ep,ev,re,r,rp)
-	return Duel.IsExistingMatchingCard(c100912018.ndcfilter,tp,LOCATION_MZONE,0,1,nil)
+	return Duel.IsExistingMatchingCard(c100912017.ndcfilter,tp,LOCATION_MZONE,0,1,nil)
 end
 function c100912017.thcon(e,tp,eg,ep,ev,re,r,rp)
 	local seq=e:GetHandler():GetSequence()
 	local pc=Duel.GetFieldCard(tp,LOCATION_SZONE,13-seq)
-	return pc and pc:IsCode(100912018)
+	return pc and pc:IsCode(100912017)
 end
 function c100912017.thfilter(c)
 	return c:IsType(TYPE_SPELL) and c:IsSetCard(0x46) and c:IsAbleToHand()
@@ -83,29 +83,29 @@ function c100912017.thop(e,tp,eg,ep,ev,re,r,rp)
 		end
 	end
 end
-function c100912018.spfilter(c,e,tp)
+function c100912017.spfilter(c,e,tp)
 	return c:IsType(TYPE_FUSION+TYPE_SYNCHRO) and c:IsRace(RACE_DRAGON) and c:IsCanBeSpecialSummoned(e,0,tp,false,false)
 end
-function c100912018.sptg(e,tp,eg,ep,ev,re,r,rp,chk,chkc)
+function c100912017.sptg(e,tp,eg,ep,ev,re,r,rp,chk,chkc)
 	local c=e:GetHandler()
 	if chkc then return chkc:IsLocation(LOCATION_ONFIELD) and chkc:IsControler(tp) and chkc:IsFaceup() and chkc~=c end
 	if chk==0 then return Duel.GetLocationCount(tp,LOCATION_MZONE)>-1
 		and Duel.IsExistingTarget(Card.IsFaceup,tp,LOCATION_ONFIELD,0,1,c)
-		and Duel.IsExistingMatchingCard(c100912018.spfilter,tp,LOCATION_EXTRA,0,1,nil,e,tp) end
+		and Duel.IsExistingMatchingCard(c100912017.spfilter,tp,LOCATION_EXTRA,0,1,nil,e,tp) end
 	Duel.Hint(HINT_SELECTMSG,tp,HINTMSG_DESTROY)
 	local g=Duel.SelectTarget(tp,Card.IsFaceup,tp,LOCATION_ONFIELD,0,1,1,c)
 	g:AddCard(c)
 	Duel.SetOperationInfo(0,CATEGORY_DESTROY,g,2,0,0)
 	Duel.SetOperationInfo(0,CATEGORY_SPECIAL_SUMMON,nil,1,tp,LOCATION_EXTRA)
 end
-function c100912018.spop(e,tp,eg,ep,ev,re,r,rp)
+function c100912017.spop(e,tp,eg,ep,ev,re,r,rp)
 	local c=e:GetHandler()
 	local tc=Duel.GetFirstTarget()
 	if not c:IsRelateToEffect(e) or not tc:IsRelateToEffect(e) then return end
 	local dg=Group.FromCards(c,tc)
 	if Duel.Destroy(dg,REASON_EFFECT)==2 then
 		Duel.Hint(HINT_SELECTMSG,tp,HINTMSG_SPSUMMON)
-		local g=Duel.SelectMatchingCard(tp,c100912018.spfilter,tp,LOCATION_EXTRA,0,1,1,nil,e,tp)
+		local g=Duel.SelectMatchingCard(tp,c100912017.spfilter,tp,LOCATION_EXTRA,0,1,1,nil,e,tp)
 		if g:GetCount()==0 then return end
 		local sc=g:GetFirst()
 		if Duel.SpecialSummonStep(sc,0,tp,tp,false,false,POS_FACEUP) then
@@ -139,14 +139,14 @@ function c100912018.spop(e,tp,eg,ep,ev,re,r,rp)
 		end
 	end
 end
-function c100912018.pencon(e,tp,eg,ep,ev,re,r,rp)
+function c100912017.pencon(e,tp,eg,ep,ev,re,r,rp)
 	local c=e:GetHandler()
 	return c:IsPreviousLocation(LOCATION_MZONE) and c:IsFaceup()
 end
-function c100912018.pentg(e,tp,eg,ep,ev,re,r,rp,chk)
+function c100912017.pentg(e,tp,eg,ep,ev,re,r,rp,chk)
 	if chk==0 then return Duel.CheckLocation(tp,LOCATION_SZONE,6) or Duel.CheckLocation(tp,LOCATION_SZONE,7) end
 end
-function c100912018.penop(e,tp,eg,ep,ev,re,r,rp)
+function c100912017.penop(e,tp,eg,ep,ev,re,r,rp)
 	if not Duel.CheckLocation(tp,LOCATION_SZONE,6) and not Duel.CheckLocation(tp,LOCATION_SZONE,7) then return false end
 	local c=e:GetHandler()
 	if c:IsRelateToEffect(e) then
