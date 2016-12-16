@@ -91,9 +91,9 @@ function Auxiliary.FOperationFunMulti(funs,n,insf)
 			for i=1,n-1 do
 				local sg=Group.CreateGroup()
 				local tbt=(2^n)-1
-				for i=1,n do
-					if funs[i](gc) then
-						sg:Merge(mg:GetMatchingGroup(Auxiliary.FConditionFilterMulti,nil,mg,funs,n,tbt-2^i))
+				for j=1,n do
+					if funs[j](gc) then
+						sg:Merge(mg:Filter(Auxiliary.FConditionFilterMulti,nil,mg,funs,n,tbt-2^j))
 					end
 				end
 				Duel.Hint(HINT_SELECTMSG,tp,HINTMSG_FMATERIAL)
@@ -105,5 +105,9 @@ function Auxiliary.FOperationFunMulti(funs,n,insf)
 			return
 		end
 		--To be done
+		local g1=Group.CreateGroup()
+		for i=1,n do
+			
+		end
 	end
 end
