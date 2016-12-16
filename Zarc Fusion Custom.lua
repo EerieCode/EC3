@@ -85,7 +85,25 @@ function Auxiliary.FOperationFunMulti(funs,n,insf)
 		local chkf=bit.band(chkfnf,0xff)
 		local eg=g:Filter(Card.IsCanBeFusionMaterial,nil,c)
 		if gc then
-			
+			local mg=eg:Clone()
+			mg:RemoveCard(gc)
+			local g1=Group.FromCards(gc)
+			for i=1,n-1 do
+				local sg=Group.CreateGroup()
+				local tbt=(2^n)-1
+				for i=1,n do
+					if funs[i](gc) then
+						sg:Merge(mg:GetMatchingGroup(Auxiliary.FConditionFilterMulti,nil,mg,funs,n,tbt-2^i))
+					end
+				end
+				Duel.Hint(HINT_SELECTMSG,tp,HINTMSG_FMATERIAL)
+				local g2=sg:Select(tp,1,1,nil)
+				g1:AddCard(g2:GetFirst())
+				mg:RemoveCard(g2:GetFirst())
+			end
+			Duel.SetFusionMaterial(g1)
+			return
 		end
+		--To be done
 	end
 end
