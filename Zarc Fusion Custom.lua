@@ -79,3 +79,13 @@ function Auxiliary.FConditionFunMulti(funs,n,insf)
 		end
 	end
 end
+function Auxiliary.FOperationFunMulti(funs,n,insf)
+	return function(e,tp,eg,ep,ev,re,r,rp,gc,chkfnf)
+		local c=e:GetHandler()
+		local chkf=bit.band(chkfnf,0xff)
+		local eg=g:Filter(Card.IsCanBeFusionMaterial,nil,c)
+		if gc then
+			
+		end
+	end
+end
