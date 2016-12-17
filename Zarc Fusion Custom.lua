@@ -10,10 +10,17 @@ function Auxiliary.AddFusionProcFunMulti(c,insf,...)
 	e1:SetOperation(Auxiliary.FOperationFunMulti(funs,n,insf))
 	c:RegisterEffect(e1)
 end
+function Auxiliary.FConditionFilterMultiOr(c,funs,n)
+	for i=1,n do
+		if funs[i](c) then return true end
+	end
+	return false
+end
 function Auxiliary.FConditionFilterMulti(c,mg,funs,n,tbt)
 	for i=1,n do
-		if bit.band(tbt,2^i)~=0 and funs[i](c) then
-			local t2=tbt-2^i
+		local tp=2^(i-1)
+		if bit.band(tbt,tp)~=0 and funs[i](c) then
+			local t2=tbt-tp
 			if t2==0 then return true end
 			local mg2=mg:Clone()
 			mg2:RemoveCard(c)
@@ -37,13 +44,78 @@ function Auxiliary.FConditionFilterMulti2(c,gr)
 		return gr2[1]:IsExists(Auxiliary.FConditionFilterMulti2,1,nil,gr2)
 	end
 end
+function Auxiliary.FConditionFilterMultiSelect(c,funs,n,mg,sg)
+	local valid=Auxiliary.FConditionFilterMultiValid(sg,funs,n)
+	if not valid then valid={0} end	
+	local all = (2^n)-1
+	for k,v in pairs(valid) do
+		v=bit.bxor(all,v)
+		if Auxiliary.FConditionFilterMulti(c,mg,funs,n,v) then return true end
+	end
+	return false
+end
+function Auxiliary.FConditionFilterMultiValid(g,funs,n)
+	local tp={}
+	local tc=g:GetFirst()
+	while tc do
+		local tp1={}
+		for i=1,n do
+			if funs[i](tc) then table.insert(tp1,2^(i-1)) end
+		end
+		table.insert(tp,tp1)
+		tc=g:GetNext()
+	end
+	return Auxiliary.FConditionMultiGenerateValids(tp,n)
+end
+function Auxiliary.FConditionMultiGenerateValids(vs,n)
+	local c=2
+	while #vs > 1 do
+		local v1=vs[1]
+		table.remove(vs,1)
+		local v2=vs[1]
+		table.remove(vs,1)
+		table.insert(vs,1,Auxiliary.FConditionMultiCombine(v1,v2,n,c))
+		c=c+1
+	end
+	return vs[1]
+end
+function Auxiliary.FConditionMultiCombine(t1,t2,n,c)
+	local res={}
+	for k1,v1 in pairs(t1) do
+		for k2,v2 in pairs(t2) do
+			table.insert(res,bit.bor(v1,v2))
+		end
+	end	
+	return res --Auxiliary.FConditionFilterMultiClean(res,n,c) --Auxiliary.FConditionFilterMultiClean2(Auxiliary.FConditionFilterMultiClean(res,n,c))
+end
+function Auxiliary.FConditionFilterMultiClean(vals,n,lim)
+	local res={}
+	for k,v in pairs(vals) do
+		local c=0
+		for i=1,n do
+			if bit.band(v,2^(i-1)) then c=c+1 end
+		end
+		if c==lim then table.insert(res,v) end
+	end
+	return res
+end
+function Auxiliary.FConditionFilterMultiClean2(vals)
+	local res={} local flags={}
+	for k,v in pairs(vals) do
+		if not flags[v] then
+			table.insert(res,v)
+			flags[v] = true
+		end
+	end
+	return res
+end
 function Auxiliary.FConditionFunMulti(funs,n,insf)
 	return function(e,g,gc,chkfnf)
 		local c=e:GetHandler()
 		if g==nil then return insf end
 		if not c:IsFacedown() then return false end
 		local chkf=bit.band(chkfnf,0xff)
-		local mg=g:Filter(Card.IsCanBeFusionMaterial,nil,c)
+		local mg=g:Filter(Card.IsCanBeFusionMaterial,nil,c):Filter(Auxiliary.FConditionFilterMultiOr,nil,funs,n)
 		if gc then
 			if not gc:IsCanBeFusionMaterial(c) then return false end
 			local check_tot=(2^n)-1
@@ -51,7 +123,7 @@ function Auxiliary.FConditionFunMulti(funs,n,insf)
 			mg2:RemoveCard(gc)
 			for i=1,n do
 				if funs[i](gc) then
-					local tbt=check_tot-2^i
+					local tbt=check_tot-2^(i-1)
 					if mg2:IsExists(Auxiliary.FConditionFilterMulti,1,nil,mg2,funs,n,tbt) then return true end
 				end
 			end
@@ -83,9 +155,9 @@ function Auxiliary.FOperationFunMulti(funs,n,insf)
 	return function(e,tp,eg,ep,ev,re,r,rp,gc,chkfnf)
 		local c=e:GetHandler()
 		local chkf=bit.band(chkfnf,0xff)
-		local eg=g:Filter(Card.IsCanBeFusionMaterial,nil,c)
+		local g=eg:Filter(Card.IsCanBeFusionMaterial,nil,c):Filter(Auxiliary.FConditionFilterMultiOr,nil,funs,n)
 		if gc then
-			local mg=eg:Clone()
+			local mg=g:Clone()
 			mg:RemoveCard(gc)
 			local g1=Group.FromCards(gc)
 			for i=1,n-1 do
@@ -93,7 +165,7 @@ function Auxiliary.FOperationFunMulti(funs,n,insf)
 				local tbt=(2^n)-1
 				for j=1,n do
 					if funs[j](gc) then
-						sg:Merge(mg:Filter(Auxiliary.FConditionFilterMulti,nil,mg,funs,n,tbt-2^j))
+						sg:Merge(mg:Filter(Auxiliary.FConditionFilterMulti,nil,mg,funs,n,tbt-2^(j-1)))
 					end
 				end
 				Duel.Hint(HINT_SELECTMSG,tp,HINTMSG_FMATERIAL)
@@ -104,10 +176,20 @@ function Auxiliary.FOperationFunMulti(funs,n,insf)
 			Duel.SetFusionMaterial(g1)
 			return
 		end
-		--To be done
-		local g1=Group.CreateGroup()
+		local sg=Group.CreateGroup()
+		local mg=g:Clone()
 		for i=1,n do
-			
+			local mg2=mg:Filter(Auxiliary.FConditionFilterMultiSelect,nil,funs,n,mg,sg)
+			Duel.Hint(HINT_SELECTMSG,tp,HINTMSG_FMATERIAL)
+			local sg2=nil
+			if i==1 and chkf~=PLAYER_NONE then
+				sg2=mg2:FilterSelect(tp,Auxiliary.FConditionCheckF,1,1,nil,chkf)
+			else
+				sg2=mg2:Select(tp,1,1,nil)
+			end
+			sg:AddCard(sg2:GetFirst())
+			mg:RemoveCard(sg2:GetFirst())
 		end
+		Duel.SetFusionMaterial(sg)
 	end
 end
