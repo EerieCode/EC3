@@ -87,27 +87,27 @@ function Auxiliary.FConditionMultiCombine(t1,t2,n,c)
 		end
 	end	
 	res=Auxiliary.FConditionMultiCheckCount(res,n)
-    return Auxiliary.FConditionFilterMultiClean(res)
+	return Auxiliary.FConditionFilterMultiClean(res)
 end
 function Auxiliary.FConditionMultiCheckCount(vals,n)
-    local res={} local flags={}
-    for k,v in pairs(vals) do
-        local c=0
-        for i=1,n do
-            if bit.band(v,2^(i-1))~=0 then c=c+1 end
-        end
-        if not flags[c] then
-            res[c] = {v}
-            flags[c] = true
-        else
-            table.insert(res[c],v)
-        end
-    end
-    local mk=0
-    for k,v in pairs(flags) do
-        if k>mk then mk=k end
-    end
-    return res[mk]
+	local res={} local flags={}
+	for k,v in pairs(vals) do
+		local c=0
+		for i=1,n do
+			if bit.band(v,2^(i-1))~=0 then c=c+1 end
+		end
+		if not flags[c] then
+			res[c] = {v}
+			flags[c] = true
+		else
+			table.insert(res[c],v)
+		end
+	end
+	local mk=0
+	for k,v in pairs(flags) do
+		if k>mk then mk=k end
+	end
+	return res[mk]
 end
 function Auxiliary.FConditionFilterMultiClean(vals)
 	local res={} local flags={}
