@@ -86,20 +86,30 @@ function Auxiliary.FConditionMultiCombine(t1,t2,n,c)
 			table.insert(res,bit.bor(v1,v2))
 		end
 	end	
-	return res --Auxiliary.FConditionFilterMultiClean(res,n,c) --Auxiliary.FConditionFilterMultiClean2(Auxiliary.FConditionFilterMultiClean(res,n,c))
+	res=Auxiliary.FConditionMultiCheckCount(res,n)
+    return Auxiliary.FConditionFilterMultiClean(res)
 end
-function Auxiliary.FConditionFilterMultiClean(vals,n,lim)
-	local res={}
-	for k,v in pairs(vals) do
-		local c=0
-		for i=1,n do
-			if bit.band(v,2^(i-1)) then c=c+1 end
-		end
-		if c==lim then table.insert(res,v) end
-	end
-	return res
+function Auxiliary.FConditionMultiCheckCount(vals,n)
+    local res={} local flags={}
+    for k,v in pairs(vals) do
+        local c=0
+        for i=1,n do
+            if bit.band(v,2^(i-1))~=0 then c=c+1 end
+        end
+        if not flags[c] then
+            res[c] = {v}
+            flags[c] = true
+        else
+            table.insert(res[c],v)
+        end
+    end
+    local mk=0
+    for k,v in pairs(flags) do
+        if k>mk then mk=k end
+    end
+    return res[mk]
 end
-function Auxiliary.FConditionFilterMultiClean2(vals)
+function Auxiliary.FConditionFilterMultiClean(vals)
 	local res={} local flags={}
 	for k,v in pairs(vals) do
 		if not flags[v] then
