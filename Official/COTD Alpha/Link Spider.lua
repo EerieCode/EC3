@@ -30,7 +30,7 @@ function c100317043.operation(e,tp,eg,ep,ev,re,r,rp)
 		Duel.Hint(HINT_SELECTMSG,tp,HINTMSG_SPSUMMON)
 		local g=Duel.SelectMatchingCard(tp,c100317043.filter,tp,LOCATION_HAND,0,1,1,nil,e,tp)
 		if g:GetCount()>0 then
-			Duel.SpecialSummon(g,0,tp,tp,false,false,POS_FACEUP,c:GetExtraZone(tp))
+			Duel.SpecialSummon(g,0,tp,tp,false,false,POS_FACEUP,c:GetLinkedZones(tp))
 		end
 	end
 end
@@ -68,6 +68,43 @@ function Duel.CheckLinkedLocation(c,tp)
 	else
 		if bit.band(mark,4)~=0 and seq<4 and Duel.CheckLocation(p,LOCATION_MZONE,seq+1) then res=res+1 end
 		if bit.band(mark,64)~=0 and seq>0 and Duel.CheckLocation(p,LOCATION_MZONE,seq-1) then res=res+1 end
+	end
+	return res
+end
+function Card.GetLinkedZones(c,tp)
+	if not tp then tp=PLAYER_ALL end
+	local seq=c:GetSequence()
+	local mark=c:GetTextDefense() --c:GetLinkMarker()
+	local p=c:GetControler()
+	local chk_own=(tp==PLAYER_ALL or c:IsControler(tp))
+	local chk_opp=(tp==PLAYER_ALL or not c:IsControler(tp))
+	--NOTE: This function assumes that the left EMzone is 5 and the right is 6
+	local res=0
+	if seq==5 then
+		if chk_own then
+			if bit.band(mark,8)~=0 and Duel.CheckLocation(p,LOCATION_MZONE,0) then res=bit.bor(res,8) end
+			if bit.band(mark,16)~=0 and Duel.CheckLocation(p,LOCATION_MZONE,1) then res=bit.bor(res,16) end
+			if bit.band(mark,32)~=0 and Duel.CheckLocation(p,LOCATION_MZONE,2) then res=bit.bor(res,32) end
+		end
+		if chk_opp then
+			if bit.band(mark,128)~=0 and Duel.CheckLocation(1-p,LOCATION_MZONE,0) then res=bit.bor(res,128) end
+			if bit.band(mark,1)~=0 and Duel.CheckLocation(1-p,LOCATION_MZONE,1) then res=bit.bor(res,1) end
+			if bit.band(mark,2)~=0 and Duel.CheckLocation(1-p,LOCATION_MZONE,2) then res=bit.bor(res,2) end			
+		end
+	elseif seq==6 then
+		if chk_own then
+			if bit.band(mark,8)~=0 and Duel.CheckLocation(p,LOCATION_MZONE,2) then res=bit.bor(res,8) end
+			if bit.band(mark,16)~=0 and Duel.CheckLocation(p,LOCATION_MZONE,3) then res=bit.bor(res,16) end
+			if bit.band(mark,32)~=0 and Duel.CheckLocation(p,LOCATION_MZONE,4) then res=bit.bor(res,32) end
+		end
+		if chk_opp then
+			if bit.band(mark,128)~=0 and Duel.CheckLocation(1-p,LOCATION_MZONE,2) then res=bit.bor(res,128) end
+			if bit.band(mark,1)~=0 and Duel.CheckLocation(1-p,LOCATION_MZONE,3) then res=bit.bor(res,1) end
+			if bit.band(mark,2)~=0 and Duel.CheckLocation(1-p,LOCATION_MZONE,4) then res=bit.bor(res,2) end			
+		end
+	else
+		if bit.band(mark,4)~=0 and seq<4 and Duel.CheckLocation(p,LOCATION_MZONE,seq+1) then res=bit.bor(res,4) end
+		if bit.band(mark,64)~=0 and seq>0 and Duel.CheckLocation(p,LOCATION_MZONE,seq-1) then res=bit.bor(res,64) end
 	end
 	return res
 end
