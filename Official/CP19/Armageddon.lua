@@ -16,6 +16,24 @@ function c100217008.initial_effect(c)
 	e1:SetTarget(c100217008.sptg)
 	e1:SetOperation(c100217008.spop)
 	c:RegisterEffect(e1)
+	--attach
+	local e2=Effect.CreateEffect(c)
+	e2:SetDescription(aux.Stringid(100217008,1))
+	e2:SetType(EFFECT_TYPE_SINGLE+EFFECT_TYPE_TRIGGER_O)
+	e2:SetCode(EVENT_SPSUMMON_SUCCESS)
+	e2:SetCondition(c100217008.xyzcon)
+	e2:SetTarget(c100217008.xyztg)
+	e2:SetOperation(c100217008.xyzop)
+	c:RegisterEffect(e2)
+	--indes
+	local e3=Effect.CreateEffect(c)
+	e3:SetType(EFFECT_TYPE_FIELD)
+	e3:SetCode(EFFECT_INDESTRUCTABLE_EFFECT)
+	e3:SetRange(LOCATION_MZONE)
+	e3:SetTargetRange(LOCATION_ONFIELD,0)
+	e3:SetTarget(c100217008.indtg)
+	e3:SetValue(1)
+	c:RegisterEffect(e3)
 end
 function c100217008.spcon(e,tp,eg,ep,ev,re,r,rp)
 	local pc=Duel.GetFieldCard(tp,LOCATION_SZONE,13-e:GetHandler():GetSequence())
@@ -38,4 +56,26 @@ function c100217008.spop(e,tp,eg,ep,ev,re,r,rp)
 	if g:GetCount()>0 then
 		Duel.SpecialSummon(g,0,tp,tp,false,false,POS_FACEUP)
 	end
+end
+function c100217008.xyzcon(e,tp,eg,ep,ev,re,r,rp)
+	return bit.band(e:GetHandler():GetSummonType(),SUMMON_TYPE_XYZ)==SUMMON_TYPE_XYZ
+end
+function c100217008.xyzfilter(c)
+	return c:IsFaceup() and c:IsType(TYPE_PENDULUM) and c:IsSetCard(0xaf)
+end
+function c100217008.xyztg(e,tp,eg,ep,ev,re,r,rp,chk)
+	if chk==0 then return Duel.IsExistingMatchingCard(c100217008.xyzfilter,tp,LOCATION_EXTRA,0,1,nil) end
+end
+function c100217008.xyzop(e,tp,eg,ep,ev,re,r,rp)
+	local c=e:GetHandler()
+	if c:IsFacedown() or not c:IsRelateToEffect(e) then return end
+	Duel.Hint(HINT_SELECTMSG,tp,HINTMSG_XMATERIAL)
+	local g=Duel.GetMatchingGroup(c100217008.xyzfilter,tp,LOCATION_EXTRA,0,nil)
+	if g:GetCount()>=1 then
+		local og=g:Select(tp,1,1,nil)
+		Duel.Overlay(c,og)
+	end
+end
+function c100217008.indtg(e,c)
+	return c:IsFaceup() and c:IsType(TYPE_PENDULUM)
 end
