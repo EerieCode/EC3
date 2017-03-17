@@ -23,6 +23,17 @@ function c100217006.initial_effect(c)
 	e2:SetTarget(c100217006.atktg)
 	e2:SetOperation(c100217006.atkop)
 	c:RegisterEffect(e2)
+	--copy
+	local e3=Effect.CreateEffect(c)
+	e3:SetDescription(aux.Stringid(100217006,1))
+	e3:SetType(EFFECT_TYPE_IGNITION)
+	e3:SetProperty(EFFECT_FLAG_CARD_TARGET)
+	e3:SetRange(LOCATION_MZONE)
+	e3:SetCountLimit(1)
+	e3:SetCost(c100217006.copycost)
+	e3:SetTarget(c100217006.copytg)
+	e3:SetOperation(c100217006.copyop)
+	c:RegisterEffect(e3)
 end
 function c100217006.matfilter(c)
 	return c:IsFusionCode(41209827) or c:IsFusionSetCard(0x1050)
@@ -54,4 +65,62 @@ function c100217006.atkop(e,tp,eg,ep,ev,re,r,rp)
 		e1:SetReset(RESET_EVENT+0x1fe0000+RESET_PHASE+PHASE_END)
 		tc:RegisterEffect(e1)
 	end
+end
+function c100217006.copycost(e,tp,eg,ep,ev,re,r,rp,chk)
+	if chk==0 then return e:GetHandler():GetFlagEffect(100217006)==0 end
+	e:GetHandler():RegisterFlagEffect(100217006,RESET_EVENT+0x1fe0000+RESET_PHASE+PHASE_END,0,1)
+end
+function c100217006.copyfilter(c)
+	return c:IsFaceup()
+end
+function c100217006.copytg(e,tp,eg,ep,ev,re,r,rp,chk,chkc)
+	if chkc then return chkc:IsControler(1-tp) and chkc:IsLocation(LOCATION_MZONE) and c100217006.copyfilter(chkc) end
+	if chk==0 then return Duel.IsExistingTarget(c100217006.copyfilter,tp,0,LOCATION_MZONE,1,nil) end
+	Duel.Hint(HINT_SELECTMSG,tp,HINTMSG_FACEUP)
+	Duel.SelectTarget(tp,c100217006.copyfilter,tp,0,LOCATION_MZONE,1,1,nil)
+end
+function c100217006.copyop(e,tp,eg,ep,ev,re,r,rp)
+	local c=e:GetHandler()
+	local tc=Duel.GetFirstTarget()
+	if tc and c:IsRelateToEffect(e) and c:IsFaceup() and tc:IsRelateToEffect(e) and tc:IsFaceup() and not tc:IsType(TYPE_TOKEN) then
+		local code=tc:GetOriginalCodeRule()
+		local e1=Effect.CreateEffect(c)
+		e1:SetType(EFFECT_TYPE_SINGLE)
+		e1:SetProperty(EFFECT_FLAG_CANNOT_DISABLE)
+		e1:SetCode(EFFECT_CHANGE_CODE)
+		e1:SetValue(code)
+		e1:SetReset(RESET_EVENT+0x1fe0000+RESET_PHASE+PHASE_END)
+		c:RegisterEffect(e1)
+		if not tc:IsType(TYPE_TRAPMONSTER) then
+			c:CopyEffect(code,RESET_EVENT+0x1fe0000+RESET_PHASE+PHASE_END,1)
+		end
+		local atk=tc:GetAttack()
+		local e2=Effect.CreateEffect(c)
+		e2:SetType(EFFECT_TYPE_SINGLE)
+		e2:SetCode(EFFECT_UPDATE_ATTACK)
+		e2:SetValue(atk)
+		e2:SetReset(RESET_EVENT+0x1fe0000+RESET_PHASE+PHASE_END)
+		c:RegisterEffect(e2)
+		local e3=Effect.CreateEffect(c)
+		e3:SetDescription(aux.Stringid(100217006,2))
+		e3:SetType(EFFECT_TYPE_FIELD+EFFECT_TYPE_CONTINUOUS)
+		e3:SetCode(EVENT_PHASE+PHASE_END)
+		e3:SetProperty(EFFECT_FLAG_CANNOT_DISABLE+EFFECT_FLAG_UNCOPYABLE)
+		e3:SetCountLimit(1)
+		e3:SetRange(LOCATION_MZONE)
+		e3:SetReset(RESET_EVENT+0x1fe0000+RESET_PHASE+PHASE_END)
+		e3:SetLabelObject(e1)
+		e3:SetLabel(cid)
+		e3:SetOperation(c100217006.rstop)
+		c:RegisterEffect(e3)
+	end
+end
+function c100217006.rstop(e,tp,eg,ep,ev,re,r,rp)
+	local c=e:GetHandler()
+	local cid=e:GetLabel()
+	if cid~=0 then c:ResetEffect(cid,RESET_COPY) end
+	local e1=e:GetLabelObject()
+	e1:Reset()
+	Duel.HintSelection(Group.FromCards(c))
+	Duel.Hint(HINT_OPSELECTED,1-tp,e:GetDescription())
 end
