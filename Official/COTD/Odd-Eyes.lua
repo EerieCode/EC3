@@ -33,7 +33,7 @@ function c101001015.initial_effect(c)
 	c:RegisterEffect(e3)
 	--special summon
 	local e4=Effect.CreateEffect(c)
-	e4:SetDescription(aux.Stringid(101001015,0))
+	e4:SetDescription(aux.Stringid(101001015,2))
 	e4:SetCategory(CATEGORY_SPECIAL_SUMMON)
 	e4:SetType(EFFECT_TYPE_QUICK_O)
 	e4:SetCode(EVENT_FREE_CHAIN)
