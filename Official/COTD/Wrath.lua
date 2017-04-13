@@ -10,6 +10,16 @@ function c101001070.initial_effect(c)
 	e1:SetTarget(c101001070.target)
 	e1:SetOperation(c101001070.activate)
 	c:RegisterEffect(e1)
+	--material
+	local e2=Effect.CreateEffect(c)
+	e2:SetType(EFFECT_TYPE_QUICK_O)
+	e2:SetCode(EVENT_FREE_CHAIN)
+	e2:SetProperty(EFFECT_FLAG_CARD_TARGET)
+	e2:SetRange(LOCATION_GRAVE)
+	e2:SetCost(c101001070.matcost)
+	e2:SetTarget(c101001070.mattg)
+	e2:SetOperation(c101001070.matop)
+	c:RegisterEffect(e2)
 end
 function c101001070.cfilter(c)
 	return c:IsFaceup() and c:IsCode(13331639)
@@ -46,4 +56,31 @@ function c101001070.activate(e,tp,eg,ep,ev,re,r,rp)
 		lc=lc-1
 	until ct==0 or sg:GetCount()==0 or lc==0 or not Duel.SelectYesNo(tp,aux.Stringid(101001070,0))
 	Duel.SpecialSummon(sel,0,tp,tp,true,false,POS_FACEUP)
+end
+function c101001070.matcost(e,tp,eg,ep,ev,re,r,rp,chk)
+	if chk==0 then return e:GetHandler():IsAbleToRemoveAsCost() end
+	Duel.Remove(e:GetHandler(),POS_FACEUP,REASON_COST)
+end
+function c101001070.xyzfilter(c)
+	return c:IsFaceup() and c:IsSetCard(0x20f8) and c:IsType(TYPE_XYZ)
+end
+function c101001070.matfilter(c)
+	return c:IsSetCard(0x20f8) and c:IsType(TYPE_MONSTER) and (c:IsFaceup() or not c:IsLocation(LOCATION_EXTRA))
+end
+function c101001070.mattg(e,tp,eg,ep,ev,re,r,rp,chk,chkc)
+	if chkc then return chkc:IsControler(tp) and chkc:IsLocation(LOCATION_MZONE) and c101001070.xyzfilter(chkc) end
+	if chk==0 then return Duel.IsExistingTarget(c101001070.xyzfilter,tp,LOCATION_MZONE,0,1,nil)
+		and Duel.IsExistingMatchingCard(c101001070.matfilter,tp,LOCATION_GRAVE+LOCATION_EXTRA,0,1,nil) end
+	Duel.Hint(HINT_SELECTMSG,tp,HINTMSG_FACEUP)
+	Duel.SelectTarget(tp,c101001070.xyzfilter,tp,LOCATION_MZONE,0,1,1,nil)
+end
+function c101001070.matop(e,tp,eg,ep,ev,re,r,rp)
+	local tc=Duel.GetFirstTarget()
+	if tc:IsFaceup() and tc:IsRelateToEffect(e) and not tc:IsImmuneToEffect(e) then
+		Duel.Hint(HINT_SELECTMSG,tp,HINTMSG_FACEUP)
+		local g=Duel.SelectMatchingCard(tp,c101001070.matfilter,tp,LOCATION_GRAVE+LOCATION_EXTRA,0,1,1,nil)
+		if g:GetCount()>0 then
+			Duel.Overlay(tc,g)
+		end
+	end
 end
