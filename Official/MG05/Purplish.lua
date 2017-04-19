@@ -18,6 +18,7 @@ function c100219002.initial_effect(c)
 	c:RegisterEffect(e1)
 	--destroy
 	local e2=Effect.CreateEffect(c)
+	e2:SetDescription(aux.Stringid(100219002,1))
 	e2:SetCategory(CATEGORY_DESTROY+CATEGORY_DAMAGE)
 	e2:SetType(EFFECT_TYPE_IGNITION)
 	e2:SetProperty(EFFECT_FLAG_CARD_TARGET)
@@ -26,6 +27,26 @@ function c100219002.initial_effect(c)
 	e2:SetTarget(c100219002.destg)
 	e2:SetOperation(c100219002.desop)
 	c:RegisterEffect(e2)
+	--reset atk
+	local e3=Effect.CreateEffect(c)
+	e3:SetDescription(aux.Stringid(100219002,2))
+	e3:SetCategory(CATEGORY_ATKCHANGE)
+	e3:SetType(EFFECT_TYPE_FIELD+EFFECT_TYPE_TRIGGER_O)
+	e3:SetCode(EVENT_BATTLE_CONFIRM)
+	e3:SetRange(LOCATION_MZONE)
+	e3:SetCondition(c100219002.atkcon2)
+	e3:SetOperation(c100219002.atkop2)
+	c:RegisterEffect(e3)
+	--pendulum
+	local e6=Effect.CreateEffect(c)
+	e6:SetDescription(aux.Stringid(100219001,3))
+	e6:SetType(EFFECT_TYPE_SINGLE+EFFECT_TYPE_TRIGGER_O)
+	e6:SetCode(EVENT_DESTROYED)
+	e6:SetProperty(EFFECT_FLAG_DELAY)
+	e6:SetCondition(c100219002.pencon)
+	e6:SetTarget(c100219002.pentg)
+	e6:SetOperation(c100219002.penop)
+	c:RegisterEffect(e6)
 end
 function c100219002.atkcon1(e,tp,eg,ep,ev,re,r,rp)
 	local a=Duel.GetAttacker()
@@ -64,5 +85,37 @@ function c100219002.desop(e,tp,eg,ep,ev,re,r,rp)
 		if Duel.Destroy(tc,REASON_EFFECT)~=0 then
 			Duel.Damage(1-tp,atk,REASON_EFFECT)
 		end
+	end
+end
+function c100219002.atkcon2(e,tp,eg,ep,ev,re,r,rp)
+	local a=Duel.GetAttacker()
+	local d=a:GetBattleTarget()
+	if a:IsControler(tp) then a,d=d,a end
+	return a and a:IsControler(1-tp) and a:GetAttack()~=a:GetBaseAttack()
+end
+function c100219002.atkop2(e,tp,eg,ep,ev,re,r,rp)
+	local tc=Duel.GetAttacker()
+	if tc:IsControler(tp) then tc=tc:GetBattleTarget() end
+	if tc and tc:IsFaceup() and tc:GetAttack()~=tc:GetBaseAttack() then
+		local e1=Effect.CreateEffect(e:GetHandler())
+		e1:SetType(EFFECT_TYPE_SINGLE)
+		e1:SetCode(EFFECT_SET_ATTACK_FINAL)
+		e1:SetValue(tc:GetBaseAttack())
+		e1:SetReset(RESET_EVENT+0x1fe0000+RESET_PHASE+PHASE_DAMAGE_CAL)
+		tc:RegisterEffect(e1)
+	end
+end
+function c100219002.pencon(e,tp,eg,ep,ev,re,r,rp)
+	local c=e:GetHandler()
+	return c:IsPreviousLocation(LOCATION_MZONE) and c:IsFaceup()
+end
+function c100219002.pentg(e,tp,eg,ep,ev,re,r,rp,chk)
+	if chk==0 then return Duel.CheckLocation(tp,LOCATION_SZONE,6) or Duel.CheckLocation(tp,LOCATION_SZONE,7) end
+end
+function c100219002.penop(e,tp,eg,ep,ev,re,r,rp)
+	if not Duel.CheckLocation(tp,LOCATION_SZONE,6) and not Duel.CheckLocation(tp,LOCATION_SZONE,7) then return false end
+	local c=e:GetHandler()
+	if c:IsRelateToEffect(e) then
+		Duel.MoveToField(c,tp,tp,LOCATION_SZONE,POS_FACEUP,true)
 	end
 end
