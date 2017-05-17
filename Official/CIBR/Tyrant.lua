@@ -38,10 +38,28 @@ function c101002026.regop(e,tp,eg,ep,ev,re,r,rp)
 	e1:SetRange(LOCATION_MZONE)
 	e1:SetValue(c101002026.efilter)
 	e1:SetReset(RESET_EVENT+0x1fe0000)
-	c:RegisterEffect(e1)	
+	c:RegisterEffect(e1)
+	local e2=Effect.CreateEffect(c)
+	e2:SetType(EFFECT_TYPE_SINGLE+EFFECT_TYPE_TRIGGER_O)
+	e2:SetCode(EVENT_DAMAGE_STEP_END)
+	e2:SetCondition(c101002026.atkcon)
+	e2:SetTarget(c101002026.atktg)
+	e2:SetOperation(c101002026.atkop)
+	c:RegisterEffect(e2)
 end
 function c101002026.efilter(e,re)
 	return re:IsActiveType(TYPE_TRAP)
+end
+function c101002026.atkcon(e,tp,eg,ep,ev,re,r,rp)
+	return e:GetHandler()==Duel.GetAttacker() and Duel.GetAttackTarget() and e:GetHandler():IsRelateToBattle()
+end
+function c101002026.atktg(e,tp,eg,ep,ev,re,r,rp,chk)
+	if chk==0 then return e:GetHandler():IsChainAttackable(0,true) end	
+end
+function c101002026.atkop(e,tp,eg,ep,ev,re,r,rp)
+	local c=e:GetHandler()
+	if not c:IsRelateToBattle() then return end
+	Duel.ChainAttack()
 end
 function c101002026.spcon(e,tp,eg,ep,ev,re,r,rp)
 	return Duel.GetTurnCount()==e:GetHandler():GetTurnID()+1
