@@ -35,6 +35,24 @@ function c101002075.initial_effect(c)
 	e3:SetOperation(c101002075.rmop)
 	c:RegisterEffect(e3)
 end
+function c101002075.target(e,tp,eg,ep,ev,re,r,rp,chk)
+	if chk==0 then return true end
+	local res,teg,tep,tev,tre,tr,trp=Duel.CheckEvent(EVENT_SPSUMMON_SUCCESS,true)
+	if res and c101002075.spcon(e,tp,teg,tep,tev,tre,tr,trp)
+		and c101002075.spcost(e,tp,teg,tep,tev,tre,tr,trp,0)
+		and c101002075.sptg(e,tp,teg,tep,tev,tre,tr,trp,0)
+		and Duel.SelectYesNo(tp,94) then
+		e:SetCategory(CATEGORY_SPECIAL_SUMMON)
+		e:SetProperty(EFFECT_FLAG_CARD_TARGET)
+		c101002075.spcost(e,tp,teg,tep,tev,tre,tr,trp,1)
+		c101002075.sptg(e,tp,teg,tep,tev,tre,tr,trp,1)
+		e:SetOperation(c101002075.spop)
+	else
+		e:SetCategory(0)
+		e:SetProperty(0)
+		e:SetOperation(nil)
+	end
+end
 function c101002075.spcon(e,tp,eg,ep,ev,re,r,rp)
 	return eg and eg:IsExists(Card.IsControler,1,nil,1-tp)
 end
