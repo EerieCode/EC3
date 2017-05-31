@@ -42,9 +42,9 @@ function c100332032.target(e,tp,eg,ep,ev,re,r,rp,chk,chkc)
 		return Duel.IsExistingTarget(c100332032.filter,tp,loc,0,1,nil)
 			and Duel.IsExistingMatchingCard(c100332032.spfilter,tp,LOCATION_EXTRA,0,1,nil,e,tp)
 	end
-	Duel.Hint(HINT_SELECTMSG,tp,HINTMSG_DESTROY)
+	Duel.Hint(HINT_SELECTMSG,tp,HINTMSG_REMOVE)
 	local g=Duel.SelectTarget(tp,c100332032.filter,tp,e:GetLabel(),0,1,1,nil)
-	Duel.SetOperationInfo(0,CATEGORY_DESTROY,g,1,0,0)
+	Duel.SetOperationInfo(0,CATEGORY_REMOVE,g,1,0,0)
 	Duel.SetOperationInfo(0,CATEGORY_SPECIAL_SUMMON,nil,1,tp,LOCATION_EXTRA)
 end
 function c100332032.activate(e,tp,eg,ep,ev,re,r,rp)
