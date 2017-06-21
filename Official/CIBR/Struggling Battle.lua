@@ -10,6 +10,12 @@ function c101002077.initial_effect(c)
 	e1:SetTarget(c101002077.target)
 	e1:SetOperation(c101002077.activate)
 	c:RegisterEffect(e1)
+	--act in hand
+	local e2=Effect.CreateEffect(c)
+	e2:SetType(EFFECT_TYPE_SINGLE)
+	e2:SetCode(EFFECT_TRAP_ACT_IN_HAND)
+	e2:SetCondition(c101002077.handcon)
+	c:RegisterEffect(e2)
 end
 function c101002077.target(e,tp,eg,ep,ev,re,r,rp,chk)
 	local g=Duel.GetMatchingGroup(Card.IsAbleToRemove,tp,0,LOCATION_ONFIELD,nil,POS_FACEDOWN)
@@ -26,4 +32,7 @@ function c101002077.activate(e,tp,eg,ep,ev,re,r,rp)
 			Duel.Remove(sg,POS_FACEDOWN,REASON_EFFECT)
 		end
 	end
+end
+function c101002077.handcon(e)
+	return Duel.GetFieldGroupCount(e:GetHandlerPlayer(),LOCATION_ONFIELD,0)==0
 end
