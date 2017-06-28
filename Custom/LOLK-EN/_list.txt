@@ -1,0 +1,556 @@
+LOLK-EN001
+ハーピィ・レディ ＸＳ(エクスタシスターズ)
+Harpie Lady Ecstasisters
+WIND Winged-Beast/Link/Effect
+LINK3 2700/↙⬇️↘
+Link 3 – "Harpie" monsters – min. 2
+(1): If a "Harpie" monster(s) is Normal or Special Summoned linked to this card: You can return 1 card on the field to its owner's hand.
+(2): During the Battle Phase, while 3 "Harpie" monsters are linked to this card, your opponent cannot activate cards or effects.
+(3): This card's name becomes "Harpie Lady Sisters" while it is on the field or in the Graveyard.
+
+LOLK-EN002
+ヒステリック・ウィップ
+Hysteric Whip
+Equip Spell
+Equip only to a "Harpie" monster you control. You can only use this card name's (2) effect once per turn.
+(1): If the equipped monster battles a monster, that monster's effect(s) are negated.
+(2): If this card is sent to the Graveyard: You can target 1 "Harpie" monster in your Graveyard; Special Summon it.
+
+LOLK-EN003
+Fearsome Fire Blast
+セイント・ファイアー・ギガ
+Quick-Play Spell
+(1): If you control a face-up "Harpie" Dragon-Type monster: The ATK and DEF of all monsters your opponent controls are halved, also if your "Harpie" monster battles an opponent's monster this turn, any Battle Damage it inflicts to your opponent is doubled.
+
+LOLK-EN004
+ブラック・デーモンズ・ドラゴン－デッド・エース
+Dead Ace B. Skull Dragon
+DARK Dragon/Link/Effect
+LINK2 3200/⬅️↙
+Link 2 – Level 5 or higher DARK Dragon-type monsters – exactly 2
+You can only use this card name's (3) effect once per turn.
+(1): Cannot be destroyed by your opponent's card effects while you control a "Red-Eyes" monster.
+(2): If a "Red-Eyes" monster(s) you control is sent from the field to the Graveyard: Inflict damage to your opponent equal to half its original ATK.
+(3): During your Main Phase: You can Fusion Summon 1 DARK Dragon-Type Fusion Monster from your Extra Deck, by returning Fusion Materials listed on it from your hand or Graveyard to the Deck(s).
+
+LOLK-EN005
+真紅眼の末裔（サン・オブ・レッドアイズ）
+Red-Eyes Son
+DARK Dragon/Pendulum
+LV5 PS8 2100/1700
+Pendulum Effect: You can only use this card name's (2) effect once per turn.
+(1): Once per turn: You can Special Summon 1 Level 7 or lower "Red-Eyes" monster from your hand or Graveyard.
+(2): You can Tribute 1 monster from your hand and/or field; add 1 "Red-Eyes" card from your Deck to your hand.
+
+Flavor Text: Dey grow up so fast… But don't let his cuteness fool ya! Dis sonuvgun ah son you, if you tick'em off. Nah'mean?
+
+LOLK-EN006
+レッドアイズ・バトルクライ
+Red-Eyes Timbre
+Quick-Play Spell
+You can only activate 1 card with this card's name per turn.
+(1): If you control no monsters: Special Summon 1 "Red-Eyes" Normal Monster from your Deck or Graveyard, and it is unaffected by your opponent's card effects this turn.
+
+LOLK-EN007
+ルーレット・ドラゴン
+Roulette Dragon
+DARK Machine/Link/Effect
+LINK3 2700/↖⬆️↙
+Link 3 – Machine-Type Effect Monsters – min. 2
+(1): Once per turn: You can activate this effect; flip a coin for each card in this card's linked Zones and call them, and destroy each card whose coin flip you called correctly.
+(2): Once per turn: You can Tribute 1 monster you control in this card's linked Zone, then target 1 card your opponent controls; destroy it.
+
+LOLK-EN008
+カートリッジ・ドラゴン
+Cartridge Dragon
+DARK Machine/Effect
+LV4 1500/1500
+You can only use each of this card name's effects once per turn.
+(1): If this card is Summoned: You can flip a coin 3 times and add 1 DARK Machine-Type monster from your Deck to your hand if at least 2 of the results are Heads.
+(2): If this card is sent from the field to the Graveyard: You can target 1 Level 5 or higher DARK Machine-Type monster in your Graveyard; Special Summon it.
+
+LOLK-EN009
+ラスト・ギャンブル
+Final Confrontation
+Spell
+You can only activate 1 card with this card's name per turn.
+(1): Special Summon 1 Level 5 or higher DARK Machine-Type monster from your hand.
+(2): You can banish this card from your Graveyard; once, for the rest of this turn, if you activate an effect that involves coin flip(s), you can redo the entire coin flip(s).
+
+LOLK-EN010
+破壊剣士－マスター・ブレイダー
+Master Destruction Swordsman
+EARTH Warrior/Link/Effect
+LINK1 2000/⬇️
+Link 1 – Level 7 EARTH Warrior – exactly 1
+(1): While "Buster Dragon" is linked to this card, you may Fusion Summon to any available Main Monster Zone (in addition to the Extra Monster Zone).
+
+LOLK-EN011
+破壊剣－ナイトバスターブレード
+Knight Buster Destruction Sword
+DARK Warrior/Effect
+LV2 1100/1000
+(1): You can target 1 "Buster Blader" you control; equip this monster from your hand or your side of the field to that target.
+(2): While this card is equipped to a monster, your opponent cannot add cards from either player's Deck to their hand by card effects.
+
+LOLK-EN012
+破壊剣－マスターブレード
+Master Destruction Sword
+Equip Spell
+Equip only to a Warrior-Type Link Monster.
+(1): While this card is face-up on the field, negate the effects of all DARK monsters.
+
+LOLK-EN013
+空眼の白骨龍（ノーアイズ・ワイト・ドラゴン）
+No-Eyes Wight Dragon
+DARK Zombie/Link/Effect
+LINK1 3000/⬇️
+Link 1 – "Skull Servant" – exactly 1
+You can only use this card name's (2) and (3) effects once per turn.
+(1): This card's name becomes "Skull Servant" while it is in the Graveyard.
+(2): You can return 1 of your banished "Skull Servant" or "Wight" cards to your Graveyard; banish 1 Spell/Trap Card your opponent controls.
+(3): You can target 1 Zombie-Type monster linked to this card: Destroy all monsters your opponent controls with ATK lower than that target.
+
+LOLK-EN014
+腐りの呪縛死霊叫（くさりのカースドスクリーム）
+Cursed Scream of Corruption
+You can only activate 1 card with this card's name per turn.
+(1): Activate 1 of these effects:
+● If you control a "Wight" or "Skull Servant" Zombie-Type monster: Send 1 Zombie-Type monster from your Deck to your Graveyard, then if that monster in your Graveyard is "Skull Servant", you can send 1 Zombie-Type monster from your hand or Deck to the Graveyard.
+● If you control "Skull Servant": Banish any number of "Skull Servant" from your Graveyard, and if you do, banish cards your opponent controls, up to the number of cards banished from your Graveyard this way.
+(2): This card's name becomes "Skull Servant" while it is in the Graveyard or banished.
+
+LOLK-EN015
+ワイト･ハウス
+Wight House
+Field Spell
+You can only use this card name's (2) and (3) effects once per turn.
+(1): This card's name becomes "Skull Servant" while it is in the Graveyard or banished.
+(2): During either player's turn, if a monster effect is activated: You can send 1 "Skull Servant" or "Wight"Zombie-Type monster you control or in your hand to the Graveyard; negate the activation, and if you do, destroy that card.
+(3): You can return 1 "Skull Servant" or 1 "Wight" Zombie-Type monster in your hand or Graveyard to the Deck, and if you do, add 1 "Skull Servant" or "Wight" Zombie-Type monster with a different name from your Deck to your hand.
+
+LOLK-EN016
+綱引きガエル
+Frog-of-War
+WATER Aqua/Link/Effect
+LINK2 1000/⬆️⬇️
+Link 2 – Aqua-Type monsters – 2 exactly
+You can only use this card name's (2) effect once per turn.
+(1): While you control another face-up WATER monster, your opponent cannot target this card for an attack.
+(2): If the total ATK of this card and your WATER monster linked to this card is greater than the ATK of your opponent's monster linked to this card: You can Tribute your WATER monster linked to this card; take control of your opponent's monster linked to this card.
+
+LOLK-EN017
+湿地草原からの宝札
+Cards From the Wetlands
+Spell
+(1): Discard 1 "Frog" monster from your hand; draw 2 cards.
+
+LOLK-EN018
+死の旋律（です・メロディー）
+Des Melody
+Trap
+(1): If you control a "Frog" monster: Destroy cards on the field up to the number of "Frog" monsters you currently control.
+
+LOLK-EN019
+ヴォルカニック・ガトリング
+Volcanic Gatling
+FIRE Pyro/Link/Effect
+LINK3 3000/↙⬇️↘
+Link 3 – Pyro-Type monsters – 2 or more
+You can only use this card's name's (1) effect once per turn.
+(1): During either player's turn: You can target all Pyro-Type monsters linked to this card; return them to the Deck, and if you do, destroy 1 card your opponent controls for each card returned this way.
+(2): Your opponent cannot target other "Volcanic" monsters you control for attacks.
+
+LOLK-EN020
+ブレイズ・キャノン・アームズ－ヴォルカニック・グレネード
+Blaze Accelerator Arms – Volcanic Grenade
+FIRE Pyro/Pendulum/Effect
+LV3 PS2 500/0
+Pendulum Effect: (1): If an opponent's monster declares an attack: You can destroy this card, and if you do, that monster's ATK and DEF become 0, and its effects are negated.
+
+Monster Effect: (1): If this card is sent to the Graveyard by the effect of a "Blaze Accelerator" card: You can destroy 1 card your opponent controls, and if you do, inflict 1000 damage to your opponent.
+
+LOLK-EN021
+ブレイズ・キャノン・アームズ－ヴォルカニック・エコー
+Blaze Accelerator Arms – Volcanic Echo
+FIRE Pyro/Pendulum/Effect
+LV3 PS6 0/500
+Pendulum Effect: You can only use this card name's (1) Pendulum Effect once per turn.
+(1): You can discard 1 card, then target 1 "Volcanic" monster in your Graveyard; Special Summon it, but it is destroyed during the End Phase.
+
+Monster Effect: You can only use this card name's (1) Monster Effect once per turn.
+(1): If this card is sent to the Graveyard by the effect of a "Blaze Accelerator" card: You can add 1 "Volcanic" monster from your Deck to your hand, except "Blaze Accelerator Arms – Volcanic Echo".
+
+LOLK-EN022
+幻獣の呪縛士バフォメット
+Berfomet, Phantom Beast Spellmaster
+DARK Beast-Warrior/Link/Effect
+LINK2 1400/↙↘
+Link 2 – "Phantom Beast" monsters – exactly 2
+You can only use this card's name's (2) effect once per turn.
+(1): Once per turn: You can Special Summon 1 Level 6 or lower "Phantom Beast" monster from your hand or Graveyard to one of this card's Linked Zones.
+(2): You can target 3 "Phantom Beast" cards in your Graveyard;  shuffle all 3 into the Deck, then draw 1 card.
+(3): If this card is destroyed (by battle or by card effect): Destroy all monsters this card was linked to.
+
+LOLK-EN023
+幻獣の王国キャメルロット
+Camel'lot – Kingdom of the Phantom Beasts
+Field Spell
+(1): If a "Phantom Beast" Beast-Type or Beast-Warrior-Type monster you control is destroyed (by battle or by card effect): You can Special Summon 1 Level 4 or lower "Phantom Beast" monster or "Berfomet" from your Deck in either face-up Attack Position or face-down Defense Position.
+(2): Once per turn: You can send 1 "Phantom Beast" Beast-Warrior-Type monster from your hand or Deck to your Graveyard; add 1 "Polymerization" from your Deck or Graveyard to your hand.
+(3): You can banish this card from your Graveyard; Special Summon 1 "Phantom Beast Knight Token" (Beast-Warrior-Type/EARTH/Level 1/ATK 0/DEF 0).
+
+LOLK-EN024
+幻獣覇者カルカダン
+Phantom Beast Master Karkadann
+DARK Beast-Warrior/Fusion/Effect
+LV9 3000/2800
+1 Level 6 or higher "Phantom Beast" monster + 1 Beast-Warrior-Type monster
+(1): Once per turn: You can Tribute 1 monster you control; until the end of the turn, this card can attack all monsters your opponent controls once each, and if this card attacks, your opponent cannot activate any Spell/Trap Cards until the end of the Damage Step.
+(2): If this card destroys an opponent's monster by battle, banish that monster.
+(3): If this card is destroyed by an opponent's card effect: Destroy all cards on the field, then you can banish this card and 2 other "Phantom Beast" monsters from your Graveyard, and if you do, Special Summon 1 Level 6 or higher "Phantom Beast" monster, except "Phantom Beast Master Karkadann", from your Deck or Extra Deck, ignoring the Summoning conditions.
+
+LOLK-EN025
+ユベル－Ｄｉｅ　Ｓａａｔ　ｄｅｒ　Ｆｉｎｓｔｅｒｎｉｓ（ディ・サート・デル・フィンステルニス）
+Yubel – Die Saat der Finsternis
+DARK Fiend/Link/Effect
+LINK3 0/↙⬆️↘
+Link 3 – DARK monsters – min. 2
+(1): This card cannot be destroyed by battle.
+(2): Your opponent takes all Battle Damage that you would have taken from a battle involving this card.
+(3): If this card is destroyed by a card effect: Special Summon 1 DARK monster that cannot be Normal Summoned/Set from your hand, Deck, Graveyard or banished cards, ignoring the Summoning conditions.
+
+LOLK-EN026
+裏切り隊長
+Mutinying Captain
+DARK Warrior/Effect
+LV3 1200/400
+(1): Your opponent cannot target face-up DARK monsters for attacks, except this one.
+(2): When this card is Normal Summoned: You can Special Summon 1 Level 4 or lower DARK monster from your hand, and if you do, send the top card of your Deck to the Graveyard.
+(3): You can target 1 of your banished DARK monsters; shuffle it into your Deck, and if you do, increase this card's Level by 1.
+
+LOLK-EN027
+ダーク･ガガッギゴ
+Dark Gagagigo
+DARK Reptile/Effect
+LV4 1850/1000
+(1): You can only control 1 "Dark Gagagigo".
+(2): If you control a DARK monster, you can Special Summon this card (from your hand), but this card's original ATK becomes 1500.
+(3): If this card is destroyed by battle or card effect and sent to the Graveyard: You can Special Summon 1 Level 4 or lower DARK monster from your Graveyard or that is banished, but its effects are negated.
+
+LOLK-EN028
+Ｃ(チェーン)・エグゼキューショナー
+Iron Chain Executioner
+EARTH Thunder/Link/Effect
+LINK2 2000/BL-BR
+Link 2 – EARTH monsters – exactly 2
+(1): This card gains 500 ATK for each EARTH monster linked to it.
+(2): You can Tribute 1 monster linked to this card; activate 1 of these effects.
+• Special Summon 1 of your banished EARTH monsters.
+• Inflict 300 damage to your opponent for each of your banished EARTH monsters.
+(3): If this card is destroyed (by battle or by card effect): Send the top 3 cards of your opponent's Deck to the Graveyard.
+
+LOLK-EN029
+Ｃ(チェーン)・コア
+Iron Chain Core
+EARTH Machine/Tuner/Effect
+LV2 800/800
+You can only use 1 of this card name's effects per turn, and only once that turn.
+(1): You can discard this card, then target up to 3 banished "Iron Chain" monsters; return them to the Graveyard(s).
+(2): If this card is sent to the Graveyard as Synchro Material for a Synchro Summon: Add 1 "Chain" Continuous Spell or Trap Card from your Deck or Graveyard to your hand, except "Chain Energy".
+
+LOLK-EN030
+Ｃ(チェーン)・ウォーデン
+Iron Chain Warden
+EARTH Fiend/Synchro/Effect
+LV7 1400/3000
+1 Tuner + 1 or more non-Tuner monsters
+You can only use this card name's (2) effect once per turn.
+(1): Monsters with ATK equal to or less than this card's DEF cannot declare an attack.
+(2): You can banish 1 "Iron Chain" monster from your Graveyard, then target 1 monster your opponent controls; destroy that monster, and if you do, send the top card of your opponent's Deck to the Graveyard, then, if you banished "Iron Chain Snake" to activate this effect, send cards from the top of your opponent's Deck equal to the destroyed monster's Level, Rank or Link.
+(3): If this card is destroyed by your opponent (by battle or by card effect): You can target 1 Level 4 or lower "Iron Chain" monster in your Graveyard; Special Summon it.
+
+LOLK-EN031
+バスター・コネクター
+Assault Connector
+DARK Psychic/Link/Effect
+LINK1 2000/BL
+Link 1 – Synchro Monster – exactly 1
+You can only Special Summon a card with this card's name once per turn.
+(1): If this card is Special Summoned: You can Set 1 "Assault Mode Activate" from your Deck or Graveyard to your field, it can be activated during this turn.
+(2): Once per turn: You can reveal 1 "/Assault Mode" monster in your hand; Special Summon 1 Synchro Monster whose name is written in that monster's card text to this card's linked Zone in Defense Position from your Extra Deck (with its effects negated), and if you do, shuffle the revealed card into your Deck.
+
+LOLK-EN032
+アンリミテッド・ソルジャー
+Unlimited Soldier
+WIND Psychic/Synchro/Effect
+LV8 3000/2500
+1 Tuner + 1 or more non-Tuner monsters
+You can only use this card name's (2) effect once per turn.
+(1): Once per turn: You can target 1 face-down card your opponent controls; return that target to the hand, and if you do, inflict 500 damage to your opponent.
+(2): You can pay 1000 LP; shuffle 1 card from your hand into the Deck, then, draw 1 card.
+
+LOLK-EN033
+アンリミテッド･ソルジャー／バスター
+Unlimited Soldier/Assault Mode 
+WIND Psychic/Special Summon/Effect
+LV10 3500/3000
+Cannot be Normal Summoned/Set. Must be Special Summoned by "Assault Mode Activate", and cannot be Special Summoned by other ways.
+You can only use this card name's (2) and (3) effects once per turn each.
+(1): Once per turn, during either player's turn: You can target 1 card your opponent controls; return it to the hand.
+(2): During your Main Phase: You can shuffle 1 card from your hand into the Deck, then, draw 1 card.
+(3): You can reveal this card in your hand, then target 1 Psychic-Type Synchro Monster in your Graveyard;  Special Summon it in Defense Position (with its effects negated), and if you do, shuffle this card into the Deck.
+(4): If this card on the field is destroyed: You can target 1 "Unlimited Soldier" in your Graveyard; Special Summon it.
+
+LOLK-EN034
+シンカラクリ－ハッカー ０９（リンク）
+Kutting-Edge Karakuri – Hacker 09 "Rinku"
+EARTH Machine/Link/Effect
+LINK2 2000/BL-BR
+Link 2 – Machine-Type monsters – exactly 2
+(1): When this card is Link Summoned: You can Special Summon 1 "Karakuri" monster from your Deck to this card's linked Zone.
+(2): While this card is face-up on the field, once per turn during your Main Phase, you can Normal Summon a "Karakuri" monster in addition to your Normal Summon or Set. (You can only gain this effect once per turn.)
+
+LOLK-EN035
+シンカラクリ－ドライバー８８９（ハヤク）
+Kutting-Edge Karakuri – Driver 889 "Hayaku"
+EARTH Machine/Tuner/Effect
+LV1 0/500
+Cannot be used as a Synchro Material, except for the Synchro Summon of a "Karakuri" Synchro monster.
+(1): If you control no monsters, you can Special Summon this card (from your hand).
+
+LOLK-EN036
+カラクリ改造
+Karakuri Augmentation
+Continuous Spell
+(1): When this card is activated: You can target 3 "Karakuri" cards in your Graveyard; shuffle them into the Deck, and if you do, Special Summon 1 "Karakuri" monster from your hand.
+(2): All "Karakuri" monsters on the field gain 300 ATK and DEF.
+
+LOLK-EN037
+マドルチェ・クリームー
+Madolche Creamoo
+EARTH Beast/Link/Effect
+LINK2 1500/BL-BR
+Link 2 – "Madolche" monsters – exactly 2
+You can only use each of this card name's effects once per turn.
+(1): When this card is Link Summoned: You can add 1 "Madolche" card from your Deck to your hand.
+(2): You can send 1 other "Madolche" monster you control or in your hand to the Graveyard; Special Summon a "Madolche" monster with the same Level as the sent monster from your Deck to this card's linked Zone.
+
+LOLK-EN038
+ティアラ・フィナーレ
+Tiara Finale
+Quick-Play Spell
+If you control a "Madolche Queen Tiaramisu", you can activate this card from your hand during your opponent's turn.
+(1): If you control a "Madolche" Xyz Monster: Return 1 card on the field to the Deck, then, if you control a "Puddingcess" monster, you can add 1 "Madolche" card from your Graveyard to your hand.
+
+LOLK-EN039
+マドルチェ・ルセット
+Madolche Recette
+Spell
+You can only activate 1 card with this card's name per turn.
+(1): Activate one of the following effects.
+● During this turn, the Level of any "Madolche" monster(s) you control is treated as Level 4.
+● During this turn, you may Normal Summon or Set 1 "Madolche" monster in addition to your Normal Summon/Set. (You can only gain this effect once per turn.)
+
+LOLK-EN040
+魔導堕天士 トーランフェル
+Underworld of Prophecy
+DARK Spellcaster/Link/Effect
+LINK3 2900/↙⬇️↘
+Link 3 – Spellcaster-Type monsters – min. 2
+(1): Cannot be Tributed or used as Material for a Fusion, Synchro, or Link Summon while face-up on the field.
+(2): Cannot be destroyed by card effects while a monster(s) is linked to this card.
+(3): Once per turn, during either player's turn: target 1 "Spellbook" Spell Card in your Graveyard; apply that target's effect, then return that target to the bottom of the Deck.
+
+LOLK-EN041
+混沌の魔導書
+Spellbook of Chaos
+Spell
+You can only activate 1 card with this card's name per turn.
+(1): Special Summon 1 Level 3 "Prophecy" monster from your Deck, but you cannot Special Summon monsters for the rest of this turn, except Spellcaster-Type monsters.
+(2): You can banish this card from your Graveyard, then target 2 Spellcaster-Type monsters you control; their Levels become the combined current Levels of those 2 monsters.
+
+LOLK-EN042
+魔導書再整理
+Spellbook Reorganization
+Continuous Spell
+You can only use this card name's (1) effect once per turn.
+(1): Once per turn, if you control a Spellcaster-type monster: You can ook at the top 3 cards of your Deck, then you can reveal 1 "Spellbook" card among them, and add it to your hand, also place the remaining cards on the top or bottom of your Deck in any order.
+(2): If you added a card(s) to your hand with this card's effect: Put 1 card from your hand on the top or bottom of your Deck.
+
+LOLK-EN043
+彼岸の媒介者　ダンテ
+Dante, Link to the Burning Abyss
+LIGHT Warrior/Link/Effect
+LINK2 2500/↙⬇️
+Link 2 – "Burning Abyss" monsters – exactly 2
+You can only use this card name's (2) effect once per turn.
+(1): Once per turn: You can send 1 "Burning Abyss" monster from your hand or your side of the field to the Graveyard; Special Summon 1 "Burning Abyss" monster from your deck.
+(2): If this card is sent to the Graveyard: You can Special Summon this card.
+
+LOLK-EN044
+彼岸の舟守　カロン
+Charon, Ferryman of the Burning Abyss
+DARK Fiend/Effect
+LV3 900/1800
+You can only use this card name's (1) effect once per turn.
+(1): When this card is Normal Summoned: You can Special Summon 1 "Burning Abyss" monster from your hand or Deck.
+
+LOLK-EN045
+彼岸からの脱出
+Escape from the Burning Abyss
+Trap
+If you control a "Dante" monster, you can activate this card from your hand.
+(1): When a card or effect is activated that targets a "Burning Abyss" monster(s) you control: Banish 1 "Burning Abyss" monster from your Deck; negate that effect, and if you do, banish that card.
+(2): You can banish this card from your Graveyard; return 1 "Beatrice, Lady of the Eternal" from your Graveyard to the Extra Deck.
+
+LOLK-EN046
+超量機獣シルバーリンクス
+Super Quantal Mech Beast Silverlynx
+LIGHT Machine/Link/Effect
+LINK3 2300/↙⬇️↘
+Link 3 – "Super Quant" monsters – min. 2
+If you control a face-up "Super Quantal Mech Ship Magnacarrier", you can Special Summon this card from your Extra Deck by discarding 1 card and sending 1 "Super Quantum White Layer" you control to the Graveyard. (This Special Summon is treated as a Link Summon.)
+(1): Negate the effect(s) of your "Super Quant" Xyz Monsters linked to this card that would prevent them from attacking.
+(2): When a "Super Quantal Mech King Great Magnus" linked to this card attacks: You can activate 1 "Super Quantal Mech Sword – Magnaslayer" directly from your Deck.
+
+LOLK-EN047
+超量士ホワイトレイヤー
+Super Quantum White Layer
+LIGHT Fairy/Effect
+LV1 100/100
+You can only use each of this card name's effects once per turn.
+(1): If the effect of a "Super Quant" monster is activated, except "Super Quantum White Layer": You can Special Summon this card from your hand.
+(2): When this card is Normal or Special Summoned: You can target 1 other "Super Quant" monster you control; this card's Level becomes the targeted monster's Level.
+(3): If this card is sent to the Graveyard: You can add 1 "Alphan" card from your Deck to your hand.
+
+LOLK-EN048
+Super Quantal Alphan Signal
+超量警報アルファンシグナル
+Spell
+You can only activate 1 card with this card's name per turn.
+(1): If your opponent controls a monster and you control no monsters: Special Summon "Super Quant" monsters with different names from your Deck, up to the number of monsters your opponent controls, but their ATK and DEF become 0 and they are destroyed during the End Phase, also you cannot Special Summon monsters for the rest of the turn, except "Super Quant" monsters.
+
+LOLK-EN049
+コロッサス・オブ・エンドレス・ナイト
+Colossus of Everlasting Night
+DARK Rock/Link/Effect
+LINK2 2500/⬅️↘
+Link 2 – Trap Cards that are monsters – exactly 2
+(1): Once per turn: You can target 1 Continuous Trap Card in your Graveyard; shuffle it into the Deck, and if you do, you can activate 1 Continuous Trap Card from your hand, that can Special Summon itself as a monster.
+(2): Trap Cards that are monsters in this card's linked Zones cannot be targeted by, or destroyed by, card effects.
+
+LOLK-EN050
+ルーラー・オブ・ダンジョンズ
+Ruler of the Dungeons
+DARK Spellcaster/Effect
+LV8 2500/0
+You can only Special Summon a card with this card's name with the way written in its (1) effect once per turn. You can only use this card name's (3) effect once per turn.
+(1): You can Special Summon this card (from your hand) by sending 1 face-up Continuous Trap Card you control to the Graveyard.
+(2): Once per turn, during either player's turn: You can target 1 Trap Card that is a monster you control; return it to the hand, and if you do, banish 1 card your opponent controls.
+(3): You can discard this card; add 1 Continuous Trap Card that can Special Summon itself as a monster from your Deck to your hand.
+
+LOLK-EN051
+アモルファス・スライム
+Amorphous Slime
+Continuous Trap
+You can only use this card name's (3) effect once per turn.
+(1): Special Summon this card to your Monster Zone in Defense Position (Aqua-Type/DARK/Level 4/ATK 0/DEF 0).
+(2): This card Special Summoned by its effect cannot be destroyed by battle.
+(3): You can banish this card from your Graveyard, then target 1 Continuous Trap Card that can Special Summoned itself as a monster in your Graveyard; activate it from your Graveyard.
+
+LOLK-EN052
+人界発獣界行きパークガイド
+Park Guide of Humanity
+EARTH Warrior/Link/Effect
+LINK4 2400/⬆️⬅️➡️⬇️
+Link 4 – Effect Monsters – 3 or more
+You can only use this card name's (2) effect once per turn.
+(1): Card effects cannot prevent monsters you control in this card's linked Zones from attacking, also their effects cannot be negated.
+(2): You can send 2 Spell Cards from your hand to the Graveyard; add 1 Normal Spell Card with a different name than either of those 2 cards from your Deck to your hand, but you lose 2000 LP if you activate it this turn.
+(3): If this card would be destroyed by battle, you can flip a coin and if the result is Heads this card is not destroyed by that battle.
+
+LOLK-EN053
+フィーライン・サーバント
+Feline Friend
+EARTH Beast-Warrior/Effect
+LV4 1700/1600
+You can only use this card name's (2) effect once per turn.
+(1): If the only monsters your opponent controls are in Defense Position and/or Link Monsters, this card can attack your opponent directly.
+(2): If a Warrior-Type Link Monster you control is targeted by an opponent's card effect: You can Special Summon this card from your hand to that monster's linked Zone, and if you do, negate that opponent's effect, and if you do that, destroy it.
+
+LOLK-EN054
+ラッキー・ボッス
+Lucky Boss
+EARTH Machine/Effect
+LV1 500/500
+You can only use this card name's (1) effect once per turn.
+(1): If you control a Link Monster: You can send 1 Spell/Trap Card from your hand to the Graveyard; banish from your Deck 1 Spell/Trap Card that is the same card type as the card sent to the Graveyard. During your 2nd Standby Phase after this effect's activation, add that banished card to your hand.
+(2): Cannot be destroyed by battle from Beast, Beast-Warrior, and Winged Beast-Type monsters.
+(3): Once per turn: You can gain 800 LP.
+(4): If a Warrior-Type Link Monster you control would be destroyed by battle or card effect, you can send this card face-up from your field or from your hand to the Graveyard instead.
+
+LOLK-EN055
+王家の伯爵
+Pharaonic Earl
+DARK Zombie/Link/Effect
+LINK1 1000/⬇️
+Link 1 – DARK monster – exactly 1
+(1): Once per Chain, when your opponent activates a Trap Card with an effect that would Special Summon a monster(s): You can Tribute 1 monster; negate that activation, and if you do, destroy it.
+(2): The monster in this card's linked Zone gains 500 ATK each time a Chain with 2 or more of your opponent's card effects finish resolving.
+
+LOLK-EN056
+新楽園（ニュー・パラダイス）
+New Paradise
+LIGHT Beast/Xyz/Effect
+RK2 1500/500
+2 Level 2 monsters
+You can only use this card name's (1) effect once per turn.
+(1): You can detach 1 Xyz Material from this card; send the top 5 cards of your opponent's Deck to the Graveyard.
+(2): Once per turn: You can Special Summon 1 "Cat Token" (Beast-Type/EARTH/Level 1/ATK 0/DEF 0) in Defense Position. It cannot be used as a Material for any Summon.
+(3): If this card on the field is sent to the Graveyard: You can activate this effect; until the end of this turn, every card your opponent controls and will control has its name changed to "Unknown".
+
+LOLK-EN057
+人形使い(ドールマスター)
+Doll Master
+DARK Spellcaster/Synchro/Effect
+LV3 1200/1800
+1 Tuner + 1 or more non-Tuner monsters
+(1): Once per turn: You can target 1 non-WATER "Necro" monster in your Graveyard; shuffle it into the Deck, and if you do, you can Special Summon 1 Level 4 or lower "Prophecy" monster from your hand.
+(2): Once per turn, during either player's turn, when an opponent's Effect Monster activates its (2) effect: You can negate that activation, and if you do, destroy it.
+
+LOLK-EN058
+伝説の勇者
+The Hero of Legends
+LIGHT Warrior/Link/Effect
+LINK3 2500/↙⬆️↘
+Link 3 – Monsters with different Types from each other – exactly 3
+You can only use this card name's (3) effect once per turn.
+(1): If your opponent controls a monster in this card's linked Zone, this card cannot be destroyed by battle or card effect, it gains 1000 ATK, also if it battles a Level 10 or higher monster, banish that opponent's monster after damage calculation.
+(2): This card gains 500 ATK for each monster you control in this card's linked Zones.
+(3): During your Main Phase: You can add 1 Normal Spell Card from your Deck to your hand, but you cannot activate a card with that card's name for the rest of this turn, and if you do, you lose 3000 LP.
+(4): Once per turn, during your End Phase: You can send the top 3 cards of your Deck to the Graveyard, and if you do, this card cannot be targeted by card effects until your opponent's End Phase.
+
+LOLK-EN059
+トワイライトロード・プリンセス
+Twilightsworn Princess
+LIGHT Spellcaster/Pendulum/Effect
+LV4 PS12 1500/1500
+Pendulum Effect: (1): You cannot Pendulum Summon monsters, except LIGHT monsters, unless you control "The Hero of Legends". This effect cannot be negated.
+(2): Once per turn: You can target 1 LIGHT monster in your Graveyard; add it to your hand, and if you do, send the top 3 cards of your Deck to the Graveyard. If you Summon a monster with that card's name for the rest of this turn, you take 1000 damage.
+
+Monster Effect: (1): If this card is Summoned: You can send 1 "Lightsworn" monster from your Deck to the Graveyard, and if you do, destroy this card.
+(2): Once per turn, during either player's turn: You can target 1 DARK monster your opponent controls; banish it. You must have 6 or more LIGHT monsters in your Graveyard to activate and to resolve this effect.
+(3): If this card is sent from your Deck to the Graveyard by the effect of a "Lightsworn" monster or "The Hero of Legends": You can pay 1000 LP; place this card in your Pendulum Zone.
+
+LOLK-EN060
+終焉の魔獣
+Dark Beast of Demise
+DARK Beast/Special Summon/Effect
+LV12 ?/3000
+Cannot be Normal Summoned/Set. Must be Special Summoned (from your hand) by Tributing any number of DARK monsters you control while your opponent controls a monster, and cannot be Special Summoned by other ways.
+(1): This card's Special Summon cannot be negated. When Special Summoned, cards and effects cannot be activated.
+(2): This card's original ATK becomes the number of monsters you Tributed for its Summon x 1000 + 1000.
+(3): Unaffected by card effects, except the effects of LIGHT monsters.
+(4): Once per turn: You can pay 3000 LP; banish all other cards on the field and in each player's Graveyards.
+(5): If this card is sent from your Deck to the Graveyard by a monster effect: You can banish this card from your Graveyard; add this banished card to your hand your 3rd Standby Phase after this effect's activation.
