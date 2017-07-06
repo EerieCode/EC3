@@ -14,8 +14,8 @@ function c101002058.initial_effect(c)
 	c:RegisterEffect(e1)
 end
 function c101002058.cost(e,tp,eg,ep,ev,re,r,rp,chk)
-	if chk==0 then return true end
 	e:SetLabel(100)
+	if chk==0 then return true end
 end
 function c101002058.cfilter(c)
 	return c:IsFaceup() and (c:GetBaseAttack()>0 or c:GetBaseDefense()>0) and c:IsAbleToRemoveAsCost()
@@ -25,8 +25,12 @@ function c101002058.filter(c)
 end
 function c101002058.target(e,tp,eg,ep,ev,re,r,rp,chk,chkc)
 	if chkc then return chkc:IsControler(1-tp) and chkc:IsLocation(LOCATION_MZONE) and c101002058.filter(chkc) end
-	if chk==0 then return Duel.IsExistingMatchingCard(c101002058.cfilter,tp,LOCATION_MZONE,0,1,nil)
-		and Duel.IsExistingTarget(c101002058.filter,tp,0,LOCATION_MZONE,1,nil) end
+	if chk==0 then 
+		if e:GetLabel()~=100 then return false end
+		e:SetLabel(0)
+		return Duel.IsExistingMatchingCard(c101002058.cfilter,tp,LOCATION_MZONE,0,1,nil)
+			and Duel.IsExistingTarget(c101002058.filter,tp,0,LOCATION_MZONE,1,nil)
+	end
 	Duel.Hint(HINT_SELECTMSG,tp,HINTMSG_REMOVE)
 	local rc=Duel.SelectMatchingCard(tp,c101002058.cfilter,tp,LOCATION_MZONE,0,1,1,nil):GetFirst()
 	if Duel.Remove(rc,POS_FACEUP,REASON_COST+REASON_TEMPORARY)~=0 then
