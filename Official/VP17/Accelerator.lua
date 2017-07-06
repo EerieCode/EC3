@@ -30,13 +30,31 @@ function c100209001.cost(e,tp,eg,ep,ev,re,r,rp,chk)
 	e1:SetReset(RESET_EVENT+0x1fe0000+RESET_PHASE+PHASE_END)
 	e:GetHandler():RegisterEffect(e1)
 end
-function c100209001.filter(c)
-	return c:IsFaceup() and c:IsRace(RACE_CYBERS)
+function c100209001.filter(c,lg)
+	return c:IsFaceup() and c:IsRace(RACE_CYBERS) and lg and lg:IsContains(c)
 end
 function c100209001.target(e,tp,eg,ep,ev,re,r,rp,chk,chkc)
-	if chkc then return chkc:IsControler(tp) and chkc:IsLocation(LOCATION_MZONE) and c100209001.filter(chkc) end
-	if chk==0 then return Duel.IsExistingTarget(c100209001.filter,tp,LOCATION_MZONE,0,1,nil) end
+	local lg=e:GetHandler():GetLinkedGroup()
+	if chkc then return chkc:IsControler(tp) and chkc:IsLocation(LOCATION_MZONE) and c100209001.filter(chkc,lg) end
+	if chk==0 then return Duel.IsExistingTarget(c100209001.filter,tp,LOCATION_MZONE,0,1,nil,lg) end
 	Duel.Hint(HINT_SELECTMSG,tp,HINTMSG_FACEUP)
-	Duel.SelectTarget(tp,c100209001.filter,tp,LOCATION_MZONE,0,1,1,nil)
+	Duel.SelectTarget(tp,c100209001.filter,tp,LOCATION_MZONE,0,1,1,nil,lg)
 	e:SetLabel(Duel.SelectOption(tp,aux.Stringid(100209001,1),aux.Stringid(100209001,2)))
+end
+function c100209001.activate(e,tp,eg,ep,ev,re,r,rp)
+	local tc=Duel.GetFirstTarget()
+	if not tc:IsRelateToEffect(e) or tc:IsFacedown() then return end
+	local e1=Effect.CreateEffect(e:GetHandler())
+	e1:SetType(EFFECT_TYPE_SINGLE)
+	e1:SetProperty(EFFECT_FLAG_SINGLE_RANGE)
+	e1:SetRange(LOCATION_MZONE)
+	e1:SetReset(RESET_EVENT+0x1fe0000+RESET_PHASE+PHASE_END)
+	if e:GetLabel()==0 then
+		e1:SetCode(EFFECT_UPDATE_ATTACK)
+		e1:SetValue(2000)
+	else
+		e1:SetCode(EFFECT_EXTRA_ATTACK_MONSTER)
+		e1:SetValue(1)
+	end
+	tc:RegisterEffect(e1)
 end
