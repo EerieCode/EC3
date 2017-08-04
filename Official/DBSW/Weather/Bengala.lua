@@ -2,6 +2,17 @@
 --Sunny Weathery Bengala
 --Scripted by Eerie Code
 function c100419032.initial_effect(c)
+	--spsummon (grave)
+	local e1=Effect.CreateEffect(c)
+	e1:SetDescription(aux.Stringid(100419032,0))
+	e1:SetCategory(CATEGORY_SPECIAL_SUMMON)
+	e1:SetType(EFFECT_TYPE_IGNITION)
+	e1:SetRange(LOCATION_GRAVE)
+	e1:SetCountLimit(1,100419032)
+	e1:SetCost(c100419032.gspcost)
+	e1:SetTarget(c100419032.gsptg)
+	e1:SetOperation(c100419032.gspop)
+	c:RegisterEffect(e1)
 	--spsummon
 	local e2=Effect.CreateEffect(c)
 	e2:SetType(EFFECT_TYPE_SINGLE+EFFECT_TYPE_CONTINUOUS)
@@ -20,6 +31,9 @@ function c100419032.initial_effect(c)
 	e3:SetOperation(c100419032.spop)
 	e3:SetLabelObject(e2)
 	c:RegisterEffect(e3)
+end
+function c100419032.gspcfilter(c)
+	return c:IsFaceup() and c:IsType(TYPE_CONTINUOUS) and c:IsAbleToGraveAsCost()
 end
 function c100419032.spreg(e,tp,eg,ep,ev,re,r,rp)
 	if not re then return end
