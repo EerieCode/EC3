@@ -28,16 +28,21 @@ function c101003014.initial_effect(c)
 	e3:SetCondition(c101003014.thcon)
 	c:RegisterEffect(e3)
 end
-function c101003014.cfilter(c,seq)
+function c101003014.cfilter(c,tp,seq)
 	local s=c:GetSequence()
-	return s==seq or (seq==1 and s==5) or (seq==3 and s==6)
+	if c:IsLocation(LOCATION_SZONE) and s==5 then return false end
+	if c:IsControler(tp) then
+		return s==seq or (seq==1 and s==5) or (seq==3 and s==6)		
+	else
+		return s==4-seq or (seq==1 and s==6) or (seq==3 and s==5)
+	end
 end
 function c101003014.spcon(e,c)
 	if c==nil then return true end
 	local tp=c:GetControler()
 	local zone=0
 	for i=0,4 do
-		if Duel.GetMatchingGroupCount(c101003014.cfilter,tp,LOCATION_ONFIELD,LOCATION_ONFIELD,nil,i)>=2 then
+		if Duel.GetMatchingGroupCount(c101003014.cfilter,tp,LOCATION_ONFIELD,LOCATION_ONFIELD,nil,tp,i)>=2 then
 			zone=zone+math.pow(2,i)
 		end
 	end
@@ -46,7 +51,7 @@ end
 function c101003014.spval(e,c)
 	local zone=0
 	for i=0,4 do
-		if Duel.GetMatchingGroupCount(c101003014.cfilter,c:GetControler(),LOCATION_ONFIELD,LOCATION_ONFIELD,nil,i)>=2 then
+		if Duel.GetMatchingGroupCount(c101003014.cfilter,c:GetControler(),LOCATION_ONFIELD,LOCATION_ONFIELD,nil,tp,i)>=2 then
 			zone=zone+math.pow(2,i)
 		end
 	end
