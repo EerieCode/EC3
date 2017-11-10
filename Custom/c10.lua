@@ -38,6 +38,15 @@ end
 function c10.invtg(e,c)
 	return e:GetHandler():GetLinkedGroup():IsContains(c)
 end
+function c10.atkval(e,c)
+	local zone=e:GetHandler():GetLinkedZone()
+	local ct=0
+	while zone~=0 do
+		if zone & 1~=0 then ct=ct+1 end
+		zone=zone >> 1
+	end	
+	return ct*500
+end
 function c10.spcon(e,tp,eg,ep,ev,re,r,rp)
 	local c=e:GetHandler()
 	return (c:IsReason(REASON_BATTLE) or (c:GetReasonPlayer()~=tp and c:IsReason(REASON_EFFECT)))
