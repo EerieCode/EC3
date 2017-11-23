@@ -1,6 +1,7 @@
 --インヴェルズ・オリジン
 --Steelswarm Origin
 --Scripted by Eerie Code
+--Requires a core update in order to work
 function c61888819.initial_effect(c)
 	c:EnableReviveLimit()
 	aux.AddLinkProcedure(c,aux.FilterBoolFunction(Card.IsSetCard,0xa),2,2)
